@@ -59,7 +59,11 @@
     "Images": ["resources/image-11-768x606.png"],
     "Description": "This project was a really basic 3d wireframe platformer",
     "Links": [{"Text": "Github", "Url": "https://github.com/FlorisTim/3D-Platformer-in-C-Console-App"}],
-    "Suffix": "t has moving platforms, and platforms slowly disappear behind you, it was also infinite with a checkpoint every x amount of platforms, +link"
+    "Suffix": "t has moving platforms, and platforms slowly disappear behind you, it was also infinite with a checkpoint every x amount of platforms, +link", ,
+    "Details": [
+      ["On the topic of 3D, this is a raycaster i also made in the console app"],
+      ["resources/raycaster.png"]
+    ]
   },
   {
     "Name": "FinalAssignment",
