@@ -1,0 +1,99 @@
+body{
+    background-color: #4c4c4c;
+    transform: scale(0.75);
+    transform-origin: top left;
+    width: 133.33%; /* compensate for shrink so it still fills screen */
+}
+video{
+    max-width: 75%;
+    align-self: center;
+}
+.pixelify-sans {
+    /*Text styling*/
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 22.5px;
+    font-weight: 00;
+    font-style: normal;
+    color: white;
+    text-align: left;
+}
+.graytext{
+    color: #9e9e9e;
+    line-height: 0;
+    margin: 0;
+    text-align: center;
+}
+h6, h2, h3{
+    text-align: center;
+    font-weight: 100;
+}
+.important{
+    color: #fd3636;
+    text-align: center;
+}
+
+
+a{
+
+    color: #f8e430;
+    text-decoration: none;
+}
+a:hover{
+    color: #4bf830;
+
+}
+.link{
+    font-size: 28px;
+}
+
+.content{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.centerlink{
+    display: block;
+    text-align: center;
+}
+
+.row{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.rentry{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+img{
+    max-width: 100%;
+}
+
+
+.project{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 2rem;
+}
+.projectcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+.embedded{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
