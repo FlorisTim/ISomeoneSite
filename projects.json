@@ -16,8 +16,8 @@
     "Period": 2026,
     "Images": ["resources/dunge1.png","resources/dunge2.png"],
     "Description": "My first actual game, I'm making it in processing, so that's java, and this is my first time using java too.",
-    "Links": [{"Text": "Github", "Url": "https://github.com/FlorisTim/Dunge"},{"Text": "Latest update (youtube)", "Url":  "https://www.youtube.com/watch?v=7Rw8C87qeKQ&pp=0gcJCQMLAYcqIYzv"}],
-    "Suffix": "+link, Check it out, and also +link!"
+    "Links": [{"Text": "latest update", "Url":  "https://www.youtube.com/watch?v=ZDEKH_ichhc"}],
+    "Suffix": "Github unavailable as this is a project of which code i'd like to keep private,But i do post the +link on youtube"
   },
   {
     "Name": "3DPlatformerWithLanMultiplayer",
