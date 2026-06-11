@@ -9,14 +9,17 @@ video{
     align-self: center;
 }
 .pixelify-sans {
-    /*Text styling*/
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
     font-size: 22.5px;
-    font-weight: 00;
-    font-style: normal;
     color: white;
-    text-align: left;
+    font-style: normal;
+    font-variation-settings: "MONO" 1;
+
 }
+
+
+
 .graytext{
     color: #9e9e9e;
     line-height: 0;
