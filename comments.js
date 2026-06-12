@@ -88,7 +88,9 @@ function profanCheck(text){
 
     if (
         text.includes("gg") ||
-        text.includes("ck")
+        text.includes("ck") ||
+        text.includes("eg") ||
+        text.includes("nk")
     ) {
         return false;
     }
