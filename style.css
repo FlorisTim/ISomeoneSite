@@ -3,6 +3,7 @@ body{
     transform: scale(0.75);
     transform-origin: top left;
     width: 133.33%; /* compensate for shrink so it still fills screen */
+    overflow-x: hidden;
 }
 video{
     max-width: 75%;

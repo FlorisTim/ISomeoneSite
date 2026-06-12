@@ -80,13 +80,14 @@ function moreComments(){
 
 
 }
-
+let previous = [];
 function profanCheck(text){
     text = text.trim();
     text = text.replace(" ", "");
     text = text.toLowerCase();
-
+    previous.push(text);
     if (
+        !previous.includes(text) ||
         text.includes("gg") ||
         text.includes("ck") ||
         text.includes("eg") ||
