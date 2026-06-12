@@ -101,7 +101,7 @@ async function sendContents(){
 }
 
 async function send(string){
-    if ( node.value.length > 4) {
+    if ( document.getElementById("textbox").value.length > 4) {
         await supa.from("chat").insert([{text: string}]);
         window.location.reload();
     }
