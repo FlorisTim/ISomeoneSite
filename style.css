@@ -29,17 +29,27 @@ video{
     background: none;
     font-family: "Google Sans Code", monospace;
     font-size: 22.5px;
-    color: white;
+    color: #f8e430;
+    margin: auto;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .button:hover{
-    color: #f8e430;
+    color: #4bf830;
 }
 
 .comments{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
     gap: 10px;
     justify-self: center;
 }

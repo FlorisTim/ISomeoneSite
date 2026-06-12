@@ -24,7 +24,7 @@ let commentSection;
 addEventListener("DOMContentLoaded", (event) => Main());
 
 async function Main(){
-    const {data, error} = await supa.from("chat").select("*").order("time", {ascending: false}).limit(20);
+    const {data, error} = await supa.from("chat").select("*").order("time", {ascending: false}).limit(100);
 
 
 
@@ -46,7 +46,7 @@ async function Main(){
     moreComments()
     const node = document.getElementById("textbox");
     node.addEventListener("keyup", function(event) {
-        if (event.key === "Enter" && node.value.length > 4) {
+        if (event.key === "Enter") {
             send(node.value);
             node.value = "";
         }
@@ -59,7 +59,10 @@ function moreComments(){
     if (document.getElementById("morebutton") != null) {
         document.getElementById("morebutton").remove();
     }
+    if (document.getElementsByClassName("disappear")[0] != null) {
 
+        document.getElementsByClassName("disappear")[0].remove();
+    }
 
     commentSection = document.getElementById("comments");
     for (let i = 0; i < 3 && index < times.length; i++){
@@ -68,11 +71,12 @@ function moreComments(){
             .replace("COMMENTTEXT",comments[index]);
         index++;
     }
-    commentSection.innerHTML += `<br>`;
+
     if (index < times.length){
         commentSection.innerHTML += `<button id="morebutton" class="button" onclick="moreComments()">more</button>`;
     } else {
-        commentSection.innerHTML += "<div class='graytext'>no more thoughts</div>"
+        commentSection.innerHTML += `<br class="disappear">`;
+        commentSection.innerHTML += "<div class='graytext'>...</div>"
     }
 
 
@@ -92,6 +96,13 @@ function profanCheck(text){
     return true;
 }
 
+async function sendContents(){
+    send(document.getElementById("textbox").value);
+}
+
 async function send(string){
-    await supa.from("chat").insert([{text:string}]);
+    if ( node.value.length > 4) {
+        await supa.from("chat").insert([{text: string}]);
+        window.location.reload();
+    }
 }
