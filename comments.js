@@ -47,8 +47,7 @@ async function Main(){
     const node = document.getElementById("textbox");
     node.addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
-            send(node.value);
-            node.value = "";
+            sendContents()
         }
     });
 }
