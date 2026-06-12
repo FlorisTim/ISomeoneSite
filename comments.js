@@ -1,5 +1,5 @@
-const key = "sb_publishable_Ob2o7ujMLXVmwj2UlVFo8Q_Lskuw8et";
-const url = "https://zrerchdmjguamvgpdcub.supabase.co";
+const key = "";
+const url = "";
 
 const supa = window.supabase.createClient(url,key)
 let previous = [];
@@ -42,7 +42,7 @@ async function Main(){
     console.log(data);
     data.forEach((item) => {
         let text = item.text.trim();
-        if (profanCheck(text) || !checkProfan) {
+        if (profanCheck(text) || !checkProfan || favs.includes(item.id)) {
             comments.push(text.substring(0,50));
             times.push(new Date(item.time).toLocaleString());
             ids.push(item.id);
