@@ -17,7 +17,7 @@
     "Images": ["resources/dunge1.png","resources/dunge2.png"],
     "Description": "My first actual game, I'm making it in processing, so that's java, and this is my first time using java too.",
     "Links": [{"Text": "latest update", "Url":  "https://www.youtube.com/watch?v=ZDEKH_ichhc"}],
-    "Suffix": "Github unavailable as this is a project of which code i'd like to keep private,But i do post the +link on youtube"
+    "Suffix": "Github unavailable as this is a project of which code i'd like to keep private, I'm currently working on a markdown file explaining the inner workings of it, and i post the +link on youtube"
   },
   {
     "Name": "3DPlatformerWithLanMultiplayer",

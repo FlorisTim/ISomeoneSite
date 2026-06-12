@@ -15,6 +15,7 @@ let index = 0;
 
 const commentTemplate = `            
             <div class="comment">
+            EXTRA
                 <div class="time">
                     TOPTEXT
                 </div>
@@ -76,10 +77,9 @@ function moreComments(){
     commentSection = document.getElementById("comments");
     for (let i = 0; i < 3 && index < times.length; i++){
         commentSection.innerHTML += commentTemplate
-            .replace("TOPTEXT",
-                (favs.includes(ids[index]) ? " <div class='fav'>liked</div>" : "") +
-                times[index])
-            .replace("COMMENTTEXT",comments[index]);
+            .replace("TOPTEXT", times[index])
+            .replace("COMMENTTEXT",comments[index])
+            .replace("EXTRA",(favs.includes(ids[index]) ? " <div class='fav'>liked</div>" : ""));
         index++;
     }
 
