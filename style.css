@@ -18,6 +18,17 @@ video{
     font-variation-settings: "MONO" 1;
 
 }
+
+.fav{
+    color: #ffffff;
+    background-color: #ff004d;
+    height: 15px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .textbox {
     display: block;
     margin-left: auto;

@@ -2,17 +2,21 @@ const key = "sb_publishable_Ob2o7ujMLXVmwj2UlVFo8Q_Lskuw8et";
 const url = "https://zrerchdmjguamvgpdcub.supabase.co";
 
 const supa = window.supabase.createClient(url,key)
-
+let previous = [];
 let checkProfan = true;
+
 let comments = [];
 let times = [];
+let ids = [];
+let favs = [];
+
 
 let index = 0;
 
 const commentTemplate = `            
             <div class="comment">
                 <div class="time">
-                    TIMEDATE
+                    TOPTEXT
                 </div>
                 <div class="text">
                     COMMENTTEXT
@@ -24,10 +28,15 @@ let commentSection;
 addEventListener("DOMContentLoaded", (event) => Main());
 
 async function Main(){
-    const {data, error} = await supa.from("chat").select("*").order("time", {ascending: false}).limit(100);
+    const {data, error} = await supa.from("chat").select("*").order("time", {ascending: false}).limit(20);
 
+    const {data: fav, error: e} = await supa.from("favs").select("*").limit(100);
 
+    fav.forEach((number) => {
+        favs.push(number.messageid);
+    })
 
+    console.log(favs);
     console.log(error);
     console.log(data);
     data.forEach((item) => {
@@ -35,6 +44,7 @@ async function Main(){
         if (profanCheck(text) || !checkProfan) {
             comments.push(text.substring(0,50));
             times.push(new Date(item.time).toLocaleString());
+            ids.push(item.id);
         }
 
     })
@@ -66,7 +76,9 @@ function moreComments(){
     commentSection = document.getElementById("comments");
     for (let i = 0; i < 3 && index < times.length; i++){
         commentSection.innerHTML += commentTemplate
-            .replace("TIMEDATE",times[index])
+            .replace("TOPTEXT",
+                (favs.includes(ids[index]) ? " <div class='fav'>liked</div>" : "") +
+                times[index])
             .replace("COMMENTTEXT",comments[index]);
         index++;
     }
@@ -80,21 +92,27 @@ function moreComments(){
 
 
 }
-let previous = [];
+
+
 function profanCheck(text){
     text = text.trim();
     text = text.replace(" ", "");
     text = text.toLowerCase();
-    previous.push(text);
+
     if (
-        !previous.includes(text) ||
+        previous.includes(text) ||(
         text.includes("gg") ||
         text.includes("ck") ||
         text.includes("eg") ||
-        text.includes("nk")
+        text.includes("nk") ||
+        text.includes("ut") ||
+        text.includes("ay")
+        )
     ) {
+
         return false;
     }
+    previous.push(text);
     return true;
 }
 
