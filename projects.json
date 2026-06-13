@@ -26,7 +26,6 @@
     "Period": 3,
     "Images": ["resources/image-15.png","resources/image-14.png"],
     "Details": [
-      ["$open_in_home"],
       ["This is a tool I made for turning .bbmodels into models, animation and rigs files for my engine"],
       ["resources/tool.png"],
       ["I was also working on adding immersive portal, which turned out to be successful"],

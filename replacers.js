@@ -13,7 +13,7 @@ function Main(){
     }
 
     for (let i = 0; i < action.length; i++) {
-        action[i].innerText = action[i].innerText.replace("+age", ageCalc);
-        action[i].innerText = action[i].innerText.replace("+year", now.getFullYear);
+        action[i].innerText = action[i].innerText.replaceAll("+age", ageCalc);
+        action[i].innerText = action[i].innerText.replaceAll("+year", now.getFullYear);
     }
 }
