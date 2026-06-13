@@ -27,3 +27,5 @@ so it derives MBO/HBO/UNI from dividing Period/16, the year by adding 2025 + flo
 and then the period by doing (Period % 4) + 1, and it gives a clean data and where i was in my education at the point of making it.
 
 There are loads of better ways to do this, but this is my second website, I'm still improving.
+
+if the first entry in the details is "$open_in_home" it skips that entry as valid text and automatically opens the entire details section if the url contains "index.html"

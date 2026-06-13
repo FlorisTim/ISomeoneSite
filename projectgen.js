@@ -21,11 +21,12 @@ async function GrabProjects(){
 function GenerateDetailsElement(Details){
     let details = ``
     if (Details?.length > 0) {
-        details += `<details>`
-
         let importedDetails = Details;
-        for (let j = 0; j < importedDetails.length; j++) {
+        details += `<details ${importedDetails[0][0] === "$open_in_home" && window.location.pathname.includes("index.html") ? "open" : ""}>`
 
+
+        for (let j = 0; j < importedDetails.length; j++) {
+            if (importedDetails[j][0].includes("$")) {continue;}
             details += `<div class = "projectcontainer">`;
 
             for (let i = 0; i < importedDetails[j].length; i++) {
