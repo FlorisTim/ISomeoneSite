@@ -26,6 +26,6 @@ i assumed that i'm going to have 3 studies and 4 years per study and 4 periods p
 so it derives MBO/HBO/UNI from dividing Period/16, the year by adding 2025 + floor(Period/4),
 and then the period by doing (Period % 4) + 1, and it gives a clean data and where i was in my education at the point of making it.
 
-There are loads of better ways to do this, but this is my second website, I'm still improving.
-
 if the first entry in the details is "$open_in_home" it skips that entry as valid text and automatically opens the entire details section if the url contains "index.html"
+
+There are loads of better ways to do this, this is made to be quick and make the result readable and i'm ok at keeping it this way.

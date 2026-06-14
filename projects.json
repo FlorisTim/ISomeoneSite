@@ -10,6 +10,16 @@
     "Suffix": "+link.........+link.........+link"
   },
   {
+    "Name": "SintlucasChatroom",
+    "Type": 0,
+    "Title": "CHATROOM",
+    "Period": 4,
+    "Images": ["resources/chtrm1.png","resources/chtrm2.png"],
+    "Description": "This is a team project we made for school. It was the only web project we had, so we chose to create a chatroom with customizable styles. The tokens are exposed in the JavaScript, which I recognize is bad practice.",
+    "Links": [{"Text": "here", "Url":  "https://sint-lucas.github.io/sd1-p4-challenge-agile-2526-boterhamzakje/"}],
+    "Suffix": "I'm not allowed to share the github because it's a fork from a school repo, but you can try it +link. All messages are stored in a single table without any encryption, and received messages are filtered on the client side to check whether they belong to a group that the user is a member of. Security was not a major consideration because this was a school project, and the focus was primarily on the customizable styles."
+  },
+  {
     "Name": "CurrentDunge",
     "Type": 0,
     "Title": "\"Dunge\" Dungeon crawler game",
@@ -17,7 +27,7 @@
     "Images": ["resources/dunge1.png","resources/dunge2.png"],
     "Description": "My first actual game, I'm making it in Processing, so that's Java, and this is my first time using Java too.",
     "Links": [{"Text": "latest update", "Url":  "https://www.youtube.com/watch?v=ZDEKH_ichhc"}],
-    "Suffix": "Github unavailable as this is a project of which code I'd like to keep private, I'm currently working on a Markdown file explaining the inner workings of it, and I post the +link on YouTube"
+    "Suffix": "I'm keeping the github private, but I am currently working on a Markdown file explaining the inner workings of it, and I post the +link on YouTube"
   },
   {
     "Name": "3DPlatformerWithLanMultiplayer",
