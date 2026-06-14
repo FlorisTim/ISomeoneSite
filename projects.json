@@ -17,7 +17,7 @@
     "Images": ["resources/chtrm1.png","resources/chtrm2.png"],
     "Description": "This is a team project we made for school. It was the only web project we had, so we chose to create a chatroom with customizable styles. The tokens are exposed in the JavaScript, which I recognize is bad practice.",
     "Links": [{"Text": "here", "Url":  "https://sint-lucas.github.io/sd1-p4-challenge-agile-2526-boterhamzakje/"}],
-    "Suffix": "I'm not allowed to share the github because it's a fork from a school repo, but you can try it +link. All messages are stored in a single table without any encryption, and received messages are filtered on the client side to check whether they belong to a group that the user is a member of. Security was not a major consideration because this was a school project, and the focus was primarily on the customizable styles."
+    "Suffix": "I'm not allowed to share the github because it's a fork from a school repo, but you can try it +link. Security was not a major consideration because this was a school project, and the focus was primarily on the customizable styles."
   },
   {
     "Name": "CurrentDunge",
