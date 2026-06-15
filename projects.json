@@ -5,9 +5,9 @@
     "Title": "PROJECTS",
     "Period": 0,
     "Images": [],
-    "Description": "A collection of projects from my entire programming journey, showing progress from early experiments to more complex systems.",
+    "Description": "These are my projects from every period of my life since I have been programming, thanks for checking them out!",
     "Links": [{"Text": "Projects 2026", "Url": "projects26.html"},{"Text": "Projects 2022-2025", "Url": "projects22.html"},{"Text": "Projects 2019-2022", "Url": "projects19.html"}],
-    "Suffix": "Navigation: +link +link +link"
+    "Suffix": "+link.........+link.........+link"
   },
   {
     "Name": "SintlucasChatroom",
@@ -15,9 +15,9 @@
     "Title": "CHATROOM",
     "Period": 4,
     "Images": ["resources/chtrm1.png","resources/chtrm2.png"],
-    "Description": "Team-based school project: a real-time chatroom web app with customizable styling options.",
+    "Description": "This is a team project we made for school. It was the only web project we had, so we chose to create a chatroom with customizable styles. The tokens are exposed in the JavaScript, which I recognize is bad practice.",
     "Links": [{"Text": "here", "Url":  "https://sint-lucas.github.io/sd1-p4-challenge-agile-2526-boterhamzakje/"}],
-    "Suffix": "The repository cannot be shared publicly because it is based on a school fork. The focus of the project was UI customization and client-side functionality. +link"
+    "Suffix": "I'm not allowed to share the github because it's a fork from a school repo, but you can try it +link. Security was not a major consideration because this was a school project, and the focus was primarily on the customizable styles."
   },
   {
     "Name": "CurrentDunge",
@@ -25,9 +25,9 @@
     "Title": "\"Dunge\" Dungeon crawler game",
     "Period": 2026,
     "Images": ["resources/dunge1.png","resources/dunge2.png"],
-    "Description": "Dungeon crawler built in Processing (Java), focusing on gameplay systems and engine structure.",
+    "Description": "My first actual game, I'm making it in Processing, so that's Java, and this is my first time using Java too.",
     "Links": [{"Text": "latest update", "Url":  "https://www.youtube.com/watch?v=ZDEKH_ichhc"}],
-    "Suffix": "GitHub is private, but I’m documenting the project in a Markdown breakdown and posting development updates on YouTube. +link"
+    "Suffix": "I'm keeping the github private, but I am currently working on a Markdown file explaining the inner workings of it, and I post the +link on YouTube"
   },
   {
     "Name": "3DPlatformerWithLanMultiplayer",
@@ -40,15 +40,15 @@
       ["resources/tool.png"],
       ["I was also working on adding immersive portal, which turned out to be successful"],
       ["resources/portal.gif"],
-      ["Physics system: AABB collision detection with velocity-based movement"],
-      ["Rendering system: multi-layer rendering where everything is drawn to a depth-buffered field, then built up into lines and triangles"],
-      ["Models, rigs and animations are parsed from custom file formats into runtime structures stored in dictionaries for rendering"],
-      ["Entity system uses a central update loop where each entity type has its own update and render methods"],
-      ["Portal system uses dual cameras and offset rendering to simulate portal views"]
+      ["Physics system: the physics system is really basic, it has AABB collision checking and velocity based movement"],
+      ["Rendering system: the rendering has multiple layers, every draw function comes down to drawing a point on the field, which is allowed or not allowed by the program looking at the depth buffer, from there it draws lines and lines draw triangles."],
+      ["Models, rigs and animations are done by parsing my custom made filetypes into initialising classes and putting them into dictionaries so they can be used to render the players and enemies and their animations"],
+      ["Entities work by having one list with all the entity instances and then updating them one by one, every entity type has its own method and render method."],
+      ["Portals were done with a very nice trick, I had 3 cameras, one main and 2 for the portals, and the portals just offset the cameras and made it so the color of the portals were showing the color straight from their cameras output, like a greenscreen"]
     ],
-    "Description": "Custom 3D platformer engine built in a C# console environment. Includes movement systems, enemies, a text-based rendering pipeline, file parsing tools, and LAN multiplayer using TCP networking.",
+    "Description": "This project is a big one, it has moving platforms, enemies, a text rendering engine, file parsers, rig editor, model editor and functional LAN multiplayer using TCP networking, in the C# console app",
     "Links": [{"Text": "Github", "Url": "https://github.com/FlorisTim/3D-platformer-in-the-c-console-app"}],
-    "Suffix": "Developed during early C# experience (5–7 months), heavily focused on engine design, networking, and system architecture. +link"
+    "Suffix": "+link I learned most of C# with this project, I started this one at 5 months of experience with C# and ended it with 7 months, I learned the most in those 2 months"
   },
   {
     "Name": "PizzaShop",
@@ -58,7 +58,7 @@
     "Images": [
       "resources/image-10-1024x852.png"
     ],
-    "Description": "School webshop project with cart system, JSON-based products, and persistent cart state across reloads.",
+    "Description": "A simple webshop, not functioning as a real one, as a project for school we had to make a webshop, my webshop used a JSON file, calculated the total price and kept the items in the cart when you reloaded the page, there's an “add more” product at the end, its purpose was to show how expansive it was.",
     "Links": [
       {
         "Text": "Github",
@@ -69,7 +69,7 @@
         "Url": "https://rawcdn.githack.com/FlorisTim/javascript-css-html-challenge/cd5ff765c0c4147d57e0f7a9b7b6056323c69ee5/sd1-p2-challenge-javascript-2526-FlorisTim/project_files%20folder/web_shop_floris.html"
       }
     ],
-    "Suffix": "Cart system with dynamic price calculation and persistent state. +link +link"
+    "Suffix": "Links: +link, +link"
   },
   {
     "Name": "Portfolio",
@@ -79,7 +79,7 @@
     "Images": [
       "resources/portfolio.png"
     ],
-    "Description": "This portfolio website. Projects are generated dynamically from structured JSON using JavaScript, making it easy to add or modify entries.",
+    "Description": "The site you're currently on, I liked building this site because it was my second website ever, although the HTML and CSS are basic, every project itself is generated by the JavaScript, each project is generated from structured data, allowing me to add and remove projects very easily",
     "Links": [
       {
         "Text": "Github",
@@ -94,9 +94,9 @@
     "Title": "3D WIREFRAME PLATFORMER",
     "Period": 1,
     "Images": ["resources/image-11-768x606.png"],
-    "Description": "Early 3D wireframe platformer built in a console-based rendering system.",
+    "Description": "This project was a 3D wireframe platformer, it had its own rendering system as it was in the console app.",
     "Links": [{"Text": "Github", "Url": "https://github.com/FlorisTim/3D-Platformer-in-C-Console-App"}],
-    "Suffix": "Includes moving platforms, disappearing platforms, checkpoints, and an infinite progression system. +link",
+    "Suffix": "It has moving platforms, and platforms slowly disappear behind you, it was also infinite with a checkpoint every x amount of platforms, +link",
     "Details": [
       ["On the topic of 3D, this is a raycaster I also made in the console app"],
       ["resources/raycaster.png"]
@@ -108,9 +108,9 @@
     "Title": "SIMPLE FIGHTING GAME",
     "Period": 2,
     "Images": ["resources/image-12-768x544.png"],
-    "Description": "Turn-based fighting game with item systems, procedural generation, and progression-based combat.",
+    "Description": "This project was a game with a simple battle system, item management, and procedurally generated items and enemies, this was the final assignment for the year.",
     "Links": [{"Text": "Github", "Url": "https://github.com/FlorisTim/FinalAssignmentYear1"}],
-    "Suffix": "Includes stats, classes, scaling enemies, and progression-based rewards. +link"
+    "Suffix": "it has items, several stats, player classes and enemies, items get stronger overtime and every time you win you get more powerful, eventually unlocking bonuses, +link"
   },
   {
     "Name": "MusicGame",
@@ -118,8 +118,8 @@
     "Title": "MUSIC MIXING GAME",
     "Period": 2025,
     "Images": ["resources/musicmixinggame.png"],
-    "Description": "Audio-based game where different sound layers are enabled and disabled to create music.",
-    "Suffix": "Includes stereo positioning where sound direction is controlled through input-based channel routing."
+    "Description": "A game where you enable and disable certain sounds which combined created a song",
+    "Suffix": "The microphone could be toggled to make other sounds position decide if the sound would be going through the left or right channel"
   },
   {
     "Name": "OperatingSystem",
@@ -127,8 +127,8 @@
     "Title": "SIMULATED OPERATING SYSTEM",
     "Period": 2021,
     "Images": ["resources/simulatedoperatingsystem.png"],
-    "Description": "Experimental simulated operating system exploring system-like architecture and application handling.",
-    "Suffix": "Includes early app store concept with plans for online integration."
+    "Description": "An attempt at making my own operating system, it was a very experimental project but extremely fun to make",
+    "Suffix": "There was an app store which would later be made online"
   },
   {
     "Name": "ChatApp",
@@ -136,8 +136,8 @@
     "Title": "ONLINE CHAT APP",
     "Period": 2019,
     "Images": ["resources/onlinechatapp.png"],
-    "Description": "Early networking-based chat app with custom emojis, encoded images, and formatted text rendering.",
-    "Suffix": "Includes custom text rendering engine, formatting system, and early experimentation with networking and data encoding."
+    "Description": "A chat app where you could make your own emoji's, share 10 by 10 binary images, animated symbols and of course normal text too",
+    "Suffix": "It had an entire text render engine, with formatting, colors and custom emojis rendered based on a few symbols, this was also my first introduction to networking and encoding and decoding data"
   },
   {
     "Name": "PMSalesGame",
@@ -145,8 +145,8 @@
     "Title": "SALES GAME",
     "Period": 2023,
     "Images": ["resources/oldsalesgame.png"],
-    "Description": "Business simulation game focused on trends, inflation, and resource management.",
-    "Suffix": "Includes economy simulation, competitor interactions, and win/loss conditions based on financial performance."
+    "Description": "This was a game where you had to keep track of trends, what products were popular, inflation and hiring and paying managers",
+    "Suffix": "Once in a while there was an enemy and at the end of the battle if they had more money you'd lose the game"
   },
   {
     "Name": "Portal",
@@ -154,7 +154,7 @@
     "Title": "VISUAL PORTAL EFFECT",
     "Period": 2019,
     "Images": ["resources/portaldemo.png"],
-    "Description": "Prototype exploring portal-based rendering and spatial visualization.",
+    "Description": "The idea in this project was that you'd be able to see half of the player on one side and the other half on the other.",
     "Suffix": ""
   },
   {
@@ -163,28 +163,29 @@
     "Title": "2D WORLD GENERATION",
     "Period": 2,
     "Images": ["resources/image-13-768x560.png"],
-    "Description": "Procedural 2D world generator inspired by terrain systems and cellular simulation concepts.",
+    "Description": "Inspired by Minecraft I wanted to make a simple world generator, every tile is 4×4 by utilizing the foreground and background colors, it was originally meant to be simulating how fungus grows, but I never got to that point as other, more bigger projects got in the way.",
     "Links": [{"Text": "Github", "Url": "https://github.com/FlorisTim/worldgenerator"}],
-    "Details": [
+    "Details":
+    [
       ["A similar project to this"],
       ["resources/topdownworldgeneration.png"],
-      ["Grid-based simulation using neighbor averaging to generate terrain-like patterns mapped to colors"]
+      ["Here I made a grid where every pixel got randomized and then getting averaged out by looking at their neighbours, I mapped it to colors that resemble terrain"]
     ],
-    "Suffix": "Includes terrain types like sand, grass, dirt, stone, water, and air, with simple biome rules. +link"
+    "Suffix": "it has 5 different tiles, sand, grass, dirt, stone, water and air, it featured mountains and shallow lakes, with grass being replaced by sand if underwater, +link"
   },
   {
     "Name": "PlantGrowth",
     "Type": 1,
     "Period": 2026,
     "Source": "resources/video_1-1.mp4",
-    "Description": "Procedural plant growth simulation based on L-system style rules."
+    "Description": "Procedural plant growth, I made this one and the next one after hearing about “L-systems”, from what I know they're a way of representing how a plant grows on text"
   },
   {
     "Name": "SalesGame",
     "Type": 1,
     "Period": 2026,
     "Source": "resources/video_1 (2).mp4",
-    "Description": "Prototype trading game focused on buying and selling mechanics in a simulated economy."
+    "Description": "prototype sales game where you have to buy and sell stuff online, I never got to finishing the game"
   },
   {
     "Name": "RagdollGame",
@@ -192,9 +193,9 @@
     "Title": "RAGDOLL PHYSICS GAME",
     "Period": 2024,
     "Images": ["resources/image-768x576.png"],
-    "Description": "Physics-based ragdoll game built using a physics system focused on joint behavior and interaction.",
+    "Description": "This project uses a built-in physics library, This taught me how to handle joints, gave me a basic sense of physics, and was fun to program too.",
     "Links": [{"Text": "Goto game", "Url": "https://rawcdn.githack.com/FlorisTim/Portfolio-sources/refs/heads/main/stickmangame.html"}],
-    "Suffix": "Includes limb-based damage, power-ups, and sound effects. +link"
+    "Suffix": "The game has powerups, per limb damage, and sound effects. +link"
   },
   {
     "Name": "Dunge",
@@ -204,7 +205,7 @@
     "Images": [
       "resources/image-1-768x429.png"
     ],
-    "Description": "Dungeon crawler with entity systems, inventory, combat, procedural elements, and JSON-driven configuration.",
+    "Description": "Inspired by the average dungeon crawler, I attempted to make one myself, I worked on it for about 8 months, and while developing made several programs that helped me develop the game",
     "Details": [
       [
         "resources/image-2-150x150.png",
@@ -212,7 +213,7 @@
         "resources/image-6-150x150.png"
       ],
       [
-        "Includes custom animation tools, particle systems, sound system, achievements, and in-game editor tools."
+        "I made a separate animation program for coding the animations, they were all formula based, the game itself featured a particle system, entities, items, an inventory system, sound effects, achievements, music and a combat system, I also added a system inside the game itself to edit how the generator works, enemy AI works etc, everything was JSON based."
       ],
       [
         "resources/image-3-768x507.png"
@@ -221,7 +222,7 @@
         "resources/image-8-768x576.png"
       ],
       [
-        "Includes a lightweight animation editor inspired by Scratch-like workflows."
+        "I created an additional animation program for this game specifically, which included a self made lightweight version of Scratch."
       ]
     ],
     "Suffix": ""
@@ -234,8 +235,8 @@
     "Images": [
       "resources/sales.png"
     ],
-    "Description": "Internal tool for tracking sales performance, bonuses, and productivity metrics.",
-    "Suffix": "Includes KPI tracking, revenue calculations, and performance history. "
+    "Description": "This is a project I made for when I worked at GoGetters, I uploaded the chat history at the end of the week to keep track of what my score was.",
+    "Suffix": "It had a way to keep track of bonuses, how much I made, how much I made for the company, my average sales in a month, my highest record, and if it's above or below the quota"
   },
   {
     "Name": "MachineCreator",
@@ -243,8 +244,8 @@
     "Title": "MACHINE CREATION GAME",
     "Period": 2023,
     "Images": ["resources/image-9-768x458.png"],
-    "Description": "Sandbox game for building logic-based machines using modular components.",
-    "Suffix": "Includes save/load system, GUI editor, and configurable simulation step control."
+    "Description": "Here I created a project that lets the user create entire machines with basic components, like calculators, counters and simple computers, I got inspired by Minecraft redstone",
+    "Suffix": "The game had a save and load system, a simple GUI for selecting and editing a project, and control over how many steps the simulation takes every update."
   },
   {
     "Name": "3DRaycasterScratch",
@@ -252,8 +253,8 @@
     "Title": "3D RAYCASTER DEMO",
     "Period": 2020,
     "Embed": "https://scratch.mit.edu/projects/436335693/embed",
-    "Description": "Raycasting demo exploring visibility and spatial rendering techniques.",
-    "Suffix": "Includes audio feedback, interaction system, and multi-room rendering with color variation."
+    "Description": "This project explores the use of raycasting to simulate visibility and spatial rendering, resulting in a simple game built around these techniques, I also added a simple interaction mechanic",
+    "Suffix": "The game features footstep audio, a basic interaction system, and multiple rooms with differently colored walls that influence the appearance of the sky."
   },
   {
     "Name": "ShadowEffectScratch",
@@ -261,8 +262,8 @@
     "Title": "Live shadow effect",
     "Period": 2020,
     "Embed": "https://scratch.mit.edu/projects/458383227/embed",
-    "Description": "Real-time shadow system using raycasting for dynamic visibility and occlusion.",
-    "Suffix": "Includes wall/window visibility rules and a simple collection objective system."
+    "Description": "Inspired by Among Us, I built a raycasting-based shadow system that dynamically hides areas behind walls when the player turns corners. This project builds on techniques developed in a previous raycasting implementation.",
+    "Suffix": "Featured walls and windows with distinct visibility behavior: the player is blocked by both, but can see through windows. Includes a simple objective system where the player collects 4 apples. Developed as a proof of concept for visibility and interaction mechanics."
   },
   {
     "Name": "CarGame",
@@ -270,8 +271,8 @@
     "Title": "2.5D CAR Racing game",
     "Period": 2021,
     "Embed": "https://scratch.mit.edu/projects/523874988/embed",
-    "Description": "Pseudo-3D racing game using segmented road rendering with parallax effects.",
-    "Suffix": "Includes obstacles, collectibles, day/night cycle, and lighting effects."
+    "Description": "In this project I created a 3D effect by placing a bunch of road segments and applying a size and parallax effect to them, same with the items and obstacles",
+    "Suffix": "The game features several obstacles like construction cones and cars, and items like coins, also a day and night cycle, road lights, and car lights"
   },
   {
     "Name": "EscapeMansion",
@@ -279,7 +280,7 @@
     "Title": "ESCAPE GAME DEMO",
     "Period": 2021,
     "Embed": "https://scratch.mit.edu/projects/546110279/embed",
-    "Description": "Top-down escape game focused on exploration, keys, and progression through levels.",
-    "Suffix": "Includes inventory system, multi-level design, and map-based navigation logic."
+    "Description": "This project is a simple game where you have to locate keys, find gates and escape a mansion, you can navigate with the map",
+    "Suffix": "Featured keys, gates, multiple levels and a basic inventory system, I used a specific mapping of the players position and the x and y of the room where they're in to draw a point on the map"
   }
 ]
