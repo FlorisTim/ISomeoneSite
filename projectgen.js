@@ -50,17 +50,19 @@ function GenerateDetailsElement(Details){
 function GeneratePeriodElement(period){
     const periodPerYear = 4;
     const periodPerStudy = 16;
+    const yearsPerStudy = 4;
 
     let periodtext = `[`
     const opleidingen = ["MBO ", "HBO ", "UNI "]
     if (period < 128 && period > 0){
+        period -= 1;
         periodtext += `${opleidingen[Math.floor(period/periodPerStudy)]} `;
-        periodtext += ` Year ${Math.floor(period/periodPerYear)+1}, `;
+        periodtext += ` Year ${(Math.floor(period/periodPerYear)%yearsPerStudy)+1}, `;
         periodtext += `Period `;
     }
-    periodtext += `${period}`;
+    periodtext += `${(period%periodPerYear)+1}`;
 
-    if (period < 128 && period > 0){periodtext += `] [${2026 + Math.floor(period/4)}`;}
+    if (period < 128 && period > 0){periodtext += `] [${2026 + Math.floor(period/periodPerYear)}`;}
     periodtext += `]`;
     periodtext = periodtext.replace("[0]", "");
 
