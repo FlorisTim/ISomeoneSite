@@ -64,7 +64,7 @@ function GeneratePeriodElement(period){
 
     if (period < 128 && period > 0){periodtext += `] [${2026 + Math.floor(period/periodPerYear)}`;}
     periodtext += `]`;
-    periodtext = periodtext.replace("[0]", "");
+    periodtext = periodtext.length < 4 ? `[${period}]` : periodtext;
 
     return `<p class="graytext">${periodtext}</p>`;
 }
