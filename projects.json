@@ -26,7 +26,7 @@
     "Period": 2026,
     "Images": ["resources/dunge1.png","resources/dunge2.png"],
     "Description": "My first actual game, I'm making it in Processing, so that's Java, and this is my first time using Java too.",
-    "Links": [{"Text": "latest update", "Url":  "https://www.youtube.com/watch?v=ZDEKH_ichhc"}],
+    "Links": [{"Text": "latest update", "Url":  "https://youtu.be/j5Et8lXv1Qw"}],
     "Suffix": "I'm keeping the github private, but I am currently working on a Markdown file explaining the inner workings of it, and I post the +link on YouTube"
   },
   {
