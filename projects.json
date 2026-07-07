@@ -27,7 +27,15 @@
     "Images": ["resources/dunge1.png","resources/dunge2.png"],
     "Description": "My first actual game, I'm making it in Processing, so that's Java, and this is my first time using Java too.",
     "Links": [{"Text": "latest update", "Url":  "https://youtu.be/j5Et8lXv1Qw"}],
-    "Suffix": "I'm keeping the github private, but I am currently working on a Markdown file explaining the inner workings of it, and I post the +link on YouTube"
+    "Suffix": "I'm keeping the github private, but I am currently working on a Markdown file explaining the inner workings of it, and I post the +link on YouTube",
+    "Details": [
+      ["Here is a short list of things think are worth mentioning that i added to this game yet."],
+      ["For the animations and entityAI i built 2 DSL's, whereof one parses symbols like \"IF 5 + 5 == a - b\" into a string of operations that end in one comparison op"],
+      ["The world generation works by generating noise based on methods I wrote myself, and several algorithms which are customizable via a json file"],
+      ["The word ofcourse also needs entities, theyre generated using templates also from a json file"],
+      ["The templates and rulesets are kept as simple as possible so they're easy to mutate and give variety throughout the world"],
+      ["I'm also planning on adding anything in nature by using something similar to L-systems, and maybe making it so that the code is an array of bytes where every even byte is a function like forward or turn right/left and every odd byte is the argument for that function, making it easy to mutate every even byte to make every plant/tree vary."]
+    ]
   },
   {
     "Name": "3DPlatformerWithLanMultiplayer",
