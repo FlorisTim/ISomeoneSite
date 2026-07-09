@@ -19,6 +19,34 @@ video{
 
 }
 
+kbd{
+    font-family: "Google Sans Code", monospace;
+    background-color: #323232;
+    border-color: #121212;
+    border-style: solid;
+    color: #ffffff;
+    border-width: 1px;
+    padding-right: 3px;
+    padding-left: 3px;
+    border-radius: 6px;
+    font-size: 80%;
+}
+
+
+.keywrd{
+    color: #DCDCAA;
+}
+
+.num{
+    color: #B5CEA8;
+    font-weight: normal;
+}
+.var{
+    color: #9CDCFE;
+    font-weight: normal;
+}
+
+
 .fav{
     color: #ffffff;
     background-color: #ff004d;

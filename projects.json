@@ -15,7 +15,7 @@
     "Title": "CHATROOM",
     "Period": 4,
     "Images": ["resources/chtrm1.png","resources/chtrm2.png"],
-    "Description": "This is a team project we made for school. It was the only web project we had, so we chose to create a chatroom with customizable styles. The tokens are exposed in the JavaScript, which I recognize is bad practice.",
+    "Description": "This is a team project we made for school. It was the only web project we had, so we chose to create a chatroom with customizable styles. The tokens are exposed in the JavaScript, which is a sacrifice we took to focus more on the architecture of the website.",
     "Links": [{"Text": "here", "Url":  "https://sint-lucas.github.io/sd1-p4-challenge-agile-2526-boterhamzakje/"}],
     "Suffix": "I'm not allowed to share the github because it's a fork from a school repo, but you can try it +link. Security was not a major consideration because this was a school project, and the focus was primarily on the customizable styles."
   },
@@ -30,7 +30,7 @@
     "Suffix": "I'm keeping the github private, but I am currently working on a Markdown file explaining the inner workings of it, and I post the +link on YouTube",
     "Details": [
       ["Here is a short list of things think are worth mentioning that i added to this game yet."],
-      ["For the animations and entityAI i built 2 DSL's, whereof one parses symbols like \"IF 5 + 5 == a - b\" into a string of operations that end in one comparison op"],
+      ["For the animations and entityAI i built 2 DSLs, whereof one parses symbols like <kbd><span class='keywrd'>IF</span> <span class='num'>5</span> + <span class='num'>5</span> == <span class='var'>a</span> - <span class='var'>b</span></kbd> into something like this <br> <kbd><span class='keywrd'>SWITCH_SLOT</span> <span class='num'>0</span>; <span class='keywrd'>ADD</span> <span class='num'>5 5</span>; <span class='keywrd'>SWITCH_SLOT</span> <span class='num'>1</span>; <span class='keywrd'>SUB</span> <span class='var'>a b</span>; <span class='keywrd'>IFEQ</span> <span class='var'>result0 result1</span>;</kbd> this makes it easier for the actual compiler to compile it"],
       ["The world generation works by generating noise based on methods I wrote myself, and several algorithms which are customizable via a json file"],
       ["The word ofcourse also needs entities, theyre generated using templates also from a json file"],
       ["The templates and rulesets are kept as simple as possible so they're easy to mutate and give variety throughout the world"],
@@ -48,7 +48,7 @@
       ["resources/tool.png"],
       ["I was also working on adding immersive portal, which turned out to be successful"],
       ["resources/portal.gif"],
-      ["Physics system: the physics system is really basic, it has AABB collision checking and velocity based movement"],
+      ["Physics system: it has AABB collision checking and velocity based movement"],
       ["Rendering system: the rendering has multiple layers, every draw function comes down to drawing a point on the field, which is allowed or not allowed by the program looking at the depth buffer, from there it draws lines and lines draw triangles."],
       ["Models, rigs and animations are done by parsing my custom made filetypes into initialising classes and putting them into dictionaries so they can be used to render the players and enemies and their animations"],
       ["Entities work by having one list with all the entity instances and then updating them one by one, every entity type has its own method and render method."],
