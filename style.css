@@ -1,0 +1,55 @@
+body{
+    background-color: #2e2e2e;
+}
+
+.google-sans-code {
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-variation-settings: "MONO" 1;
+}
+
+.slot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #2e2e2e;
+    padding: 20px;
+    justify-self: center;
+
+}
+
+.title{
+    color: white;
+    font-family: "Google Sans Code", monospace;
+    font-weight: normal;
+    font-size: 300%;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+.portfolio{
+    background-color: #4c4c4c;
+}
+
+.portfolio a{
+    border: none;
+    background: none;
+    font-family: "Google Sans Code", monospace;
+    font-size: 22.5px;
+    color: #f8e430;
+    margin: auto;
+    font-weight: 500;
+}
+
+.portfolio a:hover{
+    color: #4bf830;
+}
