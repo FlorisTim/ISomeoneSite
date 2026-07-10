@@ -1,0 +1,32 @@
+name: Update YouTube Feed
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download RSS feed
+        run: |
+          curl -L "https://www.youtube.com/feeds/videos.xml?channel_id=UCIZQmXYPqruiODZWLcQ8oIA" -o youtube.xml
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          git add youtube.xml
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update YouTube feed"
+            git push
+          fi
