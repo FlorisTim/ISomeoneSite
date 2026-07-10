@@ -18,6 +18,7 @@ body{
     padding: 20px;
     justify-self: center;
     gap: 40px;
+    border-bottom: 1px solid #2e2e2e;
 }
 img{
     border-radius: 100%;
@@ -32,13 +33,20 @@ img{
 
 }
 
+.text{
+    color: white;
+    font-family: monospace;
+    font-weight: normal;
+    font-size: 200%;
+}
+
 .main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
     margin-left: 15vw;
     margin-right: 15vw;
+
 }
 .bg{
     background-color: #4c4c4c;
