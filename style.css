@@ -22,7 +22,7 @@ body{
 
 .title{
     color: white;
-    font-family: "Google Sans Code", monospace;
+    font-family: monospace;
     font-weight: normal;
     font-size: 300%;
 
@@ -36,11 +36,11 @@ body{
     margin-left: 15vw;
     margin-right: 15vw;
 }
-.portfolio{
+.bg{
     background-color: #4c4c4c;
 }
 
-.portfolio a{
+a{
     border: none;
     background: none;
     font-family: "Google Sans Code", monospace;
@@ -50,6 +50,6 @@ body{
     font-weight: 500;
 }
 
-.portfolio a:hover{
+a:hover{
     color: #4bf830;
 }
