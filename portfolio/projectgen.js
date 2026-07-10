@@ -12,7 +12,7 @@ async function Main(){
 }
 
 async function GrabProjects(){
-    const response = await fetch("./projects.json");
+    const response = await fetch("/portfolio/projects.json");
     projects = await response.json();
 
 
