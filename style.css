@@ -17,7 +17,11 @@ body{
     background-color: #2e2e2e;
     padding: 20px;
     justify-self: center;
-
+    gap: 40px;
+}
+img{
+    border-radius: 100%;
+    border: 5px solid #393939;
 }
 
 .title{
