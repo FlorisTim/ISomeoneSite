@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e02c52cc-39b8-492d-8a86-5733f3450a13" name="Changes" comment="" />
+    <list default="true" id="e02c52cc-39b8-492d-8a86-5733f3450a13" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/projects19.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/projects19.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/projects22.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/projects22.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/projects26.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/projects26.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,14 +15,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="3GI0wGYo4lFp9BMGYxx86gR2y89" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.projects19.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/floti/Desktop/isomeonesite/portfolio",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\floti\Desktop\isomeonesite\portfolio\projects" />
@@ -38,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1783644012410</updated>
       <workItem from="1783644013527" duration="150000" />
+      <workItem from="1783644165409" duration="123000" />
     </task>
     <servers />
   </component>
