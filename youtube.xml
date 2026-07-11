@@ -21,7 +21,7 @@
    <uri>https://www.youtube.com/channel/UCIZQmXYPqruiODZWLcQ8oIA</uri>
   </author>
   <published>2026-07-10T21:03:33+00:00</published>
-  <updated>2026-07-10T21:06:39+00:00</updated>
+  <updated>2026-07-10T21:40:46+00:00</updated>
   <media:group>
    <media:title>egocentrism (fan video of myself, test for website)</media:title>
    <media:content url="https://www.youtube.com/v/TeUeJ6RgIwk?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
@@ -29,7 +29,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="2"/>
+    <media:statistics views="13"/>
    </media:community>
   </media:group>
  </entry>
@@ -52,7 +52,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="2" average="5.00" min="1" max="5"/>
-    <media:statistics views="15"/>
+    <media:statistics views="17"/>
    </media:community>
   </media:group>
  </entry>
@@ -75,7 +75,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="44"/>
+    <media:statistics views="45"/>
    </media:community>
   </media:group>
  </entry>
@@ -98,7 +98,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="8"/>
+    <media:statistics views="9"/>
    </media:community>
   </media:group>
  </entry>
@@ -121,7 +121,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="25"/>
+    <media:statistics views="26"/>
    </media:community>
   </media:group>
  </entry>
@@ -144,7 +144,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="8"/>
+    <media:statistics views="9"/>
    </media:community>
   </media:group>
  </entry>
@@ -236,7 +236,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="46"/>
+    <media:statistics views="48"/>
    </media:community>
   </media:group>
  </entry>
@@ -259,7 +259,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="29"/>
+    <media:statistics views="30"/>
    </media:community>
   </media:group>
  </entry>
@@ -282,7 +282,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="53"/>
+    <media:statistics views="54"/>
    </media:community>
   </media:group>
  </entry>
