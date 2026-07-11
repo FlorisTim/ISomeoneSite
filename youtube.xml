@@ -11,29 +11,6 @@
  </author>
  <published>2024-04-26T00:57:32+00:00</published>
  <entry>
-  <id>yt:video:TeUeJ6RgIwk</id>
-  <yt:videoId>TeUeJ6RgIwk</yt:videoId>
-  <yt:channelId>UCIZQmXYPqruiODZWLcQ8oIA</yt:channelId>
-  <title>egocentrism (fan video of myself, test for website)</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=TeUeJ6RgIwk"/>
-  <author>
-   <name>I Someone</name>
-   <uri>https://www.youtube.com/channel/UCIZQmXYPqruiODZWLcQ8oIA</uri>
-  </author>
-  <published>2026-07-10T21:03:33+00:00</published>
-  <updated>2026-07-10T21:40:46+00:00</updated>
-  <media:group>
-   <media:title>egocentrism (fan video of myself, test for website)</media:title>
-   <media:content url="https://www.youtube.com/v/TeUeJ6RgIwk?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i1.ytimg.com/vi/TeUeJ6RgIwk/hqdefault.jpg" width="480" height="360"/>
-   <media:description></media:description>
-   <media:community>
-    <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="13"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
   <id>yt:video:SxyRAhfAGxY</id>
   <yt:videoId>SxyRAhfAGxY</yt:videoId>
   <yt:channelId>UCIZQmXYPqruiODZWLcQ8oIA</yt:channelId>
@@ -356,6 +333,29 @@ Ultrabox</media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
     <media:statistics views="8"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:RZYYHMUtyrU</id>
+  <yt:videoId>RZYYHMUtyrU</yt:videoId>
+  <yt:channelId>UCIZQmXYPqruiODZWLcQ8oIA</yt:channelId>
+  <title>tslagams 120</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=RZYYHMUtyrU"/>
+  <author>
+   <name>I Someone</name>
+   <uri>https://www.youtube.com/channel/UCIZQmXYPqruiODZWLcQ8oIA</uri>
+  </author>
+  <published>2026-06-23T09:04:08+00:00</published>
+  <updated>2026-06-23T09:05:12+00:00</updated>
+  <media:group>
+   <media:title>tslagams 120</media:title>
+   <media:content url="https://www.youtube.com/v/RZYYHMUtyrU?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/RZYYHMUtyrU/hqdefault.jpg" width="480" height="360"/>
+   <media:description></media:description>
+   <media:community>
+    <media:starRating count="1" average="5.00" min="1" max="5"/>
+    <media:statistics views="14"/>
    </media:community>
   </media:group>
  </entry>
