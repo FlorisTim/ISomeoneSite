@@ -13,6 +13,9 @@ async function Main() {
         let entry = entries[i];
         posts.innerHTML += (`<div class="slot bg">${generateYTEmbed(entry.querySelectorAll("id")[0].textContent)}</div>`);
     }
+    if(window.screen.width < 900){
+        document.getElementsByClassName("replacement")[0].innerText = "Latest youtube video"
+    }
 }
 
 function generateYTEmbed(link) {

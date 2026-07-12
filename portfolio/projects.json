@@ -15,7 +15,7 @@
     "Title": "CHATROOM",
     "Period": 4,
     "Images": ["/portfolio/resources/chtrm1.png","/portfolio/resources/chtrm2.png"],
-    "Description": "This is a team project we made for school. It was the only web project we had, so we chose to create a chatroom with customizable styles. The tokens are exposed in the JavaScript, which is a sacrifice we took to focus more on the architecture of the website.",
+    "Description": "This is a team project we made for school. It was the only web project we had, so we chose to create a chatroom with customizable styles. The tokens are exposed in the JavaScript, which i recognize is bad. but it's a sacrifice we took to focus more on the architecture of the website.",
     "Links": [{"Text": "here", "Url":  "https://sint-lucas.github.io/sd1-p4-challenge-agile-2526-boterhamzakje/"}],
     "Suffix": "I'm not allowed to share the github because it's a fork from a school repo, but you can try it +link. It's not functioning as a chatroom because i removed the tokens, but you can check out the page."
   },
