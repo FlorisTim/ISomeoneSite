@@ -32,6 +32,15 @@ kbd{
     font-size: 80%;
 }
 
+a kbd{
+    text-decoration: underline;
+    color: rgba(111, 100, 255, 0.73);
+}
+a kbd:hover{
+    text-decoration: underline;
+    color: rgba(0, 178, 255, 0.73);
+}
+
 
 .keywrd{
     color: #DCDCAA;
