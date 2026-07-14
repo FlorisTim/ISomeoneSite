@@ -29,7 +29,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="2" average="5.00" min="1" max="5"/>
-    <media:statistics views="8"/>
+    <media:statistics views="11"/>
    </media:community>
   </media:group>
  </entry>
@@ -52,7 +52,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="9"/>
+    <media:statistics views="13"/>
    </media:community>
   </media:group>
  </entry>
@@ -168,7 +168,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="32"/>
+    <media:statistics views="33"/>
    </media:community>
   </media:group>
  </entry>
@@ -214,7 +214,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="25"/>
+    <media:statistics views="26"/>
    </media:community>
   </media:group>
  </entry>
@@ -283,7 +283,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="56"/>
+    <media:statistics views="57"/>
    </media:community>
   </media:group>
  </entry>
@@ -356,7 +356,7 @@ Roland50 studio
 Ultrabox</media:description>
    <media:community>
     <media:starRating count="3" average="5.00" min="1" max="5"/>
-    <media:statistics views="61"/>
+    <media:statistics views="62"/>
    </media:community>
   </media:group>
  </entry>
