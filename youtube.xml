@@ -29,7 +29,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="2" average="5.00" min="1" max="5"/>
-    <media:statistics views="20"/>
+    <media:statistics views="23"/>
    </media:community>
   </media:group>
  </entry>
@@ -52,7 +52,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="13"/>
+    <media:statistics views="16"/>
    </media:community>
   </media:group>
  </entry>
@@ -122,7 +122,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="53"/>
+    <media:statistics views="55"/>
    </media:community>
   </media:group>
  </entry>
@@ -168,7 +168,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="34"/>
+    <media:statistics views="37"/>
    </media:community>
   </media:group>
  </entry>
@@ -214,7 +214,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="26"/>
+    <media:statistics views="27"/>
    </media:community>
   </media:group>
  </entry>
@@ -283,7 +283,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="57"/>
+    <media:statistics views="58"/>
    </media:community>
   </media:group>
  </entry>
@@ -306,7 +306,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="33"/>
+    <media:statistics views="34"/>
    </media:community>
   </media:group>
  </entry>
@@ -329,7 +329,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="58"/>
+    <media:statistics views="59"/>
    </media:community>
   </media:group>
  </entry>
