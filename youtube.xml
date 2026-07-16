@@ -51,8 +51,8 @@
    <media:thumbnail url="https://i3.ytimg.com/vi/j2SpWdLVtwc/hqdefault.jpg" width="480" height="360"/>
    <media:description></media:description>
    <media:community>
-    <media:starRating count="2" average="5.00" min="1" max="5"/>
-    <media:statistics views="28"/>
+    <media:starRating count="3" average="5.00" min="1" max="5"/>
+    <media:statistics views="29"/>
    </media:community>
   </media:group>
  </entry>
@@ -75,7 +75,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="17"/>
+    <media:statistics views="18"/>
    </media:community>
   </media:group>
  </entry>
@@ -122,7 +122,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="2" average="5.00" min="1" max="5"/>
-    <media:statistics views="31"/>
+    <media:statistics views="32"/>
    </media:community>
   </media:group>
  </entry>
@@ -168,7 +168,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="10"/>
+    <media:statistics views="11"/>
    </media:community>
   </media:group>
  </entry>
