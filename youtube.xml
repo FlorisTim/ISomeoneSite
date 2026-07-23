@@ -29,7 +29,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="11"/>
+    <media:statistics views="12"/>
    </media:community>
   </media:group>
  </entry>
@@ -52,7 +52,7 @@
    <media:description></media:description>
    <media:community>
     <media:starRating count="3" average="5.00" min="1" max="5"/>
-    <media:statistics views="21"/>
+    <media:statistics views="22"/>
    </media:community>
   </media:group>
  </entry>
@@ -145,7 +145,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="2" average="5.00" min="1" max="5"/>
-    <media:statistics views="36"/>
+    <media:statistics views="37"/>
    </media:community>
   </media:group>
  </entry>
@@ -168,7 +168,7 @@ https://isomeone.nl/</media:description>
    <media:description></media:description>
    <media:community>
     <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="62"/>
+    <media:statistics views="63"/>
    </media:community>
   </media:group>
  </entry>
