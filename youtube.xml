@@ -21,7 +21,7 @@
    <uri>https://www.youtube.com/channel/UCIZQmXYPqruiODZWLcQ8oIA</uri>
   </author>
   <published>2026-07-23T18:23:25+00:00</published>
-  <updated>2026-07-23T18:44:11+00:00</updated>
+  <updated>2026-07-23T19:59:08+00:00</updated>
   <media:group>
    <media:title>Discolored Wall Album</media:title>
    <media:content url="https://www.youtube.com/v/CTQL6japTIg?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
@@ -34,8 +34,8 @@
 
 This is a collection of old music i never put online before, more soon</media:description>
    <media:community>
-    <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="12"/>
+    <media:starRating count="2" average="5.00" min="1" max="5"/>
+    <media:statistics views="20"/>
    </media:community>
   </media:group>
  </entry>
@@ -126,7 +126,7 @@ This is a collection of old music i never put online before, more soon</media:de
    <media:thumbnail url="https://i2.ytimg.com/vi/uKvmu30rRd0/hqdefault.jpg" width="480" height="360"/>
    <media:description></media:description>
    <media:community>
-    <media:starRating count="0" average="0.00" min="1" max="5"/>
+    <media:starRating count="1" average="5.00" min="1" max="5"/>
     <media:statistics views="23"/>
    </media:community>
   </media:group>
