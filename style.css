@@ -6,7 +6,7 @@ body{
     font-variation-settings: "MONO" 1;
     color:#fff;
     background-color: #333;
-    scale:1.2;
+    zoom:120%;
     overflow-x:hidden;
 }
 
@@ -56,9 +56,10 @@ img{
 .main{
     display:flex;
     flex-direction:column;
-    width: 40%;
-    justify-self: center;
-    margin:10%;
+    width: 50%;
+
+    margin:auto;
+    margin-top: 8lh;
     gap:3px;
 }
 
