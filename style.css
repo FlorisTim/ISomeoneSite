@@ -24,6 +24,12 @@ img{
     border-radius: 100%;
     border: 5px solid #393939;
 }
+.playlist{
+    border-radius: 0;
+}
+.playlist:hover{
+    scale: 1.05;
+}
 
 .title{
     color: white;
