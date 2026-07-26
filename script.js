@@ -9,7 +9,7 @@ async function Main() {
     let entries = xml.querySelectorAll("entry");
     entries = [...entries];
 
-    for (let i = 0; i < (window.screen.width < 900 ? 1 : 2); i++) {
+    for (let i = 0; i < (window.screen.width < 1200 ? 1 : 2); i++) {
         let entry = entries[i];
         posts.innerHTML += (`${generateYTEmbed(entry.querySelectorAll("id")[0].textContent)}`);
     }
