@@ -11,6 +11,29 @@
  </author>
  <published>2024-04-26T00:57:32+00:00</published>
  <entry>
+  <id>yt:video:la6dNbnjDSw</id>
+  <yt:videoId>la6dNbnjDSw</yt:videoId>
+  <yt:channelId>UCIZQmXYPqruiODZWLcQ8oIA</yt:channelId>
+  <title>any mistakes made were on purpose</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=la6dNbnjDSw"/>
+  <author>
+   <name>I Someone</name>
+   <uri>https://www.youtube.com/channel/UCIZQmXYPqruiODZWLcQ8oIA</uri>
+  </author>
+  <published>2026-07-28T21:08:13+00:00</published>
+  <updated>2026-07-28T21:27:10+00:00</updated>
+  <media:group>
+   <media:title>any mistakes made were on purpose</media:title>
+   <media:content url="https://www.youtube.com/v/la6dNbnjDSw?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/la6dNbnjDSw/hqdefault.jpg" width="480" height="360"/>
+   <media:description></media:description>
+   <media:community>
+    <media:starRating count="0" average="0.00" min="1" max="5"/>
+    <media:statistics views="2"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
   <id>yt:video:cgT2sJYGOAg</id>
   <yt:videoId>cgT2sJYGOAg</yt:videoId>
   <yt:channelId>UCIZQmXYPqruiODZWLcQ8oIA</yt:channelId>
@@ -29,7 +52,7 @@
    <media:description>first time experimenting with keyboard + some roland instrument dawless</media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
-    <media:statistics views="0"/>
+    <media:statistics views="3"/>
    </media:community>
   </media:group>
  </entry>
@@ -336,29 +359,6 @@ https://isomeone.nl/</media:description>
    <media:community>
     <media:starRating count="0" average="0.00" min="1" max="5"/>
     <media:statistics views="10"/>
-   </media:community>
-  </media:group>
- </entry>
- <entry>
-  <id>yt:video:PcYBHWirSjI</id>
-  <yt:videoId>PcYBHWirSjI</yt:videoId>
-  <yt:channelId>UCIZQmXYPqruiODZWLcQ8oIA</yt:channelId>
-  <title>Tunbled (182)</title>
-  <link rel="alternate" href="https://www.youtube.com/watch?v=PcYBHWirSjI"/>
-  <author>
-   <name>I Someone</name>
-   <uri>https://www.youtube.com/channel/UCIZQmXYPqruiODZWLcQ8oIA</uri>
-  </author>
-  <published>2026-06-29T16:34:25+00:00</published>
-  <updated>2026-06-29T16:36:41+00:00</updated>
-  <media:group>
-   <media:title>Tunbled (182)</media:title>
-   <media:content url="https://www.youtube.com/v/PcYBHWirSjI?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
-   <media:thumbnail url="https://i1.ytimg.com/vi/PcYBHWirSjI/hqdefault.jpg" width="480" height="360"/>
-   <media:description></media:description>
-   <media:community>
-    <media:starRating count="1" average="5.00" min="1" max="5"/>
-    <media:statistics views="34"/>
    </media:community>
   </media:group>
  </entry>
