@@ -1,5 +1,5 @@
 <html>
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script.js"></script>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="main">
-    <div class="entry bg row">
+    <div class="entry bg forcerow">
         <img src="logo.png" alt="logo" id="logo"> <p>ISomeone</p>
     </div>
     <div class="entry row">
@@ -19,7 +19,7 @@
     <div class="entry row">
         <div class="list">
             <div class="title">
-                PLAYLISTS
+                Playlists
             </div>
             <div class="bg">
                 <a href="https://www.youtube.com/playlist?list=PLYfvHrQ67ClE">PROJECT UPDATES</a><br>
@@ -31,7 +31,7 @@
         </div>
         <div class="list">
             <div class="title">
-                SOCIALS
+                Socials
             </div>
             <div class="bg">
                 <a href="https://www.linkedin.com/in/floris-timmermans-8254643b6/">LINKEDIN</a><br>
@@ -42,13 +42,22 @@
         </div>
         <div class="list">
             <div class="title">
-                PORTFOLIO
+                Portfolio
             </div>
             <div class="bg">
                 <a href="http://isomeone.nl/portfolio/"> PORTFOLIO (English)</a>
             </div>
         </div>
+
     </div>
+    <div class="entry row">
+        Below this point are posts i made, basically a blog thing
+    </div><br>
+    <div class="posts">
+
+
+    </div>
+    <div class="entry button post center delete1" onclick="generate(Math.min(Math.ceil(index/1.9)),16)">Load More</div><br>
 </div>
 </body>
 </html>

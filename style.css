@@ -6,8 +6,8 @@ body{
     font-variation-settings: "MONO" 1;
     color:#fff;
     background-color: #333;
-    zoom:135%;
     overflow-x:hidden;
+    margin: 0;
 }
 
 
@@ -24,6 +24,19 @@ img{
 
 }
 
+
+
+.center{
+    text-align: center;
+    padding: 1rem;
+}
+
+.graytext{
+    color: #888;
+    font-size: 75%;
+}
+
+
 .entry{
     background-color: #555;
     padding: 10px;
@@ -34,6 +47,25 @@ img{
     border-width: 1px;
 }
 
+.post{
+    background-color: #333;
+}
+
+iframe{
+    padding: 10px;
+    border: none;
+    flex:1;
+}
+
+.button:hover{
+    color: #3df730;
+
+}
+
+*. {
+    box-sizing: border-box;
+}
+
 .bg{
     background-color: #333;
     padding: 5px;
@@ -41,10 +73,31 @@ img{
     border-style: none;
 }
 
-.row, .ytvids{
+.row, .forcerow{
     display:flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.main{
+    display:flex;
+    flex-direction:column;
+    width: 40%;
+
+    margin:auto;
+    margin-top: 3lh;
+}
+
+@media (max-width: 800px) {
+    .main{
+        width: 90%;
+    }
+    .row{
+        flex-direction: column;
+    }
+    body{
+        zoom:100%;
+    }
 }
 
 .column{
@@ -63,20 +116,14 @@ iframe{
     width: auto;
 }
 
-.main{
-    display:flex;
-    flex-direction:column;
-    width: 60%;
 
-    margin:auto;
-    margin-top: 3lh;
-}
 
-a{
+a, .button{
     color: #F7DF30;
 }
 
-a:hover{
+a:hover, .button:hover{
     color: #3df730;
+    cursor: pointer;
 }
 
