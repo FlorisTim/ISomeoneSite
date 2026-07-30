@@ -22,7 +22,7 @@ function GenerateDetailsElement(Details){
     let details = ``
     if (Details?.length > 0) {
         let importedDetails = Details;
-        details += `<details ${importedDetails[0][0] === "$open_in_home" && window.location.pathname.includes("index.html") ? "open" : ""}>`
+        details += `<details ${importedDetails[0][0] === "$open_in_home" && window.location.pathname.includes("index.html") ? "open" : ""}><summary>Extra (click me!)</summary>`
 
 
         for (let j = 0; j < importedDetails.length; j++) {
