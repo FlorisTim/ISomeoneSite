@@ -193,6 +193,9 @@ img{
     max-width: 100%;
 }
 
+details:hover{
+    cursor: pointer;
+}
 
 .project{
     width: 60%;
