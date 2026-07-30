@@ -189,9 +189,7 @@ hr{
     display: flex;
     flex-direction: row;
 }
-img{
-    max-width: 100%;
-}
+
 
 summary:hover{
     cursor: pointer;
