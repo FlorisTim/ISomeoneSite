@@ -193,7 +193,7 @@ img{
     max-width: 100%;
 }
 
-details:hover{
+summary:hover{
     cursor: pointer;
 }
 
