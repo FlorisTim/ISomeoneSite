@@ -1,5 +1,5 @@
 body{
-    background-color: #4c4c4c;
+    background-color: #333;
     transform: scale(0.75);
     transform-origin: top left;
     width: 133.33%; /* compensate for shrink so it still fills screen */
@@ -144,6 +144,7 @@ h6, h2, h3{
 a{
     color: #f8e430;
     text-decoration: none;
+
 }
 a:hover{
     color: #4bf830;
@@ -151,11 +152,21 @@ a:hover{
 }
 .link{
     font-size: 28px;
+    display: block;
+    text-align: center;
 }
 
 .content{
     margin-left: 20%;
     margin-right: 20%;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+hr{
+    background-color: #333;
+    border: 1px #333 solid;
 }
 
 .centerlink{
@@ -188,7 +199,9 @@ img{
     display: flex;
     flex-direction: column;
     justify-self: center;
-    padding: 2rem;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
 }
 .projectcontainer{
     display: flex;
