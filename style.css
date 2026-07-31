@@ -63,7 +63,7 @@ iframe{
 
 }
 
-*. {
+*{
     box-sizing: border-box;
 }
 
@@ -83,7 +83,7 @@ iframe{
 .main{
     display:flex;
     flex-direction:column;
-    width: 60%;
+    width: 50%;
 
     margin:auto;
     margin-top: 3lh;
