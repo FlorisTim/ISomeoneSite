@@ -19,6 +19,10 @@ video{
 
 }
 
+img{
+    max-width: 100%;
+}
+
 kbd{
     font-family: "Google Sans Code", monospace;
     background-color: #323232;
