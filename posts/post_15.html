@@ -1,0 +1,21 @@
+title:JSON and BYTES;
+date:3 August 2026 - 15:29;
+class:;
+~
+I made my byte storage thing for dunge be able to convert json to bytes, very nice, although everything has to be a string to be able to say what type of value you're saving, like imagine if youd want to save a long, then you would have to type
+<br><br>
+{"entry": "&ltlong&gt 10"}
+<br><br>
+
+or some other type, these are the types:<br>
+none (also without <>) is a normal string<br>
+int, i, i32, integer for ints<br>
+long, l, i64 for longs<br>
+byte, b, i8 for bytes<br>
+short, s, i16 for shorts<br>
+char, c, ui16 for characters<br>
+float, f, f32 for floats<br>
+double, d, f64 for doubles<br><br>
+
+i chose mutliple strings per type so it's easier to use on the fly
+
