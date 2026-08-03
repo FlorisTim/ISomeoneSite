@@ -122,8 +122,9 @@ iframe{
 iframe{
     margin: auto;
     width: auto;
-    box-shadow: 5px 5px 10px #000;
+    box-shadow: 5px 5px 2px #333a;
     padding: 0;
+  margin: 10px;
 }
 
 
