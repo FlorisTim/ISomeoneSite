@@ -46,11 +46,18 @@ img{
     border-style: solid;
     border-color: #333;
     border-width: 1px;
+    
 }
 
 .post{
     background-color: #333;
+  
 }
+
+.post .entry{
+  border-radius: 10px;
+}
+
 
 iframe{
     padding: 10px;
@@ -115,6 +122,8 @@ iframe{
 iframe{
     margin: auto;
     width: auto;
+    box-shadow: 5px 5px 10px #000;
+    padding: 0;
 }
 
 
@@ -128,3 +137,17 @@ a:hover, .button:hover{
     cursor: pointer;
 }
 
+kbd{
+  background-color: #333;
+  padding: 1px;
+  border-radius:5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:#000;
+  color: #ddd;
+  min-width:800px;
+}
+
+kbd:hover{
+  color: #fff;
+}
