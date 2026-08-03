@@ -1,0 +1,15 @@
+title:Dunge enemy ragdolls;
+date:3 August 2026 - 22:36;
+class:;
+~
+ragdoll:<br>
+create new int array, of size (count how many stamp operations in animation opcode).
+set all those numbers to current rotation before stamp in when running opcode.
+generate new opcode: remove all direction instructions between move operations and stamp operations. put one probably new instruction by then, that references a value in the int array, now the directions are fixed to the int array, update the int array<br><br>
+
+left = > 180, so if an int is > 180, it means its pointed to the left, make a new float array of all zeros.
+increase the float aray by (rgdlarr[i] > 180 ? -0.1 : 0.1), then make sure that when direction is < 270 but > 90, then check if the sprite y is lower than the entity y, then snap it to the nearest one of two (90 or 270), then make the torso(?) function as the actual physics object, and then let the torso sprite, so not the entity, the torso sprite, fall to the ground, while still applying velocity to the x and y to make it get knockback, and make the top down perspective work<br><br>
+
+this fits well because the animations already have an "animationstate" object, which holds almost enough information to make this work, although the note up next is gonna make it a bit harder.<br><br>
+
+note: it is probably better to apply velocity already at the start, with the velocity coming from how fast a directional operation was going at that time, so imagine CHANGE-DIR-t1, you just check sin of timer and multiply it by the speed given to that function,
