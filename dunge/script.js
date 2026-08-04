@@ -14,26 +14,12 @@ async function main(){
   for (let i = 0; i < posts.length; i++){
     webPosts.innerHTML += generateWebPost(posts[i])
   }
-  const fetchedPosts = await getYoutubePosts();
-  Console.log(fetchedPosts);
+
   
 }
 
 
-async function getYoutubePosts() {
-  const targetUrl = encodeURIComponent('https://www.youtube.com/playlist?list=PLMcqH_XlXLMw');
-  
-  return await fetch(`https://corsproxy.io{targetUrl}`)
-    .then(res => {
-      if (!res.ok) throw new Error('Network response failure');
-      return res.text();
-    })
-    .then(html => {
-      const jsonText = html.split('var ytInitialData = ')[1].split(';</script')[0];
-      return JSON.parse(jsonText); 
-    })
-    .catch(err => console.error("Scraping error:", err));
-}
+
 
 
 
