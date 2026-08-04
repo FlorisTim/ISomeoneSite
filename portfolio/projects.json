@@ -26,8 +26,8 @@
     "Period": 2026,
     "Images": ["/portfolio/resources/dunge1.png","/portfolio/resources/dunge2.png"],
     "Description": "My first actual game, I'm making it in Processing, so that's Java, and this is my first time using Java too.",
-    "Links": [{"Text": "latest update", "Url":  "https://youtu.be/j5Et8lXv1Qw"}],
-    "Suffix": "I'm keeping the github private, you can email me for the most recent version of the repo, and I post the +link on YouTube",
+    "Links": [{"Text": "dev doc", "Url":  "https://isomeone.nl/dunge"}],
+    "Suffix": "I'm keeping the github private, you can email me for the most recent version of the repo, I store most info on my +link.",
     "Details": [
       ["Here is a short list of things think are worth mentioning that i added to this game yet."],
       ["For the animations and entityAI i built 2 DSLs, whereof one parses symbols like <kbd><span class='keywrd'>IF</span> <span class='num'>5</span> + <span class='num'>5</span> == <span class='var'>a</span> - <span class='var'>b</span></kbd> into something like this <br> <kbd><span class='keywrd'>SWITCH_SLOT</span> <span class='num'>0</span>; <span class='keywrd'>ADD</span> <span class='num'>5 5</span>; <span class='keywrd'>SWITCH_SLOT</span> <span class='num'>1</span>; <span class='keywrd'>SUB</span> <span class='var'>a b</span>; <span class='keywrd'>IFEQ</span> <span class='var'>result0 result1</span>;</kbd> this makes it easier for the actual compiler to compile it"],
