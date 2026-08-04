@@ -1,0 +1,68 @@
+<head><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"></head>
+<div class="main">
+  <div class="title">DUNGE</div>
+  <div class="row">
+<div class="sub">
+      <div class="title">Purpose of this page</div>
+This is by no means a proffesional landing page for my game, this is a project of mine i take semi-seriously and learn the most from in coding and music making, this is still linked under the portfolio entry because the things i have made for this dungeon crawler are definetly worth sharing.
+</div>
+</div>
+  <div class="row">
+    <div class="sub">
+      <div class="title">What is dunge?</div>
+      Dunge is a top-down dungeon crawler, the idea is that it's completely procedural, so every room is predictable according to specific formulas, and so is time, it has been a passion project for me since i was 15, i used to make it in scratch, but now i'm making it in processing in java
+    </div>
+    <div class="sub">
+      <div class="title">Creator</div>
+      I'm Floris Timmermans, online i call myself ISomeone, and i'm currently developing Dunge, I like to make music and code, and i have a website <a href="https://isomeone.nl">check it out</a>
+    </div>
+  
+  </div>
+  <div class="row">   
+<div class="sub spckbd">
+   <div class="title">Things made for DUNGE</div>
+So far i have created 2 DSL's, one for animation and one for enemy AI, both very easily debuggable and easy to understand after some use.<br><br>the animation DSL gets turned into bytecode, one of the neat features it has is that you can copy entire sections of code, and replace sections of them within copies, so for example animating a second arm does not require 2 sets of the same script but with the values flipped<br><br>
+  the AI DSL is specifically was designed for readability, for example i turned scripts like this <br><kbd>
+  ADD 5 5;<br>
+  IFEQ result 10;
+  ...
+  </kbd><br>
+  into scripts like this<br><kbd>
+  IF 5 + 5 == 10<br>
+  (<br>
+  ...<br>
+  )<br>
+  
+  </kbd>
+  basically letting the compiler pipeline transform the secondary script back into the primary, and using that to create the bytecode, furthermore i made a simple data system that turns json into chunks of 24 bytes, leaving out the types for extra compactness, it uses chains of blocks to store data, for example if i store the string "hello" and the value 5 the data would look like this<br><kbd>
+  [ref1][hello][ref2][5]</kbd><br>
+  and if you changed the string to a different size (ex. "hello world") it would become this<br><kbd>
+  [ref1][hello (skip 2)][ref2][5][world]</kbd><br>
+  making it skip the 5 chunk, this works very well and does not have the hasstle of needing to shuffle around everything in a file to just change one entry<br>
+  <br>I also made the world generation be based on a json that decides how noise is generated and under what conditions a structure should be placed, i used this same idea to make the walls of the dungeon connect based on where you are not based on the surrounding rooms.
+</div>
+</div>
+  <div class="row">   
+<div class="sub">
+   <div class="title">Things planned for DUNGE</div>
+  I'm planning on making plants, ores, etc be procedurally generated using L-Systems, i made something like this before in scratch, the idea is that theres a byte array, where every even entry is an instruction and every odd entry is an argument (assuming the array starts at 0), and then by chaning every odd entry in the array i slightly mutate the plant, this would create slight variation and fits into some simulated evolution that might be added later on
+</div>
+</div>
+  <div class="title">Latest posts about Dunge</div>
+  <div class="row">
+     <div class="sub">
+       <div class="title">Website posts</div>
+       <div class="post_section" id="webPost">    
+      
+       </div>
+    </div>
+         <div class="sub">
+       <div class="title">Youtube posts</div><div class="post_section" id="youtubePost">
+           <div class="post">I'm waiting for my google cloud account to confirm i'm real for this to work, soon.</div>
+           </div>
+    </div>
+  </div>
+  thanks for reading, it's alot i know check out <a href="https://isomeone.nl">my website</a> and <a href="https://isomeone.nl/portfolio">my portfolio</a> 
+</div>
