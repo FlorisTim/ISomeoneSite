@@ -25,6 +25,36 @@ img{
 
 }
 
+.interaction{
+    width: 3rex;
+    height: 3rex;
+    background-color: #555;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.arrow{
+    margin-top: 15%;
+    width: 70%;
+    height: 70%;
+    transition: color 0.1s;
+    color: #555;
+}
+
+
+.arrowDown{
+    color: #ca5656;
+}
+
+.arrowUp{
+    color: #67ca56;
+}
+
+.arrowUp:hover, .arrowDown:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.1s;
+}
 
 
 .center{
@@ -32,11 +62,23 @@ img{
     padding: 1rem;
 }
 
+.text85{
+    font-size: 85%;
+    position: absolute;
+    padding: 3px;
+}
+
 .graytext{
     color: #888;
     font-size: 75%;
 }
 
+.inline{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
 
 .entry{
     background-color: #555;
