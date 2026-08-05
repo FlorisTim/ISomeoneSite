@@ -26,8 +26,8 @@ img{
 }
 
 .interaction{
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     background-color: #555;
     border-radius: 50%;
     display: flex;
