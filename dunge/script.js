@@ -7,7 +7,7 @@ const webPosts = document.getElementById("webPost");
 const ytPosts = document.getElementById("youtubePost")
 
 const dungePlaylist = `PLMcqH_XlXLMw`;
-const youtubeKey = `AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I`; //this is safe; restricted to https://www.isomeone.nl only
+const youtubeKey = `AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I`; //this is safe;;;;;; restricted to https://www.isomeone.nl only
 
 async function main() {
     await lazyGrabPosts();
