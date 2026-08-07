@@ -41,7 +41,6 @@ img{
     color: #555;
 }
 
-
 .arrowDown{
     color: #ca5656;
 }
@@ -162,11 +161,10 @@ iframe{
 }
 
 iframe{
-    margin: auto;
     width: auto;
     box-shadow: 5px 5px 2px #333a;
     padding: 0;
-  margin: 10px;
+    margin: 10px;
 }
 
 

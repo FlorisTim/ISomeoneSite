@@ -12,7 +12,8 @@ const dungePlaylist = `PLMcqH_XlXLMw`;
 const youtubeKey = `AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I`; //this is safe;;;;;; restricted to https://www.isomeone.nl only
 
 async function main() {
-    loadInformation("startInfo")
+    await loadInformation("startInfo",0)
+    await loadInformation("startInfo",1)
 
     await lazyGrabPosts();
     filterPosts();
@@ -45,9 +46,13 @@ const keywordsValues = ["true","false","neg","blank","%0","x","y","-t1", "-t2"];
 const valuesExplanations = ["boolean true","boolean false","used for negating a number","empty argument","gets replaced by anything in the first index of arguments",
 "x position","y position","sine timer extension", "cosine timer extension"];
 
-const mainloader = document.getElementById("MAINLOADER");
-async function loadInformation(name){
-    let a = await fetch("./infos/" + name + ".html")
+let mainloader = document.getElementById("MAINLOADER");
+async function loadInformationNoId(name) {
+    loadInformation(name,0);
+}
+async function loadInformation(name,id){
+    mainloader = document.getElementById("LOADER"+ id);
+    let a = await fetch((id == 0 ? "./infos/" : "./plans/") + name + ".html")
     a = (await a.text())
         .replaceAll("\\[","OPENSQUARE").replaceAll("\\]", "CLOSESQUARE")
         .replaceAll("[\"back\"]","[\"qlink title\" onclick=\"loadInformation('startInfo')\"]Back[/]")
@@ -55,9 +60,12 @@ async function loadInformation(name){
         .replaceAll("[","<div class=").replaceAll("]",">")
         .replaceAll("    ","<span class='tab'></span>")
         .replaceAll("OPENSQUARE","[").replaceAll("CLOSESQUARE","]");
-
+    for (let i = 0; i < a.length; i++) {
+        if (a.substring(i).startsWith("onclick=\"loadInformation('")){
+            a = a.substring(0,i) + a.substring(i).replace("')",`',${id})`);
+        }
+    }
     let inkbd = false;
-    let quote = false;
 
     let chars = a.split('');
     for (let i = 0; i < a.length; i++) {
@@ -72,6 +80,8 @@ async function loadInformation(name){
             chars[i] = "~";
         }
     }
+
+
     a = chars.join('');
     a = a.replaceAll("~","<br>");
 
