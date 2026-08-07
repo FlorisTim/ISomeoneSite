@@ -12,7 +12,7 @@ const dungePlaylist = `PLMcqH_XlXLMw`;
 const youtubeKey = `AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I`; //this is safe;;;;;; restricted to https://www.isomeone.nl only
 
 async function main() {
-    loadInformation("startinfo")
+    loadInformation("startInfo")
 
     await lazyGrabPosts();
     filterPosts();
