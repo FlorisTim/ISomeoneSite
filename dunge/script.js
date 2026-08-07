@@ -47,7 +47,7 @@ const valuesExplanations = ["boolean true","boolean false","used for negating a 
 
 const mainloader = document.getElementById("MAINLOADER");
 async function loadInformation(name){
-    let a = await fetch("./infos/" + name + ".cstm")
+    let a = await fetch("./infos/" + name + ".html")
     a = (await a.text())
         .replaceAll("\\[","OPENSQUARE").replaceAll("\\]", "CLOSESQUARE")
         .replaceAll("[\"back\"]","[\"qlink title\" onclick=\"loadInformation('startInfo')\"]Back[/]")
