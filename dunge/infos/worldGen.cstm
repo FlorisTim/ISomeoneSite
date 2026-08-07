@@ -1,0 +1,183 @@
+["title"]World gen[/]
+
+["post spckbd"]
+["title"]2026 June[/]
+<p>the generator uses the following structure</p>
+<pre><kbd class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"generators"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">\[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"basic"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"smoothing"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">5</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"circular_smoothing"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"contrast"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"midpoint"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.5</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"chunking"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">10</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"handler"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">\[</span>
+        <span class="hljs-string">"CHUNK"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-string">"SMOOTH"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-string">"MOD"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-string">"CONTRAST"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-string">"ABSOLUTE"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-string">"MOD"</span>
+      <span class="hljs-punctuation">\]</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">\]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"features"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">\[</span>
+    <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"rare station"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"conditions"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">\[</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"negate"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"NOISE_here"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"test"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"basic"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"min"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.2</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"max"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0.4</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"negate"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"FEATURE_cross"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"test"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"rare station"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"min"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"max"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">\]</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">\]</span>
+<span class="hljs-punctuation">}</span>
+</kbd></pre>
+<h3>Generators structure</h3>
+<p>this will explain how to create an entry in the "generators" array</p>
+<h4>keys and values</h4>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>its name where it gets referenced by</td>
+</tr>
+<tr>
+<td>smoothing</td>
+<td>by how much its noise map should be smoothed</td>
+</tr>
+<tr>
+<td>circular_smoothing</td>
+<td>if the smoothing patterns is circular (true) or sqaure (false)</td>
+</tr>
+<tr>
+<td>contrast</td>
+<td>by how much the values of the noise map get amplified</td>
+</tr>
+<tr>
+<td>midpoint</td>
+<td>what should be considered "0" for the contrast function</td>
+</tr>
+<tr>
+<td>chunking</td>
+<td>how much chunks of the same values should appear in the noise map</td>
+</tr>
+<tr>
+<td>handler</td>
+<td>the order of when these actions should be applied to the map</td>
+</tr>
+</tbody></table>
+<h4>handler keywords</h4>
+<pre><kbd class="hljs language-json"><span class="hljs-punctuation">\[</span>
+ <span class="hljs-string">"CHUNK"</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-string">"SMOOTH"</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-string">"MOD"</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-string">"CONTRAST"</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-string">"ABSOLUTE"</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-string">"MOD"</span>
+<span class="hljs-punctuation">\]</span>
+</kbd></pre>
+<p>these are able to be used in any order you'd like, or even used multiple times or not at all,
+the "CHUNK" and "SMOOTH" keywords require the generator to generate other tiles on its map,
+potentially slowing it down if used more than once.</p>
+<h3>Features structure</h3>
+<h4>keys and values</h4>
+<p>there are only 2 keys, those are</p>
+<ul>
+<li>name</li>
+<li>conditions</li>
+</ul>
+<p>"name" is the name its referenced by.</p>
+<h4>Condition structure</h4>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>value description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>negate</td>
+<td>if the conditions output (true or false) should be negated</td>
+</tr>
+<tr>
+<td>type</td>
+<td>what type of condition it is</td>
+</tr>
+<tr>
+<td>test</td>
+<td>what it will be testing for</td>
+</tr>
+<tr>
+<td>min</td>
+<td>the minimum requirement for that test</td>
+</tr>
+<tr>
+<td>max</td>
+<td>the maximum requirement for that test</td>
+</tr>
+</tbody></table>
+<p>it will return true if the tests output is within the min and max range,
+the result will be flipped to false if negate is set to true.</p>
+<h4>Condition types</h4>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>meaning</th>
+<th>expected test value</th>
+<th>return value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NOISE_here</td>
+<td>will give the value at its position on the noise map</td>
+<td>a generator name</td>
+<td>a double</td>
+</tr>
+<tr>
+<td>NOISE_cross</td>
+<td>will give the average of all values in a cross shape around it</td>
+<td>a generator name</td>
+<td>a double</td>
+</tr>
+<tr>
+<td>NOISE_square</td>
+<td>will give the average of all values in a square shape around it</td>
+<td>a generator name</td>
+<td>a double</td>
+</tr>
+<tr>
+<td>FEATURE_cross</td>
+<td>will check for each neighbour in a cross if it contains a feature</td>
+<td>a feature name</td>
+<td>an int</td>
+</tr>
+<tr>
+<td>FEATURE_square</td>
+<td>will check for each neighbour in a square if it contains a feature</td>
+<td>a feature name</td>
+<td>an int</td>
+</tr>
+</tbody></table>
+<p>if all conditions return true then the feature will be added to the room</p>
+[/]
+
+["back"]

@@ -1,3 +1,14 @@
+body{
+    display : flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.information{
+    animation:1s;
+}
+
 .title{
     min-height: 2rem;
   color: #fff;
@@ -7,16 +18,38 @@
   margin-bottom:5px;
 }
 
+.left{
+    text-align: left;
+}
+
 .gray{
   color:#449;
   font-size:10px;
   padding:1px;
 }
-
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+th{
+    background-color: #336;
+}
+td{
+  background-color: #114;
+}
 kbd{
   background-color:#225;
   padding:3px;
+}
 
+.soon{
+    color: #555;
+}
+
+.spckbd{
+    height: 400px;
+    overflow-y: auto;
 }
 
 .spckbd kbd {
@@ -28,6 +61,7 @@ kbd{
     margin-top: 2px;
     margin-bottom: 2px;
     border: 1px solid rgba(34, 34, 85, 1) ;
+    font-size: 12px;
 }
 
 
@@ -58,13 +92,46 @@ body{
 
 }
 
-a{
-  color: #99f;
+
+
+a, .qlink{
+    color: #99f;
 }
 
-a:hover{
-  color:#99c;
+a:hover, .qlink:hover{
+    color:#99c;
+    cursor: pointer;
 }
+
+.tab{
+    display: inline-block;
+    width: 20px;
+}
+
+.kwdvalue{
+    color: #d68bfb;
+}
+
+.kwdtype{
+    color: #ffe448;
+}
+.kwdfunc{
+    color: #ff6a48;
+}
+
+.kwdtype, .kwdfunc, .kwdvalue{
+    transition: font-size 0.25s;
+    font-size: 12px;
+}
+
+
+.kwdtype:hover, .kwdfunc:hover, .kwdvalue:hover{
+    font-weight: bolder;
+    cursor: help;
+    transition: font-size 0.25s;
+    font-size: 15px;
+}
+
 
 .post_section{
   height:20rem;
@@ -78,6 +145,7 @@ a:hover{
   margin:10px;
   border-radius:10px;
   padding:5px;
+    box-shadow: 2px 2px 4px #000;
 }
 
 .post .title{

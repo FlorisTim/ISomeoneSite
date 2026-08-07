@@ -1,0 +1,213 @@
+["title"]Animation DSL MarkDown File[/]
+
+["post spckbd"]
+["title"]2026 June[/]
+<p>types in bytes</p>
+<pre><kbd><span class="hljs-number">00000000</span>:<span class="hljs-number">0</span> <span class="hljs-regexp">//</span> positive number
+<span class="hljs-number">00000001</span>:<span class="hljs-number">1</span> <span class="hljs-regexp">//</span> negative number
+<span class="hljs-number">00000010</span>:<span class="hljs-number">2</span> <span class="hljs-regexp">//</span> skip
+<span class="hljs-number">00000011</span>:<span class="hljs-number">3</span> <span class="hljs-regexp">//</span> nothing
+<span class="hljs-number">00000100</span>:<span class="hljs-number">4</span> <span class="hljs-regexp">//</span> nothing
+<span class="hljs-number">00000101</span>:<span class="hljs-number">5</span> <span class="hljs-regexp">//</span> nothing
+<span class="hljs-number">00000110</span>:<span class="hljs-number">6</span> <span class="hljs-regexp">//</span> <span class="hljs-keyword">function</span>
+<span class="hljs-number">00000111</span>:<span class="hljs-number">7</span> <span class="hljs-regexp">//</span> end statement
+</kbd></pre><p>arguments are ALWAYS only bytes, variables or enums, and you can prefix them with a negative (-) to negate them.
+FYI variables and enums are translated into bytes in the compiler, they are purely for neat code</p>
+<p>the SAVE and LOAD system only allow one state to be saved, when you save twice the first save is lost</p>
+<table>
+<thead>
+<tr>
+<th>byte</th>
+<th>keyword</th>
+<th>description</th>
+<th>arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>&quot;ORIGIN_X&quot;,</td>
+<td>sets the origin x</td>
+<td>(x)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>&quot;ORIGIN_Y&quot;,</td>
+<td>sets the origin y</td>
+<td>(y)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&quot;SPEED&quot;,</td>
+<td>sets the animation speed</td>
+<td>(speed)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&quot;SET_DIRECTION&quot;,</td>
+<td>sets the direction</td>
+<td>(direction)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&quot;CHANGE_DIRECTION&quot;,</td>
+<td>changes the direction</td>
+<td>(amount)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&quot;STEP&quot;,</td>
+<td>changes x and y into dir</td>
+<td>(amount)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&quot;CHANGE_X&quot;,</td>
+<td>changes x</td>
+<td>(amount)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>&quot;CHANGE_Y&quot;,</td>
+<td>changes y</td>
+<td>(amount)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>no opcode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>&quot;STAMP&quot;,</td>
+<td>stamps a sprite</td>
+<td>(sprite index)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>&quot;SET_DIRECTION-t1&quot;,</td>
+<td>sets direction based on sin</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>&quot;SET_DIRECTION-t2&quot;,</td>
+<td>sets direction based on cos</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>&quot;CHANGE_X-t1&quot;,</td>
+<td>changes x based on sin</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>&quot;CHANGE_X-t2&quot;,</td>
+<td>changes x based on cos</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>&quot;CHANGE_Y-t1&quot;,</td>
+<td>changes y based on sin</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>15</td>
+<td>&quot;CHANGE_Y-t2&quot;,</td>
+<td>changes y based on cos</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>&quot;STEP-t1&quot;,</td>
+<td>changes x,y into dir based on sin</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>&quot;STEP-t2&quot;,</td>
+<td>changes x,y into dir based on cos</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>18</td>
+<td>&quot;LOAD&quot;,</td>
+<td>loads the saved state</td>
+<td>no arguments</td>
+</tr>
+<tr>
+<td>19</td>
+<td>&quot;SAVE&quot;</td>
+<td>saves current state</td>
+<td>no arguments</td>
+</tr>
+<tr>
+<td>20</td>
+<td>&quot;ORIGIN&quot;</td>
+<td>sets the origin x and y</td>
+<td>(x, y)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>&quot;CHANGE_DIRECTION-t1&quot;,</td>
+<td>changes direction based on sin</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>22</td>
+<td>&quot;CHANGE_DIRECTION-t2&quot;</td>
+<td>changes direction based on cos</td>
+<td>(range, speed)</td>
+</tr>
+<tr>
+<td>23</td>
+<td>no opcode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>&quot;STEP_SIDE&quot;,</td>
+<td>changes x and y into dir +90</td>
+<td>(amount)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>&quot;IFSTATE&quot;,</td>
+<td>checks if a state is active</td>
+<td>(state)</td>
+</tr>
+<tr>
+<td>26</td>
+<td>&quot;RETURN&quot;</td>
+<td>adds its x, y to the output array</td>
+<td>no arguments</td>
+</tr>
+</tbody>
+</table>
+<p>you can use comments by starting a line with //</p>
+<pre><kbd><span class="hljs-comment">//enums example</span>
+<span class="hljs-keyword">enum</span> a b c;
+<span class="hljs-comment">//a = 0, b = 1, c = 2</span>
+
+<span class="hljs-comment">//variable example</span>
+<span class="hljs-keyword">var</span> a <span class="hljs-number">50</span>;
+<span class="hljs-comment">//a = 50;</span>
+</kbd></pre><p>you can do -enum or -var to negate the values,
+enums automatically assign positive numbers,
+variables only allow positive values</p>
+<p>indexer
+this is defined by an opening and closing bracket like so</p>
+<pre><kbd>(
+<span class="hljs-name">any</span> code
+)
+</kbd></pre><p>if any previous statement is false, then it skips anything in brackets, if all statements are true,
+then it runs the code in the bracket and resets the skip value, making it true again, meaning a statement
+or multiple have to be true for the next indexer to not be skipped.</p>
+<p>they&#39;re called indexers cus the compiler only saves the amt of bytes in the space using another index.</p>
+
+[/]
+["qlink title" onclick="loadInformation('animationDsl')"]Back[/]

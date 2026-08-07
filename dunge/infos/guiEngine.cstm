@@ -1,0 +1,32 @@
+["title"]GUI Engine[/]
+
+["post spckbd"]
+["title"]2026 June[/]
+the first I made my own text engine, I made every character be printed based on the index in the string, using (about) the following script:
+<kbd>**int spacing = 20;
+**for (**int i = 0; i < text.**length; i++){
+    **drawTexture(text.**charAt(i), **x + i * spacing, **y);
+}
+</kbd>
+This made it easy for me customise text styling, like bold text, colored text, most of the rendering itself is obviously done by processing itself.<br><br>
+For the buttons and input a took a similar approach, but instead of making the amount of sprites drawn based on the length i decided to always make it 3 only,
+The back, the middle and the end, where the middle is stretched to fit the size of the text, then I used processings mouse position x and y getters and shifted them so
+that 0,0 is in the center of the screen, and 10,10 is up and right.<br><br>
+
+For the text input i saved a list of integers, when the input button is pressed, it adds a hash based on it's x and y to the list,
+and every draw it checks if that hash is in that list to decide if that input field should be typed into.<br><br>
+
+The code is something along the lines of:
+<kbd>**void **drawInputAt(**x,**y){
+**int hash = **xyhash(**x,**y);
+**if (hashmap.**containsKey(hash)){
+    hashMap\[hash\] = typedText;
+    **drawSelectedButton();
+} **else {
+    **drawButton();
+}
+</kbd>
+
+[/]
+
+["back"]
