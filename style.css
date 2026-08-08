@@ -38,7 +38,7 @@ img{
     width: 70%;
     height: 70%;
     transition: color 0.1s;
-    color: #555;
+    color: #333;
 }
 
 .arrowDown{
@@ -62,9 +62,8 @@ img{
 }
 
 .text85{
-    font-size: 85%;
-    position: absolute;
-    padding: 3px;
+    font-size: 115%;
+    margin-top: 4px;
 }
 
 .graytext{
