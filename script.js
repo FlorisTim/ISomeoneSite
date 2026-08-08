@@ -35,18 +35,18 @@ async function likeButtons(id) {
      <div class="inline">
                 <div class="column">
                 <div class="interaction">
-                    <svg class="arrow ${voted ? '' : 'arrowUp'}" viewBox="0 0 8.544 10.716" ${voted ? '' : 'onclick="like(' + id + ')"'}">
+                    <svg class="arrow ${voted ? '' : 'arrowUp'}" ${voted ? '' : 'onclick="like(' + id + ')"'}viewBox="0 0 8.544 10.716">
                         <path fill="currentColor" d="M4.272 0l4.272 4.395H5.72v6.321H2.824V4.395H0z"/>
                     </svg>
-                    <div class="forcerow text85 arrowUp" title="${up} people liked this">${!voted ? "" : up}</div>
+                 
                 </div>
                 </div>
+                   <div class="forcerow text85" title="${Math.abs(up-down)} people ${down > up ? "dis": ""}liked this">${up-down}</div>
                 <div class="column">
                 <div class="interaction">
-                    <svg viewBox="0 0 8.544 10.716" class="arrow ${voted ? '' : 'arrowDown'}"   ${voted ? '' : 'onclick="disLike(' + id + ')"'}">
+                    <svg viewBox="0 0 8.544 10.716" class="arrow ${voted ? '' : 'arrowDown '}" ${voted ? '' : 'onclick="disLike(' + id + ')"'} >
                         <path fill="currentColor" d="M0 6.321h2.824V0h2.896v6.321h2.824L4.272 10.716z"/>
                     </svg>
-                    <div class="forcerow text85 arrowDown" title="${down} people disliked this">${!voted ? "" : down}</div>
                 </div>
                 
                 </div>
@@ -107,7 +107,7 @@ async function lazyGrabPosts(){
     let count = 1;
     posts = [];
     while(true){
-        let out = await fetch("/posts/post_"+count+".html");
+        let out = await fetch("https://isomeone.nl/posts/post_"+count+".html");
         if (out.ok){
             posts.push(await out.text());
             count++;
