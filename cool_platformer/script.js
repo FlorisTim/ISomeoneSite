@@ -13,7 +13,6 @@ const youtubeKey = `AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I`; //this is safe;;;;
 
 async function main() {
     await loadInformation("startInfo",0)
-    await loadInformation("startInfo",1)
 
     await lazyGrabPosts();
     filterPosts();
