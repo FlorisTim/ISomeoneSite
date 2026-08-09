@@ -14,13 +14,6 @@ const youtubeKey = `AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I`; //this is safe;;;;
 async function main() {
     await loadInformation("startInfo",0)
 
-    await lazyGrabPosts();
-    filterPosts();
-    posts.reverse();
-    for (let i = 0; i < posts.length; i++) {
-        webPosts.innerHTML += generateWebPost(posts[i])
-    }
-    document.getElementsByClassName("delete1")[0].remove();
     youtubePosts = [];
     await grabYoutubePosts(0)
     youtubePosts.sort((a, b) => getTimeAsNumber(a) - getTimeAsNumber(b));
