@@ -70,7 +70,7 @@ async function act(path){
 const hex = "0123456789abcdef";
 async function parseMetadata(header){
     for (let i = 0; i < header.length; i++) {
-        switch (header[i]) {
+        switch (header[i].trim()) {
             case "webPosts":
                 webPosts = true;
                 break;
@@ -93,7 +93,7 @@ async function parseMetadata(header){
                 youtubeToken = read(i);
                 break;
             case "theme":
-                const theme = read(i).split(" ");
+                const theme = read(i).trim().split(" ");
                 cssTemplate = cssTemplate.replaceAll("$0", hexCode(theme,0));
                 cssTemplate = cssTemplate.replaceAll("$1", hexCode(theme,1));
                 cssTemplate = cssTemplate.replaceAll("$2", hexCode(theme,8));
@@ -122,10 +122,10 @@ async function parseMetadata(header){
 
     function read(i){
         i++
-        if (header[i++] === "in_commons"){
-            return commons[header[i++]];
+        if (header[i++].trim() === "in_commons"){
+            return commons[header[i++].trim()];
         } else {
-            return header[--i];
+            return header[--i].trim();
         }
     }
 }
@@ -135,11 +135,11 @@ async function parse(path){
     const sections = inputDocument.split("----");
     let data = sections[1];
     console.log(sections);
-    await parseMetadata(sections[0].split("\r\n"));
+    await parseMetadata(sections[0].replaceAll("\n","\r\n").split("\r\n"));
     if (trim){
         data = data.trim();
     }
-    const dataSplit = data.split("\r\n");
+    const dataSplit = data.replaceAll("\n","\r\n").split("\r\n");
 
     let output = `<div class="main">`
 
