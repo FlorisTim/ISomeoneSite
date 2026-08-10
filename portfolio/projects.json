@@ -26,7 +26,7 @@
     "Period": 2026,
     "Images": ["/portfolio/resources/dunge1.png","/portfolio/resources/dunge2.png"],
     "Description": "My first actual game, I'm making it in Processing, so that's Java, and this is my first time using Java too.",
-    "Links": [{"Text": "dev doc", "Url":  "https://isomeone.nl/dunge"}],
+    "Links": [{"Text": "dev doc", "Url":  "https://isomeone.nl/dev_docs/dunge"}],
     "Suffix": "I'm keeping the github private, you can email me for the most recent version of the repo, I store most info on my +link.",
     "Details": [
       ["Here is a short list of things think are worth mentioning that i added to this game yet."],

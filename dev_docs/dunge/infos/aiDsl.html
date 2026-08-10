@@ -1,0 +1,48 @@
+["title"]AI DSL[/]
+
+["post spckbd"]
+["title"]Added in 2026 July[/]
+This is a DSL i specifically made for the entities in dunge, the idea was to have code that is easy to mutate at runtime for varying behaviour.<br><br>
+The language itself is based on the animation dsl, but this languages features more comprehensible syntax, like inline functions (addition as +, subtraction as -, etc..).<br>
+and comparisons too.<br><br>
+however, the parser that turns all that text into bytecode still expects only simple functions, so what it does is it turns:
+<kbd>IF a + b == c
+(
+...
+)
+</kbd><br>
+into
+<kbd>SWITCH_SLOT 0;
+ADD a b;
+IFEQ result0 c
+(
+)
+</kbd>
+making it into a list of functions easier to parse than the previous text.<br>
+there are also act functions, and query functions
+<kbd>**autovar Target;
+**autovar XDistance;
+SET_VAR Target : nearest &tilde;? player;
+SET_VAR XDistance : getX &tilde;! myself;
+SET_VAR XDistance : XDistance - getX &tilde;! Target;
+</kbd>
+but i also allowed for the syntax to be a bit more readable in the following example
+<kbd>SET_VAR Target : nearest?{player};
+SET_VAR XDistance : getX{myself};
+SET_VAR XDistance : getX{#Target} - -#XDistance;
+</kbd><br>
+this is a simple change but makes it so much more readable.<br>
+you may have noticed that the way i typed out the last bits of code might seem weird, but it's for a very specific reason, the order of operations is from left
+to right, so something like
+<kbd>SET_VAR XDistance : getX{myself} - getX{#Target};</kbd>
+would become
+<kbd>SET_VAR XDistance : getX &tilde;! myself - getX &tilde;! #Target;</kbd>
+and in code, "getX" is the third operation, making the eventual output be
+<kbd>SET_VAR XDistance : 3 &tilde;! myself - 3 &tilde;! #Target;</kbd>
+and going from left to right would totally ruin the functionality of this, however this is not a big deal as most of the ai code is going to be templates,
+where more complex behaviour is generated on top, for example a zombie's normal ai would be move towards player, attack, move back, repeat, but a zombie with
+one leg might walk shaky, or a delusional zombie might look for the nearest player, only for it to return the nearest zombie, this way gameplay is still fun.<br><br>
+to see more on how the language itself works, check out<br>
+["qlink" onclick="loadInformation('animationDsl')"]Animation DSL[/]
+how the bytecode works, is more indepth on that page
+[/]["back"]

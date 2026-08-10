@@ -1,0 +1,52 @@
+["title"]Binary save system[/]
+
+["post spckbd"]
+["title"]Added in 2026 August[/]
+I made this system so i can save and load data really fast for my game, It's structured in a way so that i never have to shuffle bytes around,
+for example, when replacing a value with a value that needs more bytes, then it continues writing at the end of the document, or overwrites bytes that it previously has written to.
+
+<br><br>
+The binary save system uses blocks of 24 bytes to store data, one such block can be a reference, or data, for data the first
+byte is used to display that it is not a reference, then the following 19 bytes are used for data, and the remaining 4 bytes are used to
+tell the parser where the next block is.<br><br>
+when setting or getting a value, the higher level reader and writer expects a string for the reference, this string then gets hashed, here is the code.<br>
+into a long<br>
+<kbd>**long out = 0;
+if (input.**charAt(0) == '%'){
+    **int exp = 1;
+    **for (**int i = input.length()-1; i > 0; i--){
+        out += (**long) (input.**charAt(i) - '0') * exp;
+        exp *= 10;
+    }
+    return out;
+}
+**byte\[\] array = input.getBytes(StandardCharsets.US_ASCII);
+for (int i = 0; i < array.**length; i++){
+    out = Long.rotateLeft(out, 5);
+    out ^= (array\[i\] & 0xFFL);
+    out *= 0x9E3779B97F4A7C15L;
+}
+return out;
+</kbd><br>
+normally this would return a hash that rotates bits, xors, and mutliplies by a number aproximating the golden ratio.
+<br><br>
+but as you can see this also returns a number if the first character of the input is '%'. this behaviour makes it possible to have
+some byte files act like arrays and some like actual maps.<br><br>
+The bytes are structured like the following
+<kbd>Reference:
+    (flag  1 byte)(data  19 bytes)(next block  4 bytes)
+
+Data:
+    (reference  8 bytes)(data size  4 bytes)(first block  4 bytes)(metadata  8 bytes)
+</kbd><br>
+24 bytes per chunk makes it quicker to scroll through and find objects.<br>
+the 8 bytes of metadata can be used to say what type the contents are, and the first reference block in the document contains how many elements there are.<br><br>
+
+I also made it parse json into these blocks, it successfully parses all types into bytes, it is expected to clarify what type it is by making everything a string and having the type be in it, for example:
+<kbd>{
+    "health": "&lt**int&gt 15"
+}
+</kbd><br>
+but you can also use values without clarifying the type, this does make it ambigious because an int could be parsed as a long when it becomes bigger than an int.
+[/]
+["back"]

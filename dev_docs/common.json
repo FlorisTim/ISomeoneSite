@@ -48,7 +48,9 @@
         "var",
         "autovar",
         "autopvar",
-        "char"
+        "char",
+        "string",
+        "byte"
       ],
       "descriptions": [
         "integer type, uses 32 bits and two`s compliment",
@@ -61,7 +63,9 @@
         "saves first argument as reference to the second argument",
         "automatically saves the first argument as reference to how many times autovar has been used",
         "automatically saves the first argument as reference to how many times autopvar has been used",
-        "character represented by and index of size 2 bytes"
+        "character represented by and index of size 2 bytes",
+        "a collection of characters (a glorified char array)",
+        "8 bit integer"
       ]
     },
     "values": {
