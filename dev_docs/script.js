@@ -7,10 +7,9 @@ let ytPosts;
 let playlistID;
 let youtubeKey; //this is safe;;;;;; restricted to https://www.isomeone.nl only
 
-
+let mainloader = null;
 
 async function main(yttoken, plalst, future, webpsts, ytpsts) {
-    console.log(yttoken);
     console.log(plalst);
     console.log(future);
     console.log(webpsts);
@@ -49,7 +48,7 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
 
 
 
-let mainloader = null;
+
 
 async function loadInformation(name,id){
     mainloader = document.getElementById("LOADER"+ id);
