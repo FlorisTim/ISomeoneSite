@@ -1,0 +1,71 @@
+youtubePosts
+
+infos
+
+playlist
+PLT-RDIWCKxU0
+
+youtubeToken
+in_commons
+token
+
+trimFile
+
+theme
+15 11 10
+
+
+----
+
+#(title) COOL PLATFORMER
+
+[
+    {
+        #(title) Purpose of this page
+
+        The purpose of this page is to share all there is to share about
+        my game Cool platformer, It's a C# console app game.
+    }
+]
+
+#(title) Information
+[
+    {
+        #(title) What is cool platformer?
+
+        Cool platformer is a game i made for a school project,
+        I worked on it for a total of 2 months, the game itself is a 3D platformer in the console app,
+        it began as a prototype before the school project.
+        In the prototype i made a simple wireframe game in the console,
+        with some moving platforms and y-level detection for collision.
+    }
+]
+[
+    {()<LOADER0>
+        #(post) Loading
+    }
+]
+
+#(title) Posts about cool platformer
+[
+    {
+        #(title) Youtube posts
+        !(post_section)<youtubePost>
+            #(post delete2) Loading
+        !#
+    }
+]
+
+#(title) Outro
+[
+    {
+        thanks for reading,
+        check out <a href="https://isomeone.nl">my website</a> and <a href="https://isomeone.nl/portfolio">my portfolio</a>,
+        I liked making this project,
+        it was one of the first projects I
+        ever made in a real programming language other than scratch,
+        and i feel like i learned most from it.
+    }
+]
+
+#(title)
