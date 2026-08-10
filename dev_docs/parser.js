@@ -2,9 +2,10 @@
 let documentBody;
 let source
 let commons
+
 async function load(){
     documentBody = document.getElementsByTagName("body")[0]
-    source = await fetch("../common.json")
+    source = await fetch("/dev_docs/common.json")
     commons = JSON.parse(await (await source).text());
 }
 

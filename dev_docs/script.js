@@ -5,7 +5,7 @@ let webPostsElement;
 let ytPosts;
 
 let playlistID;
-let youtubeKey; //this is safe;;;;;; restricted to https://www.isomeone.nl only
+let youtubeKey; //this is safe; restricted to https://www.isomeone.nl only
 
 let mainloader = null;
 
