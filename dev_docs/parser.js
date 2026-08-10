@@ -63,6 +63,8 @@ async function act(path){
     documentBody.innerHTML = await parse(path);
     documentBody.innerHTML += `<style>${cssTemplate}</style>`;
 
+    console.log(documentBody.innerHTML);
+
     await main(youtubeToken,playlist,plans,webPosts,youtubePosts)
 }
 const hex = "0123456789abcdef";
