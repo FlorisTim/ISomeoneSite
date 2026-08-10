@@ -29,10 +29,11 @@ const keywordFunctions = ["for","length","charAt","drawTexture", "if", "else","d
 const functionExplanations = ["for loop","returns the length of an array or a string","returns the character at a certain index","draws a sprite or image at a location","runs the following code if the statement returns true","runs the following code if last if statement returned false",
 "draws input text field", "returns true if the hashmap contains that key","returns a value based on 2 integers","draws a highlighted button","draws a button","moves on x and y",
 "moves only on x axis","injects a file before compiling"]
-const keywordTypes = ["int", "double", "float", "long", "void", "boolean","enum","var","autovar","autopvar"];
+const keywordTypes = ["int", "double", "float", "long", "void", "boolean","enum","var","autovar","autopvar","char"];
 const typeExplanations = ["integer type, uses 32 bits and two`s compliment","floating point type, uses 64 bits and the IEEE format","float type, uses 32 bits and the IEEE format",
     "integer type, uses 64 bits and two`s compliment","void means that the method after it does not return anything","boolean type, i think it uses 1 byte to store the true or false",
-"saves any arguments after as references to their index","saves first argument as reference to the second argument","automatically saves the first argument as reference to how many times autovar has been used","automatically saves the first argument as reference to how many times autopvar has been used"]
+"saves any arguments after as references to their index","saves first argument as reference to the second argument","automatically saves the first argument as reference to how many times autovar has been used","automatically saves the first argument as reference to how many times autopvar has been used",
+"character represented by and index of size 2 bytes"]
 
 const keywordsValues = ["true","false","neg","blank","%0","x","y","-t1", "-t2"];
 const valuesExplanations = ["boolean true","boolean false","used for negating a number","empty argument","gets replaced by anything in the first index of arguments",

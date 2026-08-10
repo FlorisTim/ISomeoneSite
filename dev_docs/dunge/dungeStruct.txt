@@ -1,0 +1,91 @@
+webPosts
+youtubePosts
+
+infos
+plans
+
+playlist
+PLMcqH_XlXLMw
+
+youtubeToken
+in_commons
+token
+
+trimFile
+
+theme
+11 11 15
+
+----
+
+#(title) DUNGE
+
+[
+    {
+        #(title) Purpose of this page
+
+        This is by no means a professional landing page for my game,
+        this is a project of mine i take semi-seriously and learn the most from in coding and music making,
+        this is still linked under the portfolio entry because the things i have made for
+        this dungeon crawler are definitely worth sharing.
+    }
+]
+
+#(title) Information
+[
+    {
+        #(title) What is dunge?
+
+        Dunge is a top-down dungeon crawler,
+        the idea is that it's completely procedural,
+        so every room is predictable according to specific formulas,
+        and so is time, it has been a passion project for me since i was 15,
+        i used to make it in scratch, but now i'm making it in processing in java
+    }
+    {
+        #(title) Creator
+
+        I'm Floris Timmermans, online i call myself ISomeone,
+        and i'm currently developing Dunge, I like to make music and code,
+        and i have a website <a href="https://isomeone.nl">check it out</a>
+    }
+]
+[
+    {()<LOADER0>
+        #(post) Loading
+    }
+]
+[
+    {()<LOADER1>
+        #(post) Loading
+    }
+]
+
+#(title) Latest posts about DUNGE
+[
+    {
+        #(title) Website posts
+        !(post_section)<webPost>
+            #(post delete1) Loading
+        !#
+    }
+    {
+        #(title) Youtube posts
+        !(post_section)<youtubePost>
+            #(post delete2) Loading
+        !#
+    }
+]
+
+#(title) Outro
+[
+    {
+        thanks for reading,
+        check out <a href="https://isomeone.nl">my website</a> and <a href="https://isomeone.nl/portfolio">my portfolio</a>,
+        This is a bit more than a passion project,
+        it's one of the things that keeps me motivated to build stuff,
+        I should praise it less though.
+    }
+]
+
+#(title)
