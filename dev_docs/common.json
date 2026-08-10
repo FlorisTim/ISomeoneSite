@@ -1,6 +1,7 @@
 {
   "tooltips": {
     "functions": {
+      "class": "kwdfunc",
       "names": [
         "for",
         "length",
@@ -35,6 +36,7 @@
       ]
     },
     "types": {
+      "class": "kwdtype",
       "names": [
         "int",
         "double",
@@ -63,6 +65,7 @@
       ]
     },
     "values": {
+      "class": "kwdvalue",
       "names": [
         "true",
         "false",

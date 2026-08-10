@@ -91,7 +91,7 @@ async function loadInformation(name,id){
 
     function keywords(t){
         for (let i = 0; i < commons.tooltips[t].names.length; i++) {
-            a = a.replaceAll("**" + commons.tooltips[t].names[i], `<span title='${commons.tooltips[t].descriptions[i]}' class='kwdtype' >` + commons.tooltips[t].names[i] + "</span>");
+            a = a.replaceAll("**" + commons.tooltips[t].names[i], `<span title='${commons.tooltips[t].descriptions[i]}' class='${commons.tooltips[t].class}' >` + commons.tooltips[t].names[i] + "</span>");
         }
     }
 
