@@ -10,6 +10,17 @@ body{
     margin: 0;
 }
 
+.twothird{
+    width: 66.66%;
+}
+
+.scroll{
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
 
 img{
     max-width: 30%;
@@ -91,6 +102,7 @@ img{
 
 .post{
     background-color: #333;
+    margin: 10px;
   
 }
 
@@ -112,6 +124,7 @@ iframe{
 
 *{
     box-sizing: border-box;
+    scrollbar-color: #555 #333;
 }
 
 .bg{

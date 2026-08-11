@@ -17,7 +17,8 @@ async function Main() {
     posts.reverse()
     console.log(posts)
     postsElement = document.getElementsByClassName("posts")[0]
-    await generate(2);
+    document.getElementsByClassName("delete1")[0].innerHTML = "Load more";
+    await generate(20);
 }
 
 async function likeButtons(id) {
