@@ -3,8 +3,11 @@
 ["post spckbd"]
 ["title"]2026 February[/]
 The graphics engine is built on two **int arrays, Let's call these "Depth" and "Color".<br>
-<kbd>
+The depth int array is used to decide if a pixel should be drawn or not, at the beginning of every frame all entries get set to the max value, and pixels that
+are lower than the value at a given entry are allowed to overwrite it, making the depth at that point be set to the pixels depth, this makes it so that only closest pixels get shown.
+<kbd>**void DrawPixer(**int x, **int y){
 
+}
 </kbd><br>
 [/]
 
