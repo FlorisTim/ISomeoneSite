@@ -1,0 +1,23 @@
+["title"]Multiplayer[/]
+
+["post spckbd"]
+["title"]2026 March[/]
+Multiplayer uses a custom made protocol and TCP,<br>
+it turns basic methods into strings, then turns the strings into bytes, and sends those over.<br>
+on the other end the strings get turned back into bytes and parsed into instructions.<br>
+<kbd>**void send(**string text){
+    **if (IsConnected()){
+        stream.Write(StringToBytes(text));
+    }
+}
+</kbd>
+
+theres a host and a client, when you decide to start playing in singleplayer, a host is started and youre it's client.<br>
+it then does not send over any data to anything as it is already all on the same device,
+when joining a game, your client requests all triangles and entities from the other players world, using the protocol.<br>
+the host then sends all the worlds data.<br><br>
+
+the host turns the last 2 bytes of it's ip address into a simple code the client has to type in for them to join the host.<br><br>
+
+
+[/]["back"]

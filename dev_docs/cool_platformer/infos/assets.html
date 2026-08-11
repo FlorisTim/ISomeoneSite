@@ -1,0 +1,33 @@
+["title"]Assets pipeline[/]
+
+["post spckbd"]
+["title"]2026 February[/]
+The assets are custom file formats, i made a separate tool in scratch to convert blockbench models and animations into these custom files.<br>
+at startup, these files get turned into a bunch of new instances that represend the 3d models and their animations. for example,
+this is how a model would be initialized
+<kbd>**void Load(**string file){
+    **string\[\] read = file.split('\n');
+    **for(**int i = 0; i < read.Length; ++i){
+        switch(read[i]){
+            case "model_start":
+                modelName = read\[++i\];
+                triangles = 0;
+                triangleList.Clear();
+                break;
+            case "triangle_start":
+                triangles++;
+                triangle = new Triangle();
+                break;
+            case "point1":
+                triangle.X = **double.Parse(read\[++i\])
+            break;
+            ...
+            case "triangle_end":
+                triangleList.Add(triangle);
+                break;
+            ...
+    }
+}
+</kbd>
+same with animations, enemy ai is hardcoded into the game.
+[/]["back"]

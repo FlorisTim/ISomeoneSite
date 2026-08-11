@@ -1,0 +1,14 @@
+["title"]Physics[/]
+
+["post spckbd"]
+["title"]2026 March[/]
+The physics is done by changing an entities y velocity by a negative value everytime it's not on ground.<br>
+when an entity hits a wall it checks if moving up and forward means that there isn't a wall, basically letting steps or stairs work.<br>
+there is one list of boxes that every entity scroll through to test if it's hitbox is overlapping with one
+of them, and if that is true, then the velocity applied that made that overlap happen is undone.<br><br>
+
+moving platforms are also entities, but without any physics enabled, and with a hitbox constantly set to its position.<br>
+entities with their feet on a hitbox that is moving will move with the hitbox automatically.<br><br>
+
+deltatime is calculated every frame and included in the calculations done so framerate does not affect gameplay
+[/]["back"]

@@ -50,7 +50,8 @@
         "autopvar",
         "char",
         "string",
-        "byte"
+        "byte",
+        "StringBuilder"
       ],
       "descriptions": [
         "integer type, uses 32 bits and two`s compliment",
@@ -65,7 +66,8 @@
         "automatically saves the first argument as reference to how many times autopvar has been used",
         "character represented by and index of size 2 bytes",
         "a collection of characters (a glorified char array)",
-        "8 bit integer"
+        "8 bit integer",
+        "mutable string"
       ]
     },
     "values": {
@@ -79,7 +81,8 @@
         "x",
         "y",
         "-t1",
-        "-t2"
+        "-t2",
+        "COLOR_BLACK"
       ],
       "descriptions": [
         "boolean true",
@@ -90,7 +93,8 @@
         "x position",
         "y position",
         "sine timer extension",
-        "cosine timer extension"
+        "cosine timer extension",
+        "a black color, unsigned byte 0"
       ]
     }
   },

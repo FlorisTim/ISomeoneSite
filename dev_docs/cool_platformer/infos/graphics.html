@@ -2,13 +2,39 @@
 
 ["post spckbd"]
 ["title"]2026 February[/]
-The graphics engine is built on two **int arrays, Let's call these "Depth" and "Color".<br>
+The graphics engine is built on an **int array and a **byte array, Let's call these "Depth" and "Color".<br>
 The depth int array is used to decide if a pixel should be drawn or not, at the beginning of every frame all entries get set to the max value, and pixels that
 are lower than the value at a given entry are allowed to overwrite it, making the depth at that point be set to the pixels depth, this makes it so that only closest pixels get shown.
-<kbd>**void DrawPixer(**int x, **int y){
-
+<kbd>**void DrawPixel(**int **x, **int **y, **int depth, **byte color){
+    ...
+    if (depth\[**x\]\[**y\] > depth){
+        color\[**x\]\[**y\] = color;
+    }
 }
-</kbd><br>
-[/]
-
-["back"]
+</kbd>
+to draw a frame i used the color and depth to generate one big string that i console write every frame
+<kbd>**string RenderFrame(){
+    **StringBuilder sb = new **StringBuilder();
+    **byte drawColor = **COLOR_BLACK;
+    **for (**int x = 0; x < width; x++){
+        **for (**int y = 0; y < height; y++){
+            **if (color\[x\]\[y\] != drawColor){
+                sb.append(ColorEscapeCharacter(color\[x\]\[y]\));
+                drawColor = color\[x\]\[y\];
+            }
+            sb.append(MapDepthToChar(depth\[x\]\[y\]))
+        }
+        sb.append('\n');
+    }
+</kbd>
+the 3d objects are rendered using basic trigonometry,
+at the beginning of each frame the sin and cosine are calculated so they don't have to be calculated everytime they are needed.<br>
+It starts with lines, then the lines make triangles, the triangles get filled in by a scanline and then the triangles make cubes,
+from there i can use the cubes to draw entities, platforms etc.<br>
+the 3d coordinates become 2d coordinates using the following script
+<kbd>x = (x/z) * POV;
+y = (y/z) * POV;
+</kbd>
+the reason i used a method that returns a string is so i can have cameras that return different angles, this makes it easier to switch from POV,
+keeping the player separate from the camera, this is how i made the third person, first person perspectives
+[/]["back"]
