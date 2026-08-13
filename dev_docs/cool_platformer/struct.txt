@@ -11,13 +11,19 @@ token
 
 trimFile
 
-theme
-15 12 10
+themeSubtractions
+0 1 8 9 10 11
 
+theme
+15 9 9
+
+title
+Cool platformer
 
 ----
 
 #(title) COOL PLATFORMER
+
 
 [
     {

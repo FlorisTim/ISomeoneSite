@@ -154,7 +154,7 @@ async function lazyGrabPosts(){
 }
 
 function filterPosts(){
-    posts = posts.filter(post => post.toLowerCase().includes("dunge"));
+    posts = posts.filter(post => post.toLowerCase().includes(filter));
 }
 
 function getUnsafe(key,values){

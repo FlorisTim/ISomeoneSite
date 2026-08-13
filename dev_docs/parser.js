@@ -1,10 +1,12 @@
 
 let documentBody;
+let documentHead;
 let source
 let commons
 
 async function load(){
     documentBody = document.getElementsByTagName("body")[0]
+    documentHead = document.getElementsByTagName("head")[0]
     source = await fetch("/dev_docs/common.json")
     commons = JSON.parse(await (await source).text());
 }
@@ -57,6 +59,10 @@ a:hover, .qlink:hover{
     scrollbar-color: $4 $3;
 }`
 
+let subs = [0,1,8,9,10,11];
+
+let filter = "";
+
 async function act(path){
     await load();
 
@@ -92,14 +98,20 @@ async function parseMetadata(header){
             case "youtubeToken":
                 youtubeToken = read(i);
                 break;
+            case "webPostsFilter":
+                filter = read(i);
+                break;
             case "theme":
                 const theme = read(i).trim().split(" ");
-                cssTemplate = cssTemplate.replaceAll("$0", hexCode(theme,0));
-                cssTemplate = cssTemplate.replaceAll("$1", hexCode(theme,1));
-                cssTemplate = cssTemplate.replaceAll("$2", hexCode(theme,8));
-                cssTemplate = cssTemplate.replaceAll("$3", hexCode(theme,9));
-                cssTemplate = cssTemplate.replaceAll("$4", hexCode(theme,10));
-                cssTemplate = cssTemplate.replaceAll("$5", hexCode(theme,11));
+                for (let j = 0; j < subs.length; j++) {
+                    cssTemplate = cssTemplate.replaceAll("$"+j, hexCode(theme, subs[j]));
+                }
+                break;
+            case "title":
+                documentHead.innerHTML += `<title>${read(i)}</title>`;
+                break;
+            case "themeSubtractions":
+                subs = read(i).trim().split(" ");
                 break;
         }
     }
