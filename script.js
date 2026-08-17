@@ -10,7 +10,11 @@ const supabase = createClient(
     "sb_publishable_oYu_jtRndODulzdSprQVvA_FCDe9qAn"
 );
 
+const commons = fetch("dev_docs/common.json");
+
 const MOBILE = screen.width < 800;
+
+let ytPosts;
 
 async function Main() {
     await lazyGrabPosts();
@@ -19,6 +23,7 @@ async function Main() {
     postsElement = document.getElementsByClassName("posts")[0]
     await generate(20);
     document.getElementsByClassName("delete1")[0].innerHTML = "Load more";
+
 }
 
 async function likeButtons(id) {
@@ -184,3 +189,18 @@ function getUnsafe(key,values){
     values = values.substring(a);
     return values.substring(0, values.indexOf(";")).trim();
 }
+
+function openWindow(url){
+    const w = 700;
+    const h = 500;
+
+    const l = (screen.width - w) / 2;
+    const r = (screen.height - h) / 2;
+
+    window.open(url,"gift",
+        `width=${w},height=${h},top=${r},left=${l},resizable=yes,scrollbars=yes,status=no,toolbar=no,menubar=no,location=no`)
+}
+
+window.openWindow = openWindow;
+
+
