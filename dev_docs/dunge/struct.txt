@@ -79,6 +79,7 @@ Dunge
     {
         #(title) Youtube posts
         !(post_section)<youtubePost>
+            #(post delete2) Loading
         !#
     }
 ]

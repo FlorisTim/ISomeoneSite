@@ -46,6 +46,7 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
                 console.error(e);
             }
         }
+        document.getElementsByClassName("delete2")[0].remove();
     }
 }
 
