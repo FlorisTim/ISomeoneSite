@@ -1,1 +1,9 @@
-[]
+["title"]Portals[/]
+
+["post spckbd"]
+["title"]2026 April[/]
+The portals work by using 2 extra cameras, the first one placed at the players position offset by the x and y distance of the first portal, where the output is projected on the second portal, and vice versa.<br><br>
+
+the portal entities exist out of a grid of hitboxes that check when another entity is closer, and once it is it teleports it to the other portal, disabling it for that entity until it is not touching it anymore, this means also not rendering it anymore if the entity has the main camera.
+
+[/]["back"]
