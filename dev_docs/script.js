@@ -40,7 +40,11 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
         youtubePost.sort((a, b) => getTimeAsNumber(a) - getTimeAsNumber(b));
         youtubePost.reverse();
         for (let i = 0; i < youtubePost.length; i++) {
-            ytPosts.innerHTML += generateYoutubePosts(youtubePost[i])
+            try {
+                ytPosts.innerHTML += generateYoutubePosts(youtubePost[i])
+            } catch (e){
+                console.error(e);
+            }
         }
         document.getElementsByClassName("delete2")[0].remove();
     }
@@ -98,12 +102,8 @@ async function loadInformation(name,id){
     mainloader.innerHTML = a;
 }
 
-function getTimeAsNumber(jsn){
-    try {
-        return jsn.contentDetails.videoPublishedAt.replaceAll("-", "").replaceAll(":", "").replaceAll("T", "").replaceAll("Z", "")
-    } catch (e) {
-        return "";
-    }
+function getTimeAsNumber(jsn) {
+    return jsn.contentDetails.videoPublishedAt.replaceAll("-", "").replaceAll(":", "").replaceAll("T", "").replaceAll("Z", "")
 }
 
 function getTimeAsNormal(jsn){
