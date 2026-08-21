@@ -99,7 +99,11 @@ async function loadInformation(name,id){
 }
 
 function getTimeAsNumber(jsn){
-    return jsn.contentDetails.videoPublishedAt.replaceAll("-","").replaceAll(":","").replaceAll("T","").replaceAll("Z","")
+    try {
+        return jsn.contentDetails.videoPublishedAt.replaceAll("-", "").replaceAll(":", "").replaceAll("T", "").replaceAll("Z", "")
+    } catch (e) {
+        return "";
+    }
 }
 
 function getTimeAsNormal(jsn){
