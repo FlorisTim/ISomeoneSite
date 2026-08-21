@@ -35,7 +35,6 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
     }
 
     if (ytpsts) {
-        document.getElementsByClassName("delete2")[0].remove();
         youtubePost = [];
         await grabYoutubePosts(0)
         youtubePost.sort((a, b) => getTimeAsNumber(a) - getTimeAsNumber(b));
