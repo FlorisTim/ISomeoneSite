@@ -28,7 +28,9 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
         await lazyGrabPosts();
         filterPosts();
         posts.reverse();
+
         for (let i = 0; i < posts.length; i++) {
+
             webPostsElement.innerHTML += generateWebPost(posts[i])
         }
         document.getElementsByClassName("delete1")[0].remove();
@@ -39,11 +41,12 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
         await grabYoutubePosts(0)
         youtubePost.sort((a, b) => getTimeAsNumber(a) - getTimeAsNumber(b));
         youtubePost.reverse();
+        console.log(youtubePost);
         for (let i = 0; i < youtubePost.length; i++) {
             try {
                 ytPosts.innerHTML += generateYoutubePosts(youtubePost[i])
             } catch (e){
-                console.error(e);
+                console.log(e);
             }
         }
         document.getElementsByClassName("delete2")[0].remove();
