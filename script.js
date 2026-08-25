@@ -14,8 +14,8 @@ const commons = fetch("dev_docs/common.json");
 
 const MOBILE = screen.width < 800;
 
-let ytPosts;
-
+let ytPosts = [];
+let youtubeKey;
 async function Main() {
     await lazyGrabPosts();
     posts.reverse()
@@ -24,6 +24,16 @@ async function Main() {
     await generate(20);
     document.getElementsByClassName("delete1")[0].innerHTML = "Load more";
 
+    youtubeKey = (await (await commons).json()).token;
+    await grabYoutubePosts(0);
+
+    let music = document.getElementsByClassName("music")[0];
+
+    for (let i = 0; i < ytPosts.length; i++) {
+        music.innerHTML += generateYoutubePosts(ytPosts[i]);
+    }
+
+    document.getElementsByClassName("delete2")[0].remove();
 }
 
 async function likeButtons(id) {
@@ -203,4 +213,69 @@ function openWindow(url){
 
 window.openWindow = openWindow;
 
+function generateYoutubePosts(json){
+    return `         
+         
+         <div class="post">
+                 <a class="title" href="https://www.youtube.com/watch?v=${json.contentDetails.videoId}">
+                ${json.snippet.title}
+                </a>
+            <div class="graytext">
+                ${getTimeAsNormal(json)}
+            </div><br>
+         </div>`
+}
 
+const playlistID = "PLXZT--l9jSF4";
+
+async function grabYoutubePosts(page){
+
+    let rq =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
+?part=snippet,contentDetails
+&playlistId=${playlistID}
+&key=${youtubeKey}${page !== 0 ? "&pageToken="+page : ``}`).then(res => res.json());
+
+    let error = rq.error;
+
+    if (error !== undefined) {
+        document.getElementsByClassName("delete2")[0].innerText = "failed to load yt videos: " + error.status.toLowerCase().replaceAll("_", " ");
+        document.getElementsByClassName("delete2")[0].classList.remove("delete2");
+    }
+    console.log(error);
+    console.log(rq);
+
+    ytPosts = ytPosts.concat(rq.items)
+
+    if (rq.nextPageToken != null){
+        await grabYoutubePosts(rq.nextPageToken);
+    }
+}
+
+function getTimeAsNumber(jsn) {
+    if (jsn.contentDetails.videoPublishedAt === undefined) {
+        return "undefined time";
+    }
+    return jsn.contentDetails.videoPublishedAt.replaceAll("-", "").replaceAll(":", "").replaceAll("T", "").replaceAll("Z", "")
+}
+
+function getTimeAsNormal(jsn){
+    const out = jsn.contentDetails.videoPublishedAt
+        .replaceAll("-","/")
+        .replaceAll(":",":")
+        .replaceAll("T"," - ")
+        .replaceAll("Z","")
+    return out.substring(0,out.lastIndexOf(":"))
+        .replaceAll("/01/"," January ")
+        .replaceAll("/02/"," February ")
+        .replaceAll("/03/"," March ")
+        .replaceAll("/04/"," April ")
+        .replaceAll("/05/"," May ")
+        .replaceAll("/06/"," June ")
+        .replaceAll("/07/"," July ")
+        .replaceAll("/08/"," August ")
+        .replaceAll("/09/"," September ")
+        .replaceAll("/10/"," October ")
+        .replaceAll("/11/"," November ")
+        .replaceAll("/12/"," December ")
+
+}

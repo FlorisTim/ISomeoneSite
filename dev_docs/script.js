@@ -138,28 +138,7 @@ function getTimeAsNormal(jsn){
 
 }
 
-async function grabYoutubePosts(page){
 
-    let rq =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
-?part=snippet,contentDetails
-&playlistId=${playlistID}
-&key=${youtubeKey}${page != 0 ? "&pageToken="+page : ``}`).then(res => res.json());
-
-    let error = rq.error;
-
-    if (error !== undefined) {
-        document.getElementsByClassName("delete2")[0].innerText = "failed to load yt videos: " + error.status.toLowerCase().replaceAll("_", " ");
-        document.getElementsByClassName("delete2")[0].classList.remove("delete2");
-    }
-    console.log(error);
-    console.log(rq);
-
-    youtubePost = youtubePost.concat(rq.items)
-
-    if (rq.nextPageToken != null){
-        await grabYoutubePosts(rq.nextPageToken);
-    }
-}
 
 async function lazyGrabPosts(){
     let count = 1;
@@ -194,9 +173,36 @@ function generateWebPost(doc){
 }
 
 function generateYoutubePosts(json){
-    return `         <div class="post"><a class="title" href="https://www.youtube.com/watch?v=${json.contentDetails.videoId}"}">${json.snippet.title.substring(0,35) + (json.snippet.title.length > 35 ? "..." : "")}</a>
-         <div class="gray">${getTimeAsNormal(json)}</div>
-         ${json.snippet.description === "" ? "no description" : json.snippet.description}<br><br>
-         </div></div>`
+    return `         
+         
+         <div class="post">
+            <a class="title" href="https://www.youtube.com/watch?v=${json.contentDetails.videoId}"}">
+                ${json.snippet.title.substring(0,35) + (json.snippet.title.length > 35 ? "..." : "")}</a>
+                <div class="gray">${getTimeAsNormal(json)}</div>
+                ${json.snippet.description === "" ? "no description" : json.snippet.description}<br><br>
+         </div>
+         `
 }
 
+async function grabYoutubePosts(page){
+
+    let rq =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
+?part=snippet,contentDetails
+&playlistId=${playlistID}
+&key=${youtubeKey}${page != 0 ? "&pageToken="+page : ``}`).then(res => res.json());
+
+    let error = rq.error;
+
+    if (error !== undefined) {
+        document.getElementsByClassName("delete2")[0].innerText = "failed to load yt videos: " + error.status.toLowerCase().replaceAll("_", " ");
+        document.getElementsByClassName("delete2")[0].classList.remove("delete2");
+    }
+    console.log(error);
+    console.log(rq);
+
+    youtubePost = youtubePost.concat(rq.items)
+
+    if (rq.nextPageToken != null){
+        await grabYoutubePosts(rq.nextPageToken);
+    }
+}
