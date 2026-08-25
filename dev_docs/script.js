@@ -16,15 +16,15 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
     console.log(ytpsts);
     webPostsElement = document.getElementById("webPost");
     ytPosts = document.getElementById("youtubePost");
-    await loadInformation("startInfo",0)
+    await loadInformation("startInfo", 0)
 
     youtubeKey = yttoken;
     playlistID = plalst;
-    if (future){
-        await loadInformation("startInfo",1)
+    if (future) {
+        await loadInformation("startInfo", 1)
     }
 
-    if (webpsts){
+    if (webpsts) {
         await lazyGrabPosts();
         filterPosts();
         posts.reverse();
@@ -37,22 +37,29 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
     }
 
     if (ytpsts) {
+
         youtubePost = [];
         await grabYoutubePosts(0)
+        console.log("fail");
+        document.getElementsByClassName("delete2")[0].innerText = "Failed to load youtube posts";
+        return;
+
+
         youtubePost.sort((a, b) => getTimeAsNumber(a) - getTimeAsNumber(b));
         youtubePost.reverse();
         console.log(youtubePost);
         for (let i = 0; i < youtubePost.length; i++) {
             try {
                 ytPosts.innerHTML += generateYoutubePosts(youtubePost[i])
-            } catch (e){
+            } catch (e) {
                 console.log(e);
             }
         }
         document.getElementsByClassName("delete2")[0].remove();
+
+
     }
 }
-
 
 
 
@@ -137,10 +144,17 @@ function getTimeAsNormal(jsn){
 async function grabYoutubePosts(page){
     let rq;
 
-    rq =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
+    let {error, data} =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
 ?part=snippet,contentDetails
 &playlistId=${playlistID}
 &key=${youtubeKey}${page != 0 ? "&pageToken="+page : ``}`).then(res => res.json());
+
+    if (error){
+        document.getElementsByClassName("delete2")[0].innerText = "failed to load yt videos: " + error.status.toLowerCase().replaceAll("_", " ");
+        document.getElementsByClassName("delete2")[0].classList.remove("delete2");
+    }
+
+    rq = data;
 
     youtubePost = youtubePost.concat(rq.items)
 
