@@ -103,6 +103,9 @@ async function loadInformation(name,id){
 }
 
 function getTimeAsNumber(jsn) {
+    if (jsn.contentDetails.videoPublishedAt === undefined) {
+        return "undefined time";
+    }
     return jsn.contentDetails.videoPublishedAt.replaceAll("-", "").replaceAll(":", "").replaceAll("T", "").replaceAll("Z", "")
 }
 
