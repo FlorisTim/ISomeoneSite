@@ -206,8 +206,7 @@ kbd:hover{
   color: #fff;
 }
 
-.section img{
-    width: 100% !important;
-    height: 100% !important;
+img{
+    width: 30px;
+    height: 30px;
 }
-
