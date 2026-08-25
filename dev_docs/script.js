@@ -41,9 +41,6 @@ async function main(yttoken, plalst, future, webpsts, ytpsts) {
         youtubePost = [];
         await grabYoutubePosts(0)
         console.log("fail");
-        document.getElementsByClassName("delete2")[0].innerText = "Failed to load youtube posts";
-        return;
-
 
         youtubePost.sort((a, b) => getTimeAsNumber(a) - getTimeAsNumber(b));
         youtubePost.reverse();
@@ -142,19 +139,20 @@ function getTimeAsNormal(jsn){
 }
 
 async function grabYoutubePosts(page){
-    let rq;
 
-    let {error, data} =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
+    let rq =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
 ?part=snippet,contentDetails
 &playlistId=${playlistID}
 &key=${youtubeKey}${page != 0 ? "&pageToken="+page : ``}`).then(res => res.json());
 
-    if (await error){
+    let error = rq.error;
+
+    if (error !== undefined) {
         document.getElementsByClassName("delete2")[0].innerText = "failed to load yt videos: " + error.status.toLowerCase().replaceAll("_", " ");
         document.getElementsByClassName("delete2")[0].classList.remove("delete2");
     }
-
-    rq = await data;
+    console.log(error);
+    console.log(rq);
 
     youtubePost = youtubePost.concat(rq.items)
 
