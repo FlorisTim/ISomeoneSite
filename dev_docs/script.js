@@ -149,12 +149,12 @@ async function grabYoutubePosts(page){
 &playlistId=${playlistID}
 &key=${youtubeKey}${page != 0 ? "&pageToken="+page : ``}`).then(res => res.json());
 
-    if (error){
+    if (await error){
         document.getElementsByClassName("delete2")[0].innerText = "failed to load yt videos: " + error.status.toLowerCase().replaceAll("_", " ");
         document.getElementsByClassName("delete2")[0].classList.remove("delete2");
     }
 
-    rq = data;
+    rq = await data;
 
     youtubePost = youtubePost.concat(rq.items)
 
