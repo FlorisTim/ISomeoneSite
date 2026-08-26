@@ -111,13 +111,6 @@ body{
   border-radius: 10px;
 }
 
-
-iframe{
-    padding: 10px;
-    border: none;
-    flex:1;
-}
-
 .button:hover{
     color: #3df730;
 
