@@ -150,17 +150,7 @@ iframe{
     margin-top: 3lh;
 }
 
-@media (max-width: 800px) {
-    .main{
-        width: 90%;
-    }
-    .row{
-        flex-direction: column;
-    }
-    body{
-        zoom:100%;
-    }
-}
+
 
 .column{
     display:flex;
@@ -219,4 +209,19 @@ width: 75%;
 .pc25{
     width: 25%;
     height: 400px;
+}
+
+@media (max-width: 800px) {
+    .main{
+        width: 90%;
+    }
+    .row{
+        flex-direction: column;
+    }
+    body{
+        zoom:100%;
+    }
+    .pc25 , .pc75{
+        width: 100%;
+    }
 }
