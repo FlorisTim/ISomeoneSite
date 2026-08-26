@@ -210,3 +210,13 @@ img{
     width: 30px;
     height: 30px;
 }
+
+.pc75{
+width: 75%;
+    height: 400px;
+}
+
+.pc25{
+    width: 25%;
+    height: 400px;
+}
