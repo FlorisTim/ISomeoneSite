@@ -15,7 +15,7 @@ themeSubtractions
 0 1 8 9 10 11
 
 theme
-11 15 11
+9 15 9
 
 title
 Cool platformer
