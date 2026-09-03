@@ -202,6 +202,21 @@ summary:hover{
     cursor: pointer;
 }
 
+.project summary{
+    position: fixed;
+    background-color: #333;
+}
+
+.project details[open]{
+    overflow-y: auto;
+    height: 400px;
+    background-color: #222;
+}
+.project details{
+    scrollbar-color: #333 #222;
+    height: 20px;
+}
+
 .project{
     width: 60%;
     display: flex;
@@ -209,8 +224,9 @@ summary:hover{
     justify-self: center;
     padding: 20px;
     background-color: #333;
-    border-radius: 10px;
     margin-bottom: 20px;
+
+    box-shadow: black 2px 2px 5px;
 }
 .projectcontainer{
     display: flex;

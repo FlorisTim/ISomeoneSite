@@ -3,7 +3,7 @@ youtubePosts
 infos
 
 playlist
-PLT-RDIWCKxU0
+PLXLuf9XWqyEA
 
 youtubeToken
 in_commons
@@ -15,35 +15,31 @@ themeSubtractions
 0 1 8 9 10 11
 
 theme
-9 15 9
+14 14 8
 
 title
-Cool platformer
+Kolomkamer
 
 ----
 
-#(title) COOL PLATFORMER
+#(title) KOLOMKAMER
 
 
 [
     {
         #(title) Purpose of this page
 
-        The purpose of this page is to share all there is to share about
-        my game Cool platformer, It's a C# console app game.
+        To showcase my project kolomkamers, it's an easy website-making platform based around a singular column
     }
 ]
 
 #(title) Information
 [
     {
-        #(title) What is cool platformer?
+        #(title) What is kolom kamers?
 
-        Cool platformer is a game i made for a school project,
-        I worked on it for a total of 2 months, the game itself is a 3D platformer in the console app,
-        it began as a prototype before the school project.
-        In the prototype i made a simple wireframe game in the console,
-        with some moving platforms and y-level detection for collision.
+        Kolom and Kamer are dutch words for Column and Room, the idea was to make a simple web editor that allows people
+        to create their own profile, portfolio, or documentation in a simple column
     }
 ]
 [
