@@ -137,7 +137,7 @@ body{
 .main{
     display:flex;
     flex-direction:column;
-    width: 50%;
+    width: 1000px;
 
     margin:auto;
     margin-top: 3lh;
@@ -185,6 +185,23 @@ kbd{
   min-width:800px;
 }
 
+.hfill{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: start;
+    gap: 5px;
+    height: 200px;
+}
+
+.count{
+    text-align: center;
+    font-size: 10px;
+    color: #777;
+}
+
 kbd:hover{
   color: #fff;
 }
@@ -202,6 +219,31 @@ width: 75%;
 .pc25{
     width: 25%;
     height: 400px;
+}
+
+.day{
+    min-width: 134px;
+    height: 100%;
+
+    gap:5px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.update{
+    background: linear-gradient(180deg, #777 , #333);
+
+    padding: 2px;
+    border: #333 solid 1px;
+
+    height: 100%;
+    width: 1fr;
+}
+
+.hoverable:hover{
+    border: #ffffff solid 1px;
 }
 
 @media (max-width: 800px) {

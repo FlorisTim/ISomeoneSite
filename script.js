@@ -3,6 +3,9 @@ let index = 0;
 let posts = [];
 let postsElement
 
+let webPostsDone = false;
+let ytPostsDone = false;
+
 import { createClient } from "https://esm.sh/@supabase/supabase-js";
 
 const supabase = createClient(
@@ -17,13 +20,19 @@ const MOBILE = screen.width < 800;
 let ytPosts = [];
 let youtubeKey;
 async function Main() {
-    await lazyGrabPosts();
-    posts.reverse()
-    console.log(posts)
-    postsElement = document.getElementsByClassName("posts")[0]
-    await generate(20);
-    document.getElementsByClassName("delete1")[0].innerHTML = "Load more";
+    await Promise.all([
+        loadWebPosts(),
+        loadYTPosts()
+    ]);
 
+    gatherUpdates();
+}
+
+function gatherUpdates(){
+
+}
+
+async function loadYTPosts() {
     youtubeKey = (await (await commons).json()).token;
     await grabYoutubePosts(0);
 
@@ -32,8 +41,18 @@ async function Main() {
     for (let i = 0; i < ytPosts.length; i++) {
         music.innerHTML += generateYoutubePosts(ytPosts[i]);
     }
-
+    ytPostsDone = true;
     document.getElementsByClassName("delete2")[0].remove();
+}
+
+async function loadWebPosts() {
+    await lazyGrabPosts();
+    posts.reverse()
+    console.log(posts)
+    postsElement = document.getElementsByClassName("posts")[0]
+    await generate(20);
+    document.getElementsByClassName("delete1")[0].innerHTML = "Load more";
+    webPostsDone = true;
 }
 
 async function likeButtons(id) {
@@ -250,13 +269,6 @@ async function grabYoutubePosts(page){
     }
 }
 
-function getTimeAsNumber(jsn) {
-    if (jsn.contentDetails.videoPublishedAt === undefined) {
-        return "undefined time";
-    }
-    return jsn.contentDetails.videoPublishedAt.replaceAll("-", "").replaceAll(":", "").replaceAll("T", "").replaceAll("Z", "")
-}
-
 function getTimeAsNormal(jsn){
     const out = jsn.contentDetails.videoPublishedAt
         .replaceAll("-","/")
@@ -278,3 +290,36 @@ function getTimeAsNormal(jsn){
         .replaceAll("/12/"," December ")
 
 }
+
+function textToColor(text){
+    const hex = "0123456789ABCDEF";
+
+    const numbers = new TextEncoder().encode(text);
+    let red = numbers[0];
+    let green = numbers[1]*3;
+    let blue = numbers[2]*4;
+
+    let mode = 0;
+
+    for (let i = 3; i < numbers.length; i++){
+        if (mode === 0){
+            red += numbers[i];
+        }
+        if (mode === 1){
+            green += numbers[i];
+        }
+        if (mode === 2){
+            blue += numbers[i];
+        }
+        mode++;
+        mode %= 3;
+    }
+
+    red %= 16;
+    green %= 16;
+    blue %= 16;
+
+    return `linear-gradient(180deg, #${hex[red]}${hex[green]}${hex[blue]} 0%, #${hex[(red/2)|0]}${hex[(green/2)|0]}${hex[(blue/2)|0]} 100%)`
+}
+
+window.textToColor = textToColor;
