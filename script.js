@@ -215,10 +215,9 @@ window.openWindow = openWindow;
 
 function generateYoutubePosts(json){
     return `         
-         
          <div class="post">
                  <a class="title" href="https://www.youtube.com/watch?v=${json.contentDetails.videoId}">
-                ${json.snippet.title}
+                ${json.snippet.title.substring(0,14) + (json.snippet.title.length > 16 ? "..." : "")}
                 </a>
             <div class="graytext">
                 ${getTimeAsNormal(json)}
