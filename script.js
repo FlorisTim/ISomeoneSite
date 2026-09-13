@@ -25,11 +25,58 @@ async function Main() {
         loadYTPosts()
     ]);
 
-    gatherUpdates();
+    const projectUpdates = document.getElementById("updates");
+
+    let date = new Date();
+    date.setDate(date.getDate() - 7);
+    for (let i = 0; i < 7; i++) {
+        date.setDate(date.getDate() + 1);
+        projectUpdates.innerHTML += gatherUpdates(date);
+    }
+
 }
 
-function gatherUpdates(){
+const updateTemplate = `<div class="update hoverable" style="background: $background"><div class="title">$title</div><p>$desc</p></div>`
 
+function createUpdateTile(title, description) {
+    return updateTemplate
+        .replace("$background", textToColor(title))
+        .replace("$title", title)
+        .replace("$desc", description);
+}
+
+function gatherUpdates(day) {
+    const updates = document.getElementById("updates");
+    let output = [];
+    const yt = ytMusicAtDate(day)
+    for (let v of yt) {
+        output.push(v)
+    }
+    let out = "<div class='day'>"
+    out += `<div class="count">${day.getDate()}</div>`
+
+    for (let u of output) {
+        out += u;
+    }
+
+    if (output.length === 0) {
+        out += `<div class="update"><div class="title">No updates</div></div>`
+    }
+
+    out += "</div>"
+    return out;
+}
+
+function ytMusicAtDate(givenDate){
+    const now = givenDate.toISOString().split("T")[0].trim();
+    let out = []
+    for (let c of ytPosts){
+        const time = c.contentDetails.videoPublishedAt.split("T")[0].trim();
+        if (time === now){
+            out.push(createUpdateTile("Music",c.snippet.title));
+        }
+    }
+    return out;
 }
 
 async function loadYTPosts() {
