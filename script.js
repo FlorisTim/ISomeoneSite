@@ -27,9 +27,11 @@ async function Main() {
 
     const projectUpdates = document.getElementById("updates");
 
+    const history = 7;
+
     let date = new Date();
-    date.setDate(date.getDate() - 7);
-    for (let i = 0; i < 7; i++) {
+    date.setDate(date.getDate() - history);
+    for (let i = 0; i < history; i++) {
         date.setDate(date.getDate() + 1);
         projectUpdates.innerHTML += gatherUpdates(date);
     }
@@ -59,7 +61,7 @@ function gatherUpdates(day) {
 
 
     let out = "<div class='day'>"
-    out += `<div class="count">${day.getDate()}</div>`
+    out += `<div class="count">${day.toISOString().split("T")[0]}</div><div class="section">`
 
     for (let u of output) {
         out += u;
@@ -69,7 +71,7 @@ function gatherUpdates(day) {
         out += `<div class="update"><div class="title">No updates</div></div>`
     }
 
-    out += "</div>"
+    out += "</div></div>"
     return out;
 }
 
@@ -410,7 +412,10 @@ function textToColor(text){
     green %= 16;
     blue %= 16;
 
-    return `linear-gradient(180deg, #${hex[red]}${hex[green]}${hex[blue]} 0%, #${hex[(red/2.5)|0]}${hex[(green/2.5)|0]}${hex[(blue/2.5)|0]} 100%)`
+
+
+    return `linear-gradient(180deg, #${hex[red]}${hex[green]}${hex[blue]} 0%, #${hex[(red/1.5)|0]}${hex[(green/1.5)|0]}${hex[(blue/1.5)|0]} 100%)`
+
 }
 
 window.textToColor = textToColor;
