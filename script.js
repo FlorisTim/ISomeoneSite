@@ -52,6 +52,12 @@ function gatherUpdates(day) {
     for (let v of yt) {
         output.push(v)
     }
+    const web = postAtDate(day)
+    for (let v of web) {
+        output.push(v)
+    }
+
+
     let out = "<div class='day'>"
     out += `<div class="count">${day.getDate()}</div>`
 
@@ -67,13 +73,51 @@ function gatherUpdates(day) {
     return out;
 }
 
+function getDateOfPost(post) {
+    let date = getUnsafe("date", post);
+
+    date = date
+        .replace("January", "1")
+        .replace("February", "2")
+        .replace("March", "3")
+        .replace("April", "4")
+        .replace("May", "5")
+        .replace("June", "6")
+        .replace("July", "7")
+        .replace("August", "8")
+        .replace("September", "9")
+        .replace("October", "10")
+        .replace("November", "11")
+        .replace("December", "12");
+
+    const values = date.split(" ")
+    console.log(date)
+    if (values.length  < 3) {
+        return ""
+    }
+    return values[2] + "-" + (values[1].length === 1 ? "0" + values[1] : values[1]) + "-" + (values[0].length === 1 ? "0" + values[0] : values[0]);
+}
+
+function postAtDate(givenDate) {
+    const now = givenDate.toISOString().split("T")[0].trim();
+
+    let out = []
+    for (let c of posts){
+        const time = getDateOfPost(c);
+        if (time === now){
+            out.push(createUpdateTile("Post", c.substring(c.indexOf("~") + 2,c.indexOf("~") + 40).trim().replaceAll("\n","<br>") + "..."));
+        }
+    }
+    return out;
+}
+
 function ytMusicAtDate(givenDate){
     const now = givenDate.toISOString().split("T")[0].trim();
     let out = []
     for (let c of ytPosts){
         const time = c.contentDetails.videoPublishedAt.split("T")[0].trim();
         if (time === now){
-            out.push(createUpdateTile("Music",c.snippet.title));
+            out.push(createUpdateTile("Music",`Uploaded <a "href="https://www.youtube.com/watch?v=${c.contentDetails.videoId}">${c.snippet.title}</a> to youtube`));
         }
     }
     return out;
@@ -343,7 +387,7 @@ function textToColor(text){
 
     const numbers = new TextEncoder().encode(text);
     let red = numbers[0];
-    let green = numbers[1]*3;
+    let green = numbers[1]*4;
     let blue = numbers[2]*4;
 
     let mode = 0;
@@ -366,7 +410,7 @@ function textToColor(text){
     green %= 16;
     blue %= 16;
 
-    return `linear-gradient(180deg, #${hex[red]}${hex[green]}${hex[blue]} 0%, #${hex[(red/2)|0]}${hex[(green/2)|0]}${hex[(blue/2)|0]} 100%)`
+    return `linear-gradient(180deg, #${hex[red]}${hex[green]}${hex[blue]} 0%, #${hex[(red/2.5)|0]}${hex[(green/2.5)|0]}${hex[(blue/2.5)|0]} 100%)`
 }
 
 window.textToColor = textToColor;
