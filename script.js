@@ -13,21 +13,32 @@ const supabase = createClient(
     "sb_publishable_oYu_jtRndODulzdSprQVvA_FCDe9qAn"
 );
 
-const commons = fetch("dev_docs/common.json");
+let commons ;
 
 const MOBILE = screen.width < 800;
 
 let ytPosts = [];
 let youtubeKey;
+
+let ytUpdates = [];
+
 async function Main() {
+    commons = await fetch("dev_docs/common.json").then((res) => res.json());
+
     await Promise.all([
         loadWebPosts(),
-        loadYTPosts()
+        loadYTMusic(),
     ]);
+
+    const playlists = commons.playlists
+
+    for (const p of playlists) {
+        await loadYTPosts(p)
+    }
 
     const projectUpdates = document.getElementById("updates");
 
-    const history = 7;
+    const history = 14;
 
     let date = new Date();
     date.setDate(date.getDate() - history);
@@ -58,7 +69,11 @@ function gatherUpdates(day) {
     for (let v of web) {
         output.push(v)
     }
-
+    const ytp = ytPostAtDate(day)
+    for (let v of ytp) {
+        output.push(v)
+        console.log(v)
+    }
 
     let out = "<div class='day'>"
     out += `<div class="count">${day.toISOString().split("T")[0]}</div><div class="section">`
@@ -113,28 +128,60 @@ function postAtDate(givenDate) {
     return out;
 }
 
+function ytPostAtDate(givenDate) {
+    const now = givenDate.toISOString().split("T")[0].trim();
+    let out = []
+    for (let c of ytUpdates){
+        const time = c.date.trim()
+        if (time === now){
+            out.push(createUpdateTile(c.type,`Uploaded <a href="https://www.youtube.com/watch?v=${c.href}">${c.title}</a> to youtube`));
+        }
+    }
+    return out;
+}
+
 function ytMusicAtDate(givenDate){
     const now = givenDate.toISOString().split("T")[0].trim();
     let out = []
     for (let c of ytPosts){
         const time = c.contentDetails.videoPublishedAt.split("T")[0].trim();
         if (time === now){
-            out.push(createUpdateTile("Music",`Uploaded <a "href="https://www.youtube.com/watch?v=${c.contentDetails.videoId}">${c.snippet.title}</a> to youtube`));
+            out.push(createUpdateTile("Music",`Uploaded <a href="https://www.youtube.com/watch?v=${c.contentDetails.videoId}">${c.snippet.title}</a> to youtube`));
         }
     }
     return out;
 }
 
-async function loadYTPosts() {
-    youtubeKey = (await (await commons).json()).token;
-    await grabYoutubePosts(0);
+async function loadYTPosts(playlist){
+    youtubeKey = commons.token;
+    const o = await grabYoutubePosts(0,playlist.id);
+    for (let c of o) {
+        try {
+            ytUpdates.push({
+                type: playlist.name,
+                title: c.snippet.title,
+                date: c.contentDetails.videoPublishedAt.split("T")[0].trim(),
+                href: `https://www.youtube.com/watch?v=${c.contentDetails.videoId}`
+            })
+        } catch(err) {
+            console.error(err);
+        }
+    }
+    console.log(ytUpdates);
+}
+
+async function loadYTMusic() {
+    youtubeKey = commons.token;
+    ytPosts = await grabYoutubePosts(0,"PLXZT--l9jSF4");
 
     let music = document.getElementsByClassName("music")[0];
 
     for (let i = 0; i < ytPosts.length; i++) {
+        console.log("added",i);
         music.innerHTML += generateYoutubePosts(ytPosts[i]);
     }
     ytPostsDone = true;
+    console.log("ytPostsDone");
     document.getElementsByClassName("delete2")[0].remove();
 }
 
@@ -163,7 +210,7 @@ async function likeButtons(id) {
      <div class="inline">
                 <div class="column">
                 <div class="interaction">
-                    <svg class="arrow ${voted ? '' : 'arrowUp'}" ${voted ? '' : 'onclick="like(' + id + ')"'}viewBox="0 0 8.544 10.716">
+                    <svg class="arrow ${voted ? '' : 'arrowUp'}" ${voted ? '' : 'onclick="like(' + id + ')"'} viewBox="0 0 8.544 10.716">
                         <path fill="currentColor" d="M4.272 0l4.272 4.395H5.72v6.321H2.824V4.395H0z"/>
                     </svg>
                  
@@ -337,10 +384,9 @@ function generateYoutubePosts(json){
          </div>`
 }
 
-const playlistID = "PLXZT--l9jSF4";
 
-async function grabYoutubePosts(page){
-
+async function grabYoutubePosts(page,playlistID){
+    let array = []
     let rq =  await fetch(`https://www.googleapis.com/youtube/v3/playlistItems
 ?part=snippet,contentDetails
 &playlistId=${playlistID}
@@ -355,11 +401,13 @@ async function grabYoutubePosts(page){
     console.log(error);
     console.log(rq);
 
-    ytPosts = ytPosts.concat(rq.items)
+    array = array.concat(rq.items)
 
     if (rq.nextPageToken != null){
-        await grabYoutubePosts(rq.nextPageToken);
+        array = array.concat(await grabYoutubePosts(rq.nextPageToken, playlistID));
     }
+
+    return array;
 }
 
 function getTimeAsNormal(jsn){
@@ -388,9 +436,9 @@ function textToColor(text){
     const hex = "0123456789ABCDEF";
 
     const numbers = new TextEncoder().encode(text);
-    let red = numbers[0];
-    let green = numbers[1]*4;
-    let blue = numbers[2]*4;
+    let red = numbers[0]*89;
+    let green = numbers[1]*27;
+    let blue = numbers[2]*573;
 
     let mode = 0;
 

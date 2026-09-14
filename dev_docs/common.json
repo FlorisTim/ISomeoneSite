@@ -98,5 +98,27 @@
       ]
     }
   },
-  "token": "AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I"
+  "token": "AIzaSyD-KjEjV-eGaMM6tJA084n_d7ZncI_UT5I",
+  "playlists": [
+    {
+      "name": "Dunge",
+      "id": "PLMcqH_XlXLMw"
+    },
+    {
+      "name": "Cool Platformer",
+      "id": "PLT-RDIWCKxU0"
+    },
+    {
+      "name": "KolomKamers",
+      "id": "PLXLuf9XWqyEA"
+    },
+    {
+      "name": "Side Stuff",
+      "id": "PLYfvHrQ67ClE"
+    },
+    {
+      "name": "Unrelated",
+      "id": "PLSlUwXuZztrM"
+    }
+  ]
 }
