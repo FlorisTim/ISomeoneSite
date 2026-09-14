@@ -226,6 +226,9 @@ width: 75%;
 .section{
     overflow-y: auto;
     height: 100%;
+    overflow-x: hidden;
+    scrollbar-color: #FFFFFF00 #FFFFFF00;
+    scrollbar-width: none;
 }
 
 .day{
@@ -261,6 +264,7 @@ width: 75%;
 
     padding-bottom: 5px;
     box-shadow: #000 1px 1px 1px;
+
 }
 
 .hoverable:hover{
