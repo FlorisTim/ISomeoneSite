@@ -436,9 +436,9 @@ function textToColor(text){
     const hex = "0123456789ABCDEF";
 
     const numbers = new TextEncoder().encode(text);
-    let red = numbers[0]*89;
-    let green = numbers[1]*27;
-    let blue = numbers[2]*573;
+    let red = numbers[0]*2;
+    let green = numbers[1]*3;
+    let blue = numbers[2]*11;
 
     let mode = 0;
 
