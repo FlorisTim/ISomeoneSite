@@ -10,6 +10,7 @@ const replacers = {
 let json;
 async function fetchProjects(){
     json = parseJSFON(await (await fetch("projects.jsfon")).text());
+    console.log(json);
 }
 let popups = [];
 
@@ -80,11 +81,12 @@ function replaceDate(replacer, text){
 }
 
 function parseJSFON(text){
-    return JSON.parse(text
-        .replaceAll("\n","")
+    const out = text
+        .replaceAll("\r\n","")
         .replaceAll("\\n","<br>")
-        .replaceAll("  ","")
-    )
+        .replaceAll("  ","");
+
+    return JSON.parse(out);
 }
 
 function addProjects(){

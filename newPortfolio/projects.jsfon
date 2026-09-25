@@ -2,7 +2,7 @@
   {
     "title": "Dunge",
     "languages": ["JAVA (Processing)","XML"],
-    "image": "resources/cp1.png",
+    "image": "resources/dunge1.png",
     "desc":
     "
     Dunge is a dungeon crawler I'm always working on.\n\n
@@ -13,10 +13,23 @@
         {
         "type": "images",
         "data": ["resources/cp1.png","resources/cp2.png"]
-        },
+        }
+    ]
+  },
+  {
+    "title": "Cool Platformer",
+    "languages": ["C#"],
+    "image": "resources/cp1.png",
+    "desc":
+    "
+    Cool Platformer is a 3D Platformer in the C# console app, I made it for a school project\n\n
+    It has LAN multiplayer, full 256 color, basic physics engine and 3d models + animation
+    ",
+    "popup":
+    [
         {
-        "type": "text",
-        "data": ["","resources/cp2.png"]
+        "type": "images",
+        "data": ["resources/cp1.png","resources/cp2.png"]
         }
     ]
   }
