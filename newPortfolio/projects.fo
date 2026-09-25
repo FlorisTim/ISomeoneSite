@@ -50,5 +50,66 @@
         "data": ["resources/cp1.png","resources/cp2.png"]
         }
     ]
+  },
+  {
+    "title": "Dunge",
+    "languages": ["Java (Processing)","XML","JSON"],
+    "image": "resources/dunge1.png",
+    "desc":
+    "
+    Dunge is a dungeon crawler & my pet project, I have been working on this game since i was 15.\n\n
+
+    It's my primary source of learning novel concepts in game development.
+    ",
+    "popup":
+    [
+        "DUNGE",
+        "Infinite dungeon crawler",
+        {
+        "type": "text",
+        "data": ["What is Dunge?",
+        "<p>
+        Dunge is an infinite dungeon crawler I am always working on, I use it mostly to learn from./n/n
+
+        Whenever i think of a cool game concept i try to work it out and make it work with all other concepts in this game.
+        </p>"]
+        },
+        {
+        "type": "images",
+        "data": ["resources/dunge3.png","resources/dunge4.png","resources/dunge5.png"]
+        },
+        {
+        "type": "text",
+        "data": ["Features in dunge",
+        "<p>
+        The game includes:\n
+        - Configurable world gen\n
+        - XML Based gui\n
+        - An animation DSL\n
+        - An enemy AI VM-like system (also using a DSL)\n\n
+
+        It's important to note i go into more depth in <a href='https://www.isomeone.nl/dev_docs/dunge'>this document</a>\n
+        The GitHub repo is not public, you can E-Mail me for the code.
+        </p>"]
+        },
+        {
+        "type": "text",
+        "data": ["Languages used",
+        "<p>
+        I used 2 official languages (Java, XML and JSON), counting the DSLs I used 4.
+        </p>"]
+        },
+        {
+        "type": "text",
+        "data": ["Older versions",
+        "<p>
+        In older versions (made in scratch) everything was configurable via JSON, and i made an editor for the animations (in scratch too) see below
+        </p>"]
+        },
+        {
+        "type": "image",
+        "data": ["resources/dunge6.png"]
+        }
+    ]
   }
 ]
