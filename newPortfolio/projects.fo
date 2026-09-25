@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Cool Platformer",
+    "languages": ["C#"],
+    "image": "resources/cp1.png",
+    "desc":
+    "
+    Cool Platformer is a 3D Platformer in the C# console app, I made it for a school project\n\n
+    It has LAN multiplayer, full 256 color, basic physics engine and 3d models + animation
+    ",
+    "popup":
+    [
+        "Cool Platformer",
+        "3D Platformer in the C# Console App",
+        {
+        "type": "text",
+        "data": ["What is Cool Platformer?",
+        "<p>
+        Cool Platformer is a 3D Platformer inside the C# console app.\n\n
+        I made it for SHiNE, A school assignment that gave us creative freedom to make something we would learn from.
+        </p>"]
+        },
+        {
+        "type": "images",
+        "data": ["resources/portal.gif"]
+        },
+        {
+        "type": "text",
+        "data": ["Features in cool platformer",
+        "<p>
+        The game includes:\n
+        - LAN Multiplayer\n
+        - 256 Colors\n
+        - Immersive portals (previous gif)\n
+        - Custom formats for 3d models, animations, and rigs\n\n
+
+        It's important to note i go into more depth in <a href='https://www.isomeone.nl/dev_docs/cool_platformer'>this document</a>\n
+        And ofcourse the github repo <a href='https://github.com/FlorisTim/3D-platformer-in-the-c-console-app'>GitHub Repo</a>
+        </p>"]
+        },
+        {
+        "type": "text",
+        "data": ["Languages used",
+        "<p>
+        I only used one language, C#
+        </p>"]
+        },
+        {
+        "type": "images",
+        "data": ["resources/cp1.png","resources/cp2.png"]
+        }
+    ]
+  }
+]

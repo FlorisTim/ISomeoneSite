@@ -9,10 +9,11 @@ const replacers = {
 
 let json;
 async function fetchProjects(){
-    json = parseJSFON(await (await fetch("projects.jsfon")).text());
+    json = parse(await (await fetch("projects.fo")).text());
     console.log(json);
 }
 let popups = [];
+let popupElement;
 
 const languageTag = `
 <span class="language">$LANG</span>
@@ -47,7 +48,7 @@ function generateTile(title, description, languages, image){
         .replace("$DESC",description)
         .replace("$LANGS",languageTags(languages))
         .replace("$IMG", "<img class='image' src='" + image + "' alt='" + title + "'>")
-        .replace("$ID", popups.length.toString());
+        .replace("$ID", (popups.length-1).toString());
 }
 
 document.addEventListener('DOMContentLoaded', () => {main()});
@@ -63,6 +64,7 @@ async function main(){
     await fetchProjects();
 
     projects = document.getElementById("projects");
+    popupElement = document.getElementById("popup");
     addProjects();
 }
 
@@ -80,9 +82,11 @@ function replaceDate(replacer, text){
     }
 }
 
-function parseJSFON(text){
+function parse(text){
     const out = text
         .replaceAll("\r\n","")
+        .replaceAll("\r","")
+        .replaceAll("\n","")
         .replaceAll("\\n","<br>")
         .replaceAll("  ","");
 
@@ -99,4 +103,50 @@ function addProjects(){
             project.image
         );
     }
+}
+
+window.popup = popup;
+
+window.closePopup = closePopup;
+function closePopup(){
+    popupElement.style.display = "none";
+    document.body.style.overflowY = "auto";
+}
+
+const section = "<div class='top entry'><div class='title'>$TITLE</div>$CONTENT</div>"
+const row = "<div class='imgrow'>$CONTENT</div>"
+
+function createImageRow(images){
+    let out = "";
+    for (const image of images){
+        out += `<img class="bigimage" alt="${image}" src="${image}">`
+    }
+    return row.replace("$CONTENT",out);
+}
+
+function createTextSection(title, text){
+    return section
+        .replace("$TITLE", title)
+        .replace("$CONTENT", text);
+}
+
+function popup(json){
+    const popupMain = document.getElementById("popupmain");
+    popupMain.innerHTML = "";
+    document.getElementById("popuptitle").innerText = json[0];
+    document.getElementById("popupsubtitle").innerText = json[1];
+
+    for (let i = 2; i < json.length; i++){
+        switch (json[i].type){
+            case "images":
+                popupMain.innerHTML += createImageRow(json[i].data);
+                break;
+            case "text":
+                popupMain.innerHTML += createTextSection(json[i].data[0],json[i].data[1]);
+                break;
+        }
+    }
+    popupMain.innerHTML+="<br>"
+    popupElement.style.display = "";
+    document.body.style.overflowY = "hidden";
 }

@@ -1,5 +1,5 @@
 body{
-    background: #e5e5e5;
+    background: #d8d9ff;
     color: #1c31b9;
     font-family: verdana, serif;
 }
@@ -15,7 +15,7 @@ body{
     justify-content: space-between;
 }
 
-.entry{
+.entry, .imgrow{
     background: #ffffff;
     min-height: 100px;
 
@@ -28,12 +28,12 @@ body{
     flex: 1;
 }
 
-.top.entry{
+.top.entry, .imgrow{
     border-radius: 10px;
     border: 2px solid #fff;
 }
 
-.top.entry:hover{
+.top.entry:hover, .imgrow:hover{
     border: 2px solid rgb(91 91 255 / 0.39);
 }
 
@@ -134,4 +134,41 @@ body{
 }
 img{
     flex: 1;
+}
+
+.popup{
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    background: #d8d9ff;
+    overflow-y: scroll;
+}
+
+.exit{
+    left: 5%;
+    top: 5%;
+    margin: 10px;
+    position: fixed;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.exit:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.imgrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.bigimage{
+    border-radius: 10px;
+    min-height: 250px;
+    max-height: 250px;
 }
