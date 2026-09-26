@@ -1,7 +1,7 @@
 body{
     background: #d8d9ff;
     color: #1c31b9;
-    font-family: verdana, serif;
+    font-family: verdana, sans-serif;
 }
 
 .row, .divider{
@@ -17,6 +17,10 @@ body{
 
 .entry, .imgrow{
     background: #ffffff;
+}
+
+.entry, .imgrow, .inentry{
+
     min-height: 100px;
 
     color: #000000;
@@ -37,6 +41,9 @@ body{
     border: 2px solid rgb(91 91 255 / 0.39);
 }
 
+.inentry{
+    text-align: center;
+}
 
 .title{
     text-align: center;
@@ -46,7 +53,7 @@ body{
     color: #fff;
 }
 
-.project-tile > .title{
+.project-tile > .title, .inentry > .title{
     background: none;
     color: black;
 }
@@ -75,7 +82,7 @@ body{
 .project-tile{
     min-width: 220px;
     max-width: 220px;
-    height: 320px;
+    height: 340px;
     background: #ddf;
     margin-left: -5px;
     border-radius:10px;

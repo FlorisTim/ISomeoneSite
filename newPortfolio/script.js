@@ -116,10 +116,10 @@ function closePopup(){
 const section = "<div class='top entry'><div class='title'>$TITLE</div>$CONTENT</div>"
 const row = "<div class='imgrow'>$CONTENT</div>"
 
-function createImageRow(images){
+function createImageRow(images, big){
     let out = "";
     for (const image of images){
-        out += `<img class="bigimage" alt="${image}" src="${image}">`
+        out += `<img class="${big ? "singular" : "bigimage"}" alt="${image}" src="${image}">`
     }
     return row.replace("$CONTENT",out);
 }
@@ -139,7 +139,10 @@ function popup(json){
     for (let i = 2; i < json.length; i++){
         switch (json[i].type){
             case "images":
-                popupMain.innerHTML += createImageRow(json[i].data);
+                popupMain.innerHTML += createImageRow(json[i].data, false);
+                break;
+            case "image":
+                popupMain.innerHTML += createImageRow(json[i].data, true);
                 break;
             case "text":
                 popupMain.innerHTML += createTextSection(json[i].data[0],json[i].data[1]);
