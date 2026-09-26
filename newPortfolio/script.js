@@ -78,7 +78,7 @@ function replaceDate(replacer, text){
 
         repl.innerHTML = text
             .replaceAll("%Y",result.getFullYear()-1970)
-            .replaceAll("%M",result.getMonth());
+            .replaceAll("%M",result.getMonth().toString());
     }
 }
 
