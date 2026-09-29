@@ -4,6 +4,10 @@ body{
     font-family: verdana, sans-serif;
 }
 
+p{
+    margin-left: 2px;
+}
+
 .row, .divider{
     gap: 5px;
     display: flex;
@@ -197,4 +201,10 @@ img{
     border-radius: 4px;
     float: right;
     margin-right: 5px;
+}
+
+.profilepicture{
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
 }
