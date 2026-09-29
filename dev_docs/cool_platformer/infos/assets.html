@@ -8,7 +8,7 @@ this is how a model would be initialized
 <kbd>**void Load(**string file){
     **string\[\] read = file.split('\n');
     **for(**int i = 0; i < read.Length; ++i){
-        switch(read[i]){
+        switch(read\[i\]){
             case "model_start":
                 modelName = read\[++i\];
                 triangles = 0;
@@ -19,7 +19,7 @@ this is how a model would be initialized
                 triangle = new Triangle();
                 break;
             case "point1":
-                triangle.X = **double.Parse(read\[++i\])
+                triangle.X = double.Parse(read\[++i\])
             break;
             ...
             case "triangle_end":
