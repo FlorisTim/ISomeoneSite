@@ -20,7 +20,7 @@ const languageTag = `
 `
 const projectTile = `
 <div class="project-tile" onclick="popup(popups[$ID])">
-<div class="title">
+<div class="title left">
 $TITLE
 </div>
 $IMG
@@ -44,7 +44,7 @@ function languageTags(langs){
 }
 function generateTile(title, description, languages, image){
     return projectTile
-        .replace("$TITLE",title)
+        .replace("$TITLE",title.replaceAll("[","<span class='tag'>").replaceAll("]","</span>"))
         .replace("$DESC",description)
         .replace("$LANGS",languageTags(languages))
         .replace("$IMG", "<img class='image' src='" + image + "' alt='" + title + "'>")

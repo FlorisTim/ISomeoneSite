@@ -53,6 +53,11 @@ body{
     color: #fff;
 }
 
+.left{
+    text-align: left;
+    margin-left: 5px;
+}
+
 .project-tile > .title, .inentry > .title{
     background: none;
     color: black;
@@ -178,4 +183,18 @@ img{
     border-radius: 10px;
     min-height: 250px;
     max-height: 250px;
+}
+
+.singular{
+    max-width: 100%;
+}
+
+.tag{
+    margin-top: 2px;
+    font-size: 12px;
+    background: #ffff;
+    padding: 1px;
+    border-radius: 4px;
+    float: right;
+    margin-right: 5px;
 }

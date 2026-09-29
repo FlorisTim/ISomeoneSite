@@ -111,5 +111,64 @@
         "data": ["resources/dunge6.png"]
         }
     ]
+  },
+  {
+    "title": "KolomKamers [in dev]",
+    "languages": ["JS","Python","HTML","CSS"],
+    "image": "resources/kkt.png",
+    "desc":
+    "
+    KolomKamers is an online website creator/editor based on a single central column, Inspired by most of my websites.\n\n
+
+    It has a simple dashboard, drag and drop elements, currently working on api support.
+    ",
+    "popup":
+    [
+        "KolomKamers",
+        "Online web editor",
+        {
+        "type": "text",
+        "data": ["What is Kolomkamers?",
+        "<p>
+        Kolomkamers is an easy way to create your own website, You can log in, create a website, and share it with others.\n\n
+
+        It could be used for a simple profile / portfolio or for a document or presentation.
+        </p>"]
+        },
+        {
+        "type": "image",
+        "data": ["resources/kk1.png"]
+        },
+        {
+        "type": "text",
+        "data": ["Features in kolomkamers",
+        "<p>
+        Up until now it has:\n
+        - Login / Signup screen\n
+        - Working backend server\n
+        - Web Editor\n
+        - Compact markup language to save space on server\n\n
+
+        I'm planning to add:\n
+        - Style editor (markup language already includes style)\n
+        - Custom community made tiles\n
+        - API support, allowing users to upload tokens that are kept on my server without being public\n\n
+
+        I'm currently creating a document for this project that goes into more depth, which I will share here when done\n
+        The github repo is public <a href='https://github.com/FlorisTim/kolomkamer'>right here</a>
+        </p>"]
+        },
+        {
+        "type": "text",
+        "data": ["Languages used",
+        "<p>
+        I used JS and Python for the backend, and html and css if you count those.
+        </p>"]
+        },
+        {
+        "type": "image",
+        "data": ["resources/kk2.png"]
+        }
+    ]
   }
 ]
