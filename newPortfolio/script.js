@@ -90,7 +90,7 @@ function parse(text){
         .replaceAll("\\n","<br>")
         .replaceAll("  ","");
 
-    return JSON.parse(out);
+    return JSON.parse(`[${out}]`);
 }
 
 function addProjects(){

@@ -1,11 +1,15 @@
-body{
-    background: #d8d9ff;
-    color: #1c31b9;
-    font-family: verdana, sans-serif;
+:root{
+    --background: #333;
+    --listbg: #555;
+    --project: #777;
+    --foreground: #888;
+    --top: #bbb;
 }
 
-p{
-    margin-left: 2px;
+body{
+    background: var(--background);
+    color: var(--top);
+    font-family: verdana, sans-serif;
 }
 
 .row, .divider{
@@ -20,14 +24,15 @@ p{
 }
 
 .entry, .imgrow{
-    background: #ffffff;
+    background: var(--listbg);
+
 }
 
 .entry, .imgrow, .inentry{
 
     min-height: 100px;
 
-    color: #000000;
+    color: #fff;
     text-align: left;
 
     padding: 5px;
@@ -36,14 +41,7 @@ p{
     flex: 1;
 }
 
-.top.entry, .imgrow{
-    border-radius: 10px;
-    border: 2px solid #fff;
-}
 
-.top.entry:hover, .imgrow:hover{
-    border: 2px solid rgb(91 91 255 / 0.39);
-}
 
 .inentry{
     text-align: center;
@@ -51,20 +49,16 @@ p{
 
 .title{
     text-align: center;
-    background: #0e30ff;
+    background: var(--foreground);
     padding: 5px;
-    border-radius:10px;
     color: #fff;
 }
 
-.left{
+.project-tile > .title, .inentry > .title{
     text-align: left;
     margin-left: 5px;
-}
-
-.project-tile > .title, .inentry > .title{
     background: none;
-    color: black;
+    color: #fff;
 }
 
 .red{
@@ -72,7 +66,7 @@ p{
 }
 
 .grey{
-    color: #666
+    color: #bbb
 }
 
 .main{
@@ -92,29 +86,34 @@ p{
     min-width: 220px;
     max-width: 220px;
     height: 340px;
-    background: #ddf;
+    background: var(--project);
     margin-left: -5px;
-    border-radius:10px;
     display: flex;
     flex-direction: column;
-
+    transition: 0.05s;
 }
 
 .project-tile:hover{
-    background: #c9c9ff;
+    background: var(--foreground);
     cursor: pointer;
+    transform: scale(1.01);
+    transition: 0.05s;
+}
 
+.entry{
+    overflow-y: visible;
 }
 
 .horizontal-scroll{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    overflow-x:scroll;
-    scrollbar-color: #888 #fff;
+    overflow-x: auto;
+    overflow-y: visible;
 }
 
 .langs{
+    color: #000;
     margin-top:auto;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -125,10 +124,9 @@ p{
 
 }
 .description {
-    background: #fff;
+    background: var(--listbg);
     margin: 10px;
     padding: 4px;
-    border-radius: 5px;
     font-size: 12px;
 }
 
@@ -146,7 +144,6 @@ p{
     max-height: 110px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5px;
 }
 img{
     flex: 1;
@@ -156,8 +153,17 @@ img{
     position: fixed;
     inset: 0;
     height: 100%;
-    background: #d8d9ff;
+    background: var(--background);
     overflow-y: scroll;
+}
+
+
+
+a{
+    color: #f8e430;
+}
+a:hover{
+    color: #4bf830;
 }
 
 .exit{
@@ -165,9 +171,9 @@ img{
     top: 5%;
     margin: 10px;
     position: fixed;
-    background: #ffffff;
+    background: var(--listbg);
     padding: 5px;
-    border-radius: 10px;
+
 }
 
 .exit:hover{
@@ -184,7 +190,6 @@ img{
 }
 
 .bigimage{
-    border-radius: 10px;
     min-height: 250px;
     max-height: 250px;
 }
@@ -194,17 +199,19 @@ img{
 }
 
 .tag{
-    margin-top: 2px;
     font-size: 12px;
-    background: #ffff;
-    padding: 1px;
-    border-radius: 4px;
+    background: var(--listbg);
+    padding-left: 4px;
+    padding-right: 4px;
     float: right;
     margin-right: 5px;
 }
 
 .profilepicture{
     margin: 10px;
-    border-radius: 10px;
     width: 200px;
+}
+
+.top{
+    padding: 5px;
 }

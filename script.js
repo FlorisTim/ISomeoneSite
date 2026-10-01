@@ -404,7 +404,9 @@ async function grabYoutubePosts(page,playlistID){
     array = array.concat(rq.items)
 
     if (rq.nextPageToken != null){
-        array = array.concat(await grabYoutubePosts(rq.nextPageToken, playlistID));
+        if (rq.nextPageToken.length > 15) {
+            array = array.concat(await grabYoutubePosts(rq.nextPageToken, playlistID));
+        }
     }
 
     return array;
