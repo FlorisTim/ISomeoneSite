@@ -130,6 +130,8 @@ function createTextSection(title, text){
         .replace("$CONTENT", text);
 }
 
+console.log()
+
 function popup(json){
     const popupMain = document.getElementById("popupmain");
     popupMain.innerHTML = "";

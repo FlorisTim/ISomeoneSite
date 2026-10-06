@@ -1,5 +1,3 @@
-
-
 # Portfolio
 
 ## Additions to original portfolio
