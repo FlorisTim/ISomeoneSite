@@ -1,0 +1,25 @@
+["title"]Parser[/]
+
+["post spckbd"]
+["title"]October 2026[/]
+Splitting text like
+<kbd>print(hello, world);
+</kbd>
+Into elementary tokens like:
+<kbd>print
+(
+hello
+,
+world
+);
+</kbd>
+<br>
+I did this by having 2 lists of characters, the normal characters (a-z, A-Z, 0-9 and _) and the syntax characters (plus minus brackets etc..)<br>
+while scrolling through an input string, it constructs a string by adding the character of the input string to it.<br><br>
+
+it switches modes depending on what character it sees (normal or syntax), and before it switches and appends the new character it emits the current string and clears it.<br>
+<br>
+Now this does not differentiate or split `);` into the two seperate symbols they are, This is just the start of the compiler.
+[/]
+
+["back"]

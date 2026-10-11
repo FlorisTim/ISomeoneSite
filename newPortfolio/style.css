@@ -53,9 +53,10 @@ body{
     padding: 5px;
     color: #fff;
 }
-
-.project-tile > .title, .inentry > .title{
+.project-tile > .title, .inentry > .title :not(.center){
     text-align: left;
+}
+.project-tile > .title, .inentry > .title{
     margin-left: 5px;
     background: none;
     color: #fff;
@@ -157,7 +158,9 @@ img{
     overflow-y: scroll;
 }
 
-
+.center{
+    text-align: center;
+}
 
 a{
     color: #f8e430;
@@ -214,4 +217,9 @@ a:hover{
 
 .top{
     padding: 5px;
+}
+
+p{
+    margin-left: 10px;
+    margin-right: 10px;
 }

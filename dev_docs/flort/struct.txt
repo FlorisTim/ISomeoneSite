@@ -1,0 +1,72 @@
+youtubePosts
+
+infos
+
+playlist
+PLCvaCEplVxwI
+
+youtubeToken
+in_commons
+token
+
+trimFile
+
+themeSubtractions
+0 1 8 9 10 11
+
+theme
+15 11 15
+
+title
+Flort Engine
+
+----
+
+#(title) Flort Engine
+
+
+[
+    {
+        #(title) Purpose of this page
+
+        On this page I will be explaining what Flort Engine is
+    }
+]
+
+#(title) Information
+[
+    {
+        #(title) What is Flort Enginge?
+
+        Flort engine is a project i started because I wanted to learn rust, I thought it would be cool to
+        make a game engine in it to learn, later i realised that i would have to make a compiler for a (custom?) language.
+
+        That's why i decided to make it mainly a configurable compiler for several different languages, or atleast the same language
+        with syntax similair to mainstream ones
+    }
+]
+[
+    {()<LOADER0>
+        #(post) Loading
+    }
+]
+
+#(title) Posts about Flort engine
+[
+    {
+        #(title) Youtube posts
+        !(post_section)<youtubePost>
+            #(post delete2) Loading
+        !#
+    }
+]
+
+#(title) Outro
+[
+    {
+        thanks for reading,
+        check out <a href="https://isomeone.nl">my website</a> and <a href="https://isomeone.nl/portfolio">my portfolio</a>,.
+    }
+]
+
+#(title)

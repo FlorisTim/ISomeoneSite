@@ -42,32 +42,5 @@ Kolomkamer
         to create their own profile, portfolio, or documentation in a simple column
     }
 ]
-[
-    {()<LOADER0>
-        #(post) Loading
-    }
-]
-
-#(title) Posts about cool platformer
-[
-    {
-        #(title) Youtube posts
-        !(post_section)<youtubePost>
-            #(post delete2) Loading
-        !#
-    }
-]
-
-#(title) Outro
-[
-    {
-        thanks for reading,
-        check out <a href="https://isomeone.nl">my website</a> and <a href="https://isomeone.nl/portfolio">my portfolio</a>,
-        I liked making this project,
-        it was one of the first projects I
-        ever made in a real programming language other than scratch,
-        and i feel like i learned most from it.
-    }
-]
 
 #(title)
