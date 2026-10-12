@@ -3,8 +3,18 @@ let index = 0;
 let posts = [];
 let postsElement
 
+let interestingText = [];
+
 let webPostsDone = false;
 let ytPostsDone = false;
+
+function addInterestingText(txt){
+    interestingText.push(txt);
+    document.getElementById("updates").innerHTML = "";
+    for (let i = 1; i < 20; i++){
+        document.getElementById("updates").innerHTML += interestingText[interestingText.length-i];
+    }
+}
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js";
 
@@ -39,9 +49,11 @@ async function Main() {
     const projectUpdates = document.getElementById("updates");
 
     const history = 14;
+    const history = 7;
 
     let date = new Date();
     date.setDate(date.getDate() - history);
+    projectUpdates.innerHTML = "";
     for (let i = 0; i < history; i++) {
         date.setDate(date.getDate() + 1);
         projectUpdates.innerHTML += gatherUpdates(date);
@@ -156,6 +168,7 @@ async function loadYTPosts(playlist){
     youtubeKey = commons.token;
     const o = await grabYoutubePosts(0,playlist.id);
     for (let c of o) {
+        addInterestingText(`${c.snippet.title}<br>`)
         try {
             ytUpdates.push({
                 type: playlist.name,
@@ -177,6 +190,7 @@ async function loadYTMusic() {
     let music = document.getElementsByClassName("music")[0];
 
     for (let i = 0; i < ytPosts.length; i++) {
+
         console.log("added",i);
         music.innerHTML += generateYoutubePosts(ytPosts[i]);
     }
@@ -282,7 +296,9 @@ async function lazyGrabPosts(){
     let count = 1;
     posts = [];
     while(true){
+
         let out = await fetch("https://isomeone.nl/posts/post_"+count+".html");
+        addInterestingText(`post${count}<br>`)
         if (out.ok){
             posts.push(await out.text());
             count++;
@@ -393,6 +409,7 @@ async function grabYoutubePosts(page,playlistID){
 &key=${youtubeKey}${page !== 0 ? "&pageToken="+page : ``}`).then(res => res.json());
 
     let error = rq.error;
+    addInterestingText(`post ${page}, ${playlistID}<br>`)
 
     if (error !== undefined) {
         document.getElementsByClassName("delete2")[0].innerText = "failed to load yt videos: " + error.status.toLowerCase().replaceAll("_", " ");
