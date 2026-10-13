@@ -47,8 +47,7 @@ async function Main() {
     }
 
     const projectUpdates = document.getElementById("updates");
-
-    const history = 14;
+    
     const history = 7;
 
     let date = new Date();
