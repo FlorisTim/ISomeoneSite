@@ -19,7 +19,7 @@ while scrolling through an input string, it constructs a string by adding the ch
 
 it switches modes depending on what character it sees (normal or syntax), and before it switches and appends the new character it emits the current string and clears it.<br>
 <br>
-Now this does not differentiate or split `);` into the two seperate symbols they are, This is just the start of the compiler.
+the config it gets also holds a character list of singular characters, so when it encounters a character like ")" it immediately emits a token.
 [/]
 
 ["back"]
