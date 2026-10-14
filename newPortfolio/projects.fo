@@ -170,4 +170,53 @@
     "data": ["resources/kk2.png"]
     }
   ]
+},
+{
+  "title": "Flort engine [in dev]",
+  "languages": ["Rust"],
+  "image": "resources/rust_crab.png",
+  "desc":
+  "
+  Flort engine is a project i started to begin learning rust, my original idea was to make a game engine.\n\n
+
+  After realising the scope of the task i decided to build a configurable compiler first.
+  ",
+  "popup":
+  [
+    "Flort engine",
+    "Configurable compiler",
+    {
+    "type": "text",
+    "data": ["What is Flort engine?",
+    "<p>
+    Flort engine is a configurable compiler, with the goal of becoming a very simple OOP game engine.\n\n
+
+    The goal is to be able to compile Java, JS and python like languages all into the same bytecode to run a program (or a game).
+    </p>"]
+    },
+    {
+    "type": "text",
+    "data": ["Features in Flort engine",
+    "<p>
+    Up until now it has:\n
+    - Lexer\n
+    - Basic startup program\n
+
+    I'm planning to add:\n
+    - Parser\n
+    - Bytecode compiler\n
+    - Runtime engine\n\n
+
+    It's important to note i go into more depth in <a href='https://www.isomeone.nl/dev_docs/flort'>this document</a>\n
+    The github repo is public <a href='https://github.com/FlorisTim/flort'>right here</a>
+    </p>"]
+    },
+    {
+    "type": "text",
+    "data": ["Languages used",
+    "<p>
+    I used JS and Python for the backend, and html and css if you count those.
+    </p>"]
+    }
+  ]
 }
