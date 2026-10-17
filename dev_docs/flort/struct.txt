@@ -43,6 +43,8 @@ Flort Engine
 
         That's why i decided to make it mainly a configurable compiler for several different languages, or atleast the same language
         with syntax similair to mainstream ones
+
+        <a href="https://github.com/FlorisTim/flort">github repo</a>
     }
 ]
 [
