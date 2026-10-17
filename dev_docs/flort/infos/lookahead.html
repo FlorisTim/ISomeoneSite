@@ -1,0 +1,16 @@
+["title"]Looking ahead[/]
+
+["post spckbd"]
+["title"]October 2026[/]
+So the current output contains a lot of Unknowns and ambiguous tokens. I solved these using the following techniques<br><br>
+A few arrays get initialized, for example an array fo custom types, it adds every token that is unknown and comes after the "class" token, now that token whenever encountered will be reclassified as a TypeIdentifier (if the token in question is unknown).<br>
+same for variables and methods, it does it in a slightly different way, but fundamentally the same.<br><br>
+
+this way a case like
+<kbd>Box&ltSomething&ltAnotherThing>>
+</kbd>
+Will make the ambiguous last token (the ">>") turn into two closing brackets (instead of a right bit shift).<br>
+It does not tell what type variables are, or functions return, but it gives enough information to resolve all ambiguous cases.
+[/]
+
+["back"]
