@@ -23,12 +23,13 @@ the config it gets also holds a character list of singular characters, so when i
 
 Numbers are handled similarly, the config holds a number character list.<br>
 But there's an issue:<br>
-the character for field access is the same character as the decimal point, i solved this by looking ahead and seeing if the current string, if '.' is already a valid number (for example 1.) or concatenated with the next character would be a valid number (for example .1), otherwise its a field access symbol.
-<br>
+the character for field access is the same character as the decimal point<br>
+I solved this by looking ahead and seeing if the current string<br> if '.' is already a valid number (for example 1.) or concatenated with the next character would be a valid number (for example .1), otherwise its a field access symbol.
+<br><br>
 Sometimes, however there are 'ambiguous' cases. for example in this code:
 <kbd>Box&ltSomething&ltAnotherThing>>
 </kbd>
-it ends with ">>", this could either be 2 closing brackets, or a right bit shift operator, so it gets parsed as ambiguous, maintaining the 2 possibilities.<br>
+it ends with ">>", this could either be 2 closing brackets, or a right bit shift operator<br> so it gets parsed as ambiguous, maintaining the 2 possibilities.<br>
 
 
 [/]
