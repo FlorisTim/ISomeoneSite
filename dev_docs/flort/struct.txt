@@ -39,12 +39,19 @@ Flort Engine
         #(title) What is Flort Enginge?
 
         Flort engine is a project i started because I wanted to learn rust, I thought it would be cool to
-        make a game engine in it to learn, later i realised that i would have to make a compiler for a (custom?) language.
+        make a game engine in it to learn, later i realised that i would have to make a compiler for a (custom?) language.<br>
 
         That's why i decided to make it mainly a configurable compiler for several different languages, or atleast the same language
-        with syntax similair to mainstream ones
-
+        with syntax similair to mainstream ones<br>
+        <br>
         <a href="https://github.com/FlorisTim/flort">github repo</a>
+    }
+    {
+        #(title) Creator
+
+        I'm Floris Timmermans, online i call myself ISomeone,
+        and i'm currently developing Dunge, I like to make music and code,
+        and i have a website <a href="https://isomeone.nl">check it out</a>
     }
 ]
 [
