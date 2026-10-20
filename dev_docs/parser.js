@@ -1,3 +1,5 @@
+let params = new URLSearchParams(document.location.search);
+let portfolio = params.get("source") === "portfolio";
 
 let documentBody;
 let documentHead;
@@ -22,7 +24,74 @@ let plans = false;
 
 let trim = false;
 
-let cssTemplate = `
+let cssTemplate = portfolio ?`
+</style>
+<div class="exit" onclick="location.href='/newPortfolio'">Back</div>
+<style>
+.exit{
+    left: 5%;
+    top: 5%;
+    margin: 10px;
+    position: fixed;
+    background: #555;
+    padding: 5px;
+    font-size: 12px;
+}
+.exit:hover{
+    color: red;
+    cursor: pointer;
+}
+.gray{
+  color:#bbb;
+}
+th{
+    background-color: #333;
+}
+td, .post{
+  background-color: #333;
+      box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+kbd{
+  background-color: #333;
+
+}
+
+.spckbd kbd {
+    background: linear-gradient(90deg, #555 0%, rgba(0, 0, 0, 0) 100%);
+    border: 1px solid #555 ;
+}
+body{
+    font-family: verdana, sans-serif;
+    background-color: #333;
+}
+.sub {
+    background-color: #555;
+    box-shadow: none;
+    border-radius: 0
+}
+a, .qlink{
+    color: #f8e430;
+}
+a:hover, .qlink:hover{
+    color:#4bf830;
+}
+.post .title, .post_section{
+    background-color:#555;
+}
+.sub .title{
+ background-color:#777;
+ border-radius: 0
+}
+*{
+    scrollbar-color: #777 #555;
+}
+.post > .title{
+   background-color: #333;
+}
+` : `
 .gray{
   color:$1;
 }

@@ -133,6 +133,12 @@ function createTextSection(title, text){
 console.log()
 
 function popup(json){
+    if (json[0] === "devdoc"){
+        const url = new URL(`/dev_docs/${json[1]}`, window.location.origin);
+        url.searchParams.set("source", "portfolio");
+        window.location.href = url.toString();
+        return;
+    }
     const popupMain = document.getElementById("popupmain");
     popupMain.innerHTML = "";
     document.getElementById("popuptitle").innerText = json[0];

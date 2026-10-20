@@ -8,47 +8,9 @@
   Cool Platformer is a 3D Platformer in the C# console app, I made it for a school project\n\n
   It has LAN multiplayer, full 256 color, basic physics engine and 3d models + animation
   ",
-  "popup":
-  [
-    "Cool Platformer",
-    "3D Platformer in the C# Console App",
-    {
-    "type": "text",
-    "data": ["What is Cool Platformer?",
-    "<p>
-    Cool Platformer is a 3D Platformer inside the C# console app.\n\n
-    I made it for SHiNE, A school assignment that gave us creative freedom to make something we would learn from.
-    </p>"]
-    },
-    {
-    "type": "images",
-    "data": ["resources/portal.gif"]
-    },
-    {
-    "type": "text",
-    "data": ["Features in cool platformer",
-    "<p>
-    The game includes:\n
-    - LAN Multiplayer\n
-    - 256 Colors\n
-    - Immersive portals (previous gif)\n
-    - Custom formats for 3d models, animations, and rigs\n\n
-
-    It's important to note i go into more depth in <a href='https://www.isomeone.nl/dev_docs/cool_platformer'>this document</a>\n
-    And ofcourse the github repo <a href='https://github.com/FlorisTim/3D-platformer-in-the-c-console-app'>GitHub Repo</a>
-    </p>"]
-    },
-    {
-    "type": "text",
-    "data": ["Languages used",
-    "<p>
-    I only used one language, C#
-    </p>"]
-    },
-    {
-    "type": "images",
-    "data": ["resources/cp1.png","resources/cp2.png"]
-    }
+  "popup":[
+    "devdoc",
+    "cool_platformer"
   ]
 },
 {
@@ -63,53 +25,8 @@
   ",
   "popup":
   [
-    "DUNGE",
-    "Infinite dungeon crawler",
-    {
-    "type": "text",
-    "data": ["What is Dunge?",
-    "<p>
-    Dunge is an infinite dungeon crawler I am always working on, I use it mostly to learn from.\n\n
-
-    Whenever i think of a cool game concept i try to work it out and make it work with all other concepts in this game.
-    </p>"]
-    },
-    {
-    "type": "images",
-    "data": ["resources/dunge3.png","resources/dunge4.png","resources/dunge5.png"]
-    },
-    {
-    "type": "text",
-    "data": ["Features in dunge",
-    "<p>
-    The game includes:\n
-    - Configurable world gen\n
-    - XML Based gui\n
-    - An animation DSL\n
-    - An enemy AI VM-like system (also using a DSL)\n\n
-
-    It's important to note i go into more depth in <a href='https://www.isomeone.nl/dev_docs/dunge'>this document</a>\n
-    The GitHub repo is not public, you can E-Mail me for the code.
-    </p>"]
-    },
-    {
-    "type": "text",
-    "data": ["Languages used",
-    "<p>
-    I used 2 official languages (Java, XML and JSON), counting the DSLs I used 4.
-    </p>"]
-    },
-    {
-    "type": "text",
-    "data": ["Older versions",
-    "<p>
-    In older versions (made in scratch) everything was configurable via JSON, and i made an editor for the animations (in scratch too) see below
-    </p>"]
-    },
-    {
-    "type": "image",
-    "data": ["resources/dunge6.png"]
-    }
+    "devdoc",
+    "dunge"
   ]
 },
 {
@@ -183,40 +100,7 @@
   ",
   "popup":
   [
-    "Flort engine",
-    "Configurable compiler",
-    {
-    "type": "text",
-    "data": ["What is Flort engine?",
-    "<p>
-    Flort engine is a configurable compiler, with the goal of becoming a very simple OOP game engine.\n\n
-
-    The goal is to be able to compile Java, JS and python like languages all into the same bytecode to run a program (or a game).
-    </p>"]
-    },
-    {
-    "type": "text",
-    "data": ["Features in Flort engine",
-    "<p>
-    Up until now it has:\n
-    - Lexer\n
-    - Basic startup program\n
-
-    I'm planning to add:\n
-    - Parser\n
-    - Bytecode compiler\n
-    - Runtime engine\n\n
-
-    It's important to note i go into more depth in <a href='https://www.isomeone.nl/dev_docs/flort'>this document</a>\n
-    The github repo is public <a href='https://github.com/FlorisTim/flort'>right here</a>
-    </p>"]
-    },
-    {
-    "type": "text",
-    "data": ["Languages used",
-    "<p>
-    I used JS and Python for the backend, and html and css if you count those.
-    </p>"]
-    }
+    "devdoc",
+    "flort"
   ]
 }
