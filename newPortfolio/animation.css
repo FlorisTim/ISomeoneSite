@@ -1,0 +1,77 @@
+body{
+    overflow-x: hidden;
+}
+
+.main{
+    perspective: 800px;
+}
+
+.hand-effect{
+    position: absolute;
+    top: 0;
+    left: 60%;
+}
+#holder1{
+    animation: 2s ease-out 0s 1 holderSlideInFromLeft;
+    animation-fill-mode: forwards;
+}
+#about{
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-200%) scale(2) rotateZ(20deg);
+    }
+    50% {
+        transform: translateX(0) scale(1);
+    }
+    60% {
+        transform: rotateX(0deg);
+    }
+    65% {
+        transform: rotateX(180deg);
+    }
+    70% {
+        transform: rotateX(360deg);
+    }
+    80% {
+        transform: rotateX(540deg);
+    }
+    95% {
+        transform: rotateX(720deg);
+    }
+    100% {
+        transform: rotateX(720deg);
+    }
+}
+
+@keyframes holderSlideInFromLeft {
+    0% {
+        transform: translateX(-300%) scale(0.2) rotateZ(0deg) translateY(200px);
+    }
+    50% {
+        transform: translateX(-30%) scale(0.2) rotateZ(-20deg) translateY(100px);
+    }
+    60% {
+        transform: translateX(-30%) scale(0.2) rotateZ(-40deg) translateY(-100px);
+    }
+    70% {
+        transform: translateX(-30%) scale(0.2) rotateZ(-40deg) translateY(300px);
+    }
+    100% {
+        transform: translateX(200%) scale(0.2);
+    }
+}
+
+@media (min-width: 2000px){
+    #holder1{
+        display: none;
+    }
+    #about{
+        animation: none;
+    }
+}
