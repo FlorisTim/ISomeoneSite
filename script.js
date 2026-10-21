@@ -173,7 +173,7 @@ async function loadYTPosts(playlist){
                 type: playlist.name,
                 title: c.snippet.title,
                 date: c.contentDetails.videoPublishedAt.split("T")[0].trim(),
-                href: `https://www.youtube.com/watch?v=${c.contentDetails.videoId}`
+                href: `${c.contentDetails.videoId}`
             })
         } catch(err) {
             console.error(err);
