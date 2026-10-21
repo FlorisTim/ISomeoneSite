@@ -62,7 +62,7 @@ body{
         transform: translateX(-30%) scale(0.2) rotateZ(-20deg) translateY(100px);
     }
     60% {
-        transform: translateX(-30%) scale(0.2) rotateZ(-40deg) translateY(-100px);
+        transform: translateX(-30%) scale(0.2) rotateZ(-20deg) translateY(-1000px);
     }
     70% {
         transform: translateX(-30%) scale(0.2) rotateZ(-40deg) translateY(300px);
