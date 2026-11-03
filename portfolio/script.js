@@ -8,8 +8,8 @@ const replacers = {
 }
 
 let json;
-async function fetchProjects(){
-    json = parse(await (await fetch("projects.fo")).text());
+async function fetchProjects(path){
+    json = parse(await (await fetch(path)).text());
     console.log(json);
 }
 let popups = [];
@@ -53,6 +53,7 @@ function generateTile(title, description, languages, image){
 
 document.addEventListener('DOMContentLoaded', () => {main()});
 let projects;
+let musicProjects;
 
 async function main(){
     const commonSuffix = "%Y years";
@@ -61,11 +62,15 @@ async function main(){
     replaceDate("codingExperience", commonSuffix);
     replaceDate("musicExperience", commonSuffix);
 
-    await fetchProjects();
-
-    projects = document.getElementById("projects");
     popupElement = document.getElementById("popup");
-    addProjects();
+
+    await fetchProjects("projects.fo");
+    projects = document.getElementById("projects");
+    addProjects(projects);
+
+    await fetchProjects("music_projects.fo");
+    musicProjects = document.getElementById("mprojects");
+    addProjects(musicProjects);
 }
 
 function replaceDate(replacer, text){
@@ -93,10 +98,10 @@ function parse(text){
     return JSON.parse(`[${out}]`).reverse();
 }
 
-function addProjects(){
+function addProjects(projectsElement){
     for (const project of json){
         popups.push(project.popup);
-        projects.innerHTML += generateTile(
+        projectsElement.innerHTML += generateTile(
             project.title,
             project.desc,
             project.languages,
@@ -151,6 +156,9 @@ function popup(json){
                 break;
             case "image":
                 popupMain.innerHTML += createImageRow(json[i].data, true);
+                break;
+            case "video":
+                popupMain.innerHTML += `<iframe src="${json[i].data}"></iframe>`;
                 break;
             case "text":
                 popupMain.innerHTML += createTextSection(json[i].data[0],json[i].data[1]);

@@ -78,8 +78,8 @@ body{
 }
 
 .small{
-    color: #888;
-    font-size: 8px;
+    color: #aaa;
+    font-size: 12px;
     margin-left: 10px;
     margin-top:-10px;
 }
@@ -207,6 +207,13 @@ a:hover{
     max-width: 100%;
 }
 
+iframe{
+    width: 1000px;
+    height: 500px;
+    border: none;
+    margin-bottom: 30px;
+}
+
 .tag{
     font-size: 12px;
     background: var(--listbg);
@@ -249,5 +256,11 @@ p{
         flex-direction: row;
         justify-content: space-around;
 
+    }
+    iframe{
+        width: auto;
+        height: auto;
+        border: none;
+        margin-bottom: 30px;
     }
 }
