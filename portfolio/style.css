@@ -6,6 +6,10 @@
     --top: #bbb;
 }
 
+*{
+    scrollbar-color: #777 #555;
+}
+
 body{
     background: var(--background);
     color: var(--top);
@@ -18,6 +22,7 @@ body{
     flex-direction: row;
     justify-content: center
 }
+
 
 .divider{
     justify-content: space-between;
@@ -40,8 +45,6 @@ body{
 
     flex: 1;
 }
-
-
 
 .inentry{
     text-align: center;
@@ -86,10 +89,12 @@ body{
 
 .project-tile{
     min-width: 220px;
+    flex: 1;
     max-width: 220px;
     height: 340px;
     background: var(--project);
-    margin-left: -5px;
+    margin-left: -4px;
+    margin-right: -4px;
     display: flex;
     flex-direction: column;
     transition: 0.05s;
@@ -109,7 +114,7 @@ body{
 .horizontal-scroll{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 13px;
     overflow-x: auto;
     overflow-y: visible;
 }
@@ -176,13 +181,9 @@ a:hover{
 }
 
 .exit{
-    left: 5%;
-    top: 5%;
-    margin: 10px;
-    position: fixed;
     background: var(--listbg);
     padding: 5px;
-
+    text-align: center;
 }
 
 .exit:hover{
@@ -214,6 +215,16 @@ iframe{
     margin-bottom: 30px;
 }
 
+.tag2{
+    font-size: 10px;
+    background: var(--top);
+    color: #000;
+    border-radius:5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 5px;
+}
+
 .tag{
     font-size: 12px;
     background: var(--listbg);
@@ -235,6 +246,75 @@ iframe{
 p{
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.audio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 5px;
+    background: #555;
+    padding: 4px;
+}
+
+.info{
+    padding-right: 2px;
+    padding-left: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.timetext{
+    text-align: left;
+}
+
+.bar{
+    margin-top: 5px;
+    height: 10px;
+}
+
+.fill {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #000000;
+    outline: none;
+    width: 100%;
+    margin: 0;
+}
+
+.fill::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.flex1{
+    flex: 3;
+}
+
+button{
+    flex: .25;
+    border: none;
+    background-color: #777;
+    color: #fff;
+    font-size: 12px;
+    height: 45px;
+}
+
+.smaller{
+    flex: .5;
+    gap: 5px;
+}
+
+button:hover{
+    background-color: #aaa;
+    cursor: pointer;
 }
 
 @media (max-width: 1200px){

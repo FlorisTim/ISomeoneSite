@@ -41,8 +41,8 @@
         </p>"]
         },
         {
-        "type": "video",
-        "data": ["https://www.youtube.com/embed/3pLPXLp5cJo?si=eTY6TbpvV-IaFGQQ"]
+        "type": "audio",
+        "data": ["resources/sa.mp3", "Strada Averta"]
         }
   ]
 }
