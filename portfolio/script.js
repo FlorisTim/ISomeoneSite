@@ -65,11 +65,11 @@ async function main(){
 
     popupElement = document.getElementById("popup");
 
-    await fetchProjects("projects.fo");
+    await fetchProjects("projects.json");
     projects = document.getElementById("projects");
     addProjects(projects, `<span class="tag2">&lt/&gt</span>`);
 
-    await fetchProjects("music_projects.fo");
+    await fetchProjects("music_projects.json");
     musicProjects = document.getElementById("projects");
     addProjects(musicProjects, `<span class="tag2">♫♪</span>`);
 }
@@ -184,12 +184,21 @@ function popup(json) {
                     const el = document.getElementById(`player${json[i].data[0]}`)
                     const tm = document.getElementById(`time${json[i].data[0]}`)
                     const disp = document.getElementById(`display${json[i].data[0]}`);
+                    const pel = document.getElementById(`g${json[i].data[0]}`);
+
+                    if (pel.style.display == "none" && el.paused) {
+                        stop(`${json[i].data[0]}`);
+                        el.currentTime = 0;
+                        disp.value = 0;
+                    }
 
                     if (Math.abs(disp.value - 100 / el.duration * el.currentTime) > 1) {
                         el.currentTime = el.duration/100 * disp.value;
                     }
                     tm.innerHTML = formatTime(Math.round(el.currentTime)) + " / " + formatTime(Math.round(el.duration));
                     disp.value = (100 / el.duration * el.currentTime);
+
+
                 }, 250);
 
                 break;

@@ -1,0 +1,87 @@
+
+  {
+    "title": "Flort engine [in dev]",
+    "languages": [
+      "Rust"
+    ],
+    "image": "resources/rust_crab.png",
+    "desc": "Flort engine is a project i started to begin learning rust, my original idea was to make a game engine.<br><br>After realising the scope of the task i decided to build a configurable compiler first.",
+    "popup": [
+      "devdoc",
+      "flort"
+    ]
+  },
+  {
+    "title": "KolomKamers [in dev]",
+    "languages": [
+      "JS",
+      "Python",
+      "HTML",
+      "CSS"
+    ],
+    "image": "resources/kkt.png",
+    "desc": "KolomKamers is an online website creator/editor based on a single central column, Inspired by most of my websites.<br><br>It has a simple dashboard, drag and drop elements, currently working on api support.",
+    "popup": [
+      "KolomKamers",
+      "Online web editor",
+      {
+        "type": "text",
+        "data": [
+          "What is Kolomkamers?",
+          "<p>Kolomkamers is an easy way to create your own website, You can log in, create a website, and share it with others.<br><br>It could be used for a simple profile / portfolio or for a document or presentation.</p>"
+        ]
+      },
+      {
+        "type": "image",
+        "data": [
+          "resources/kk1.png"
+        ]
+      },
+      {
+        "type": "text",
+        "data": [
+          "Features in kolomkamers",
+          "<p>Up until now it has:<br>- Login / Signup screen<br>- Working backend server<br>- Web Editor<br>- Compact markup language to save space on server<br><br>I'm planning to add:<br>- Style editor (markup language already includes style)<br>- Custom community made tiles<br>- API support, allowing users to upload tokens that are kept on my server without being public<br><br>I'm currently creating a document for this project that goes into more depth, which I will share here when done<br>The github repo is public <a href='https://github.com/FlorisTim/kolomkamer'>right here</a></p>"
+        ]
+      },
+      {
+        "type": "text",
+        "data": [
+          "Languages used",
+          "<p>I used JS and Python for the backend, and html and css if you count those.</p>"
+        ]
+      },
+      {
+        "type": "image",
+        "data": [
+          "resources/kk2.png"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Dunge",
+    "languages": [
+      "Java (Processing)",
+      "XML",
+      "JSON"
+    ],
+    "image": "resources/dunge1.png",
+    "desc": "Dunge is a dungeon crawler & my pet project, I have been working on this game since i was 15.<br><br>It's my primary source of learning novel concepts in game development.",
+    "popup": [
+      "devdoc",
+      "dunge"
+    ]
+  },
+  {
+    "title": "Cool Platformer",
+    "languages": [
+      "C#"
+    ],
+    "image": "resources/cp1.png",
+    "desc": "Cool Platformer is a 3D Platformer in the C# console app, I made it for a school project<br><br>It has LAN multiplayer, full 256 color, basic physics engine and 3d models + animation",
+    "popup": [
+      "devdoc",
+      "cool_platformer"
+    ]
+  }
