@@ -10,6 +10,42 @@
     scrollbar-color: #777 #555;
 }
 
+.bottom_info{
+    margin-top: -30px;
+    position: sticky;
+    top: 485px;
+    min-height: 30px;
+    background: linear-gradient(0deg, #000 0%, #0000 100%);
+    transition: 1000ms;
+}
+
+.bottom_info:hover {
+    opacity: 0;
+    transition: 1000ms;
+}
+
+.scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 515px;
+    display: flex;
+    flex-direction: column;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+
+.spacer{
+    height: 50px;
+}
+
+.scroll > .spacer{
+    min-height: 25px;
+}
+
 body{
     background: var(--background);
     color: var(--top);

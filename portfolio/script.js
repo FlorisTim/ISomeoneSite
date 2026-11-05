@@ -96,7 +96,7 @@ function parse(text){
         .replaceAll("\\n","<br>")
         .replaceAll("  ","");
 
-    return JSON.parse(`[${out}]`).reverse();
+    return JSON.parse(out).reverse();
 }
 
 function addProjects(projectsElement, prefix){
@@ -152,7 +152,7 @@ function createAudio(id){
   <div class="bar">
   <input type="range" step="0.01" id="display${id[0]}" value="0" class="fill">
   </div>
-
+</div>
 </div>
 
 `;
@@ -169,18 +169,26 @@ function popup(json) {
     popupMain.innerHTML = "";
     document.getElementById("popuptitle").innerText = json[0];
     document.getElementById("popupsubtitle").innerText = json[1];
-
+    let result = "";
     for (let i = 2; i < json.length; i++) {
         switch (json[i].type) {
+            case "scroll_start":
+                result += `<div class="scroll"><span class="bottom_info"></span>`;
+                break;
+            case "end":
+                result += `</div>`;
+                break;
+            case "spacer":
+                result += `<div class="spacer"></div>`;
+                break;
             case "images":
-                popupMain.innerHTML += createImageRow(json[i].data, false);
+                result += createImageRow(json[i].data, false);
                 break;
             case "image":
-                popupMain.innerHTML += createImageRow(json[i].data, true);
+                result += createImageRow(json[i].data, true);
                 break;
             case "audio":
-                popupMain.innerHTML += createAudio(json[i].data);
-                document.getElementById(`display${json[i].data[0]}`).value = 80;
+                result += createAudio(json[i].data);
                 window.setInterval(function () {
                     const el = document.getElementById(`player${json[i].data[0]}`)
                     const tm = document.getElementById(`time${json[i].data[0]}`)
@@ -206,11 +214,12 @@ function popup(json) {
 
                 break;
             case "text":
-                popupMain.innerHTML += createTextSection(json[i].data[0], json[i].data[1]);
+                result += createTextSection(json[i].data[0], json[i].data[1]);
                 break;
         }
     }
-    popupMain.innerHTML += "<br>"
+    console.log(result);
+    popupMain.innerHTML = result;
     popupElement.style.display = "";
     document.body.style.overflowY = "hidden";
 }

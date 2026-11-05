@@ -1,41 +1,200 @@
-
+[
   {
-        "title": "Strada Averta",
-        "languages": [
-            "Ultrabox"
-        ],
-        "image": "resources/sa.jpg",
-        "desc": "I made an instrumental song for the website of my uncle and his friend. <br>It has kind of a weird, melancholic aesthetic, so I made the song using vocal sounds and echo-y piano<br><br>",
-        "popup": [
-            "Music for Strada Averta",
-            "",
-            {
-                "type": "text",
-                "data": [
-                    "Description",
-                    "<p>I made an instrumental song for the website of my uncle and his friend. <br>It has kind of a weird, melancholic aesthetic, so I made the song using vocal sounds and echo-y piano<br><br>It uses some drum and bass inspired drums halfway through the instrumental.</p>"
-                ]
-            },
-            {
-                "type": "text",
-                "data": [
-                    "Tools used",
-                    "<p>I used UltraBox, an online tool for making websites.<br>SampleFocus for samples.<br>My voice for the vocal sounds</p>"
-                ]
-            },
-            {
-                "type": "text",
-                "data": [
-                    "Music used in",
-                    "<p>It's used by my uncle and his friend in their Strada Averta project.<br><br>I also used it in a game I made (play it <a href='/unnamed_game'>here</a> flashing lights!!!)</p>"
-                ]
-            },
-            {
-                "type": "audio",
-                "data": [
-                    "resources/sa.mp3",
-                    "Strada Averta"
-                ]
-            }
+    "title": "Strada Averta",
+    "languages": [
+      "Ultrabox"
+    ],
+    "image": "resources/sa.jpg",
+    "desc": "I made an instrumental song for the website of my uncle and his friend. <br>It has kind of a weird, melancholic aesthetic, so I made the song using vocal sounds and echo-y piano<br><br>",
+    "popup": [
+      "Music for Strada Averta",
+      "",
+      {
+        "type": "text",
+        "data": [
+          "Description",
+          "<p>I made an instrumental song for the website of my uncle and his friend. <br>It has kind of a weird, melancholic aesthetic, so I made the song using vocal sounds and echo-y piano<br><br>It uses some drum and bass inspired drums halfway through the instrumental.</p>"
         ]
-    }
+      },
+      {
+        "type": "text",
+        "data": [
+          "Tools used",
+          "<p>I used UltraBox, an online tool for making music.<br>SampleFocus for samples.<br>My voice for the vocal sounds</p>"
+        ]
+      },
+      {
+        "type": "text",
+        "data": [
+          "Music used in",
+          "<p>It's used by my uncle and his friend in their Strada Averta project.<br><br>I also used it in a game I made (play it <a href='/unnamed_game'>here</a> flashing lights!!!)</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/sa.mp3",
+          "Strada Averta"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "2026 Music album",
+    "languages": [
+      "Ultrabox", "DrumBit"
+    ],
+    "image": "resources/albm/img.png",
+    "desc": "Collection of some of the music I made in 2026, These are my personal favourites",
+    "popup": [
+      "2026 Music album",
+      "my favourites from music I made in 2026",
+      {
+        "type": "text",
+        "data": [
+          "Description",
+          "<p>Collection of some of the music I made in 2026, These are my personal favourites</p>"
+        ]
+      },
+      {
+        "type": "text",
+        "data": [
+          "Tools used",
+          "<p>I used UltraBox, an online tool for making music.<br>SampleFocus for samples.<br>My voice for the vocal sounds<br>DrumBit for drums</p>"
+        ]
+      },
+      {
+        "type": "spacer"
+      },
+      {
+        "type": "scroll_start"
+      },
+      {
+        "type": "text",
+        "data": [
+          "2019 Activites",
+          "<p>This is an instrumental I made based on some recordings of me when I was 11 (in 2019)</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/2019a.mp3",
+          "2019 Activites"
+        ]
+      },
+
+      {
+        "type": "text",
+        "data": [
+          "Clairvoyance",
+          "<p>This was part of a series of songs which names all ended with '-oyance', clairvoyance was my favourite</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/clairvoyance.mp3",
+          "Clairvoyance"
+        ]
+      },
+
+      {
+        "type": "text",
+        "data": [
+          "Diliti 120",
+          "<p>I made this in the summer vacation while I was sitting in my garden</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/dlti.mp3",
+          "Diliti 120"
+        ]
+      },
+
+      {
+        "type": "text",
+        "data": [
+          "4Midable",
+          "<p>This instrumental is named after my then friends online handle, It's a pretty aggressive song and he played games with similar music</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/f.mp3",
+          "4Midable"
+        ]
+      },
+
+      {
+        "type": "text",
+        "data": [
+          "Met Pindakaas",
+          "<p>I made this while in the train on my way to school. I wanted to try using lyrics and did not succeed, but i did manage to put a weird sample in the middle of it.</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/pndks.mp3",
+          "Met Pindakaas"
+        ]
+      },
+
+      {
+        "type": "text",
+        "data": [
+          "Reverberated Means",
+          "<p>I made this after seeing a video on youtube with a guy that wrote a program that turns one song into a single average sound, I used those sounds to make an instrumental</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/rvbrt.mp3",
+          "Reverberated Means"
+        ]
+      },
+
+      {
+        "type": "text",
+        "data": [
+          "Title screen music",
+          "<p>I was bored out of my mind when I made this, Sometimes its stuck in my head</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/ttl.mp3",
+          "Title screen musics"
+        ]
+      },
+
+      {
+        "type": "text",
+        "data": [
+          "Twpsd",
+          "<p>I made this while in class. the name is an abbreviation of something, I dont remember what though</p>"
+        ]
+      },
+      {
+        "type": "audio",
+        "data": [
+          "resources/albm/twpsd.mp3",
+          "Twpsd"
+        ]
+      },
+      {
+        "type": "spacer"
+      },
+      {
+        "type": "end"
+      }
+    ]
+  }
+]
+
