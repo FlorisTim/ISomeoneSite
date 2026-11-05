@@ -180,6 +180,7 @@ function popup(json) {
                 break;
             case "audio":
                 popupMain.innerHTML += createAudio(json[i].data);
+                document.getElementById(`display${json[i].data[0]}`).value = 80;
                 window.setInterval(function () {
                     const el = document.getElementById(`player${json[i].data[0]}`)
                     const tm = document.getElementById(`time${json[i].data[0]}`)
@@ -193,13 +194,15 @@ function popup(json) {
                     }
 
                     if (Math.abs(disp.value - 100 / el.duration * el.currentTime) > 1) {
-                        el.currentTime = el.duration/100 * disp.value;
+                        if (disp.value != 50){
+                            el.currentTime = el.duration/100 * disp.value;
+                        }
                     }
                     tm.innerHTML = formatTime(Math.round(el.currentTime)) + " / " + formatTime(Math.round(el.duration));
                     disp.value = (100 / el.duration * el.currentTime);
 
 
-                }, 250);
+                }, 10);
 
                 break;
             case "text":
